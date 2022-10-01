@@ -6,18 +6,18 @@ enum PathSide {
 }
 
 class Link:
-	var path: Path3D
+	var segment: Segment
 	var side: PathSide
 	var other_node: PathNode
 
-	func _init(path: Path3D, side: PathSide, other_node: PathNode):
-		self.path = path
+	func _init(segment: Segment, side: PathSide, other_node: PathNode):
+		self.segment = segment
 		self.side = side
 		self.other_node = other_node
 
 	func _to_string() -> String:
-		return "{path: %d, side: %s, other_node: %d}" % [
-			path.get_instance_id(),
+		return "{segment: %d, side: %s, other_node: %d}" % [
+			segment.get_instance_id(),
 			side_str(),
 			other_node.get_instance_id()
 		]
@@ -30,10 +30,10 @@ class Link:
 
 	func direction() -> Vector3:
 		if side == PathSide.Begin:
-			return (path.curve.get_point_out(0) - path.curve.get_point_position(0)).normalized()
+			return (segment.curve.get_point_out(0) - segment.curve.get_point_position(0)).normalized()
 		else:
-			var idx: = path.curve.point_count - 1
-			return (path.curve.get_point_in(idx) - path.curve.get_point_position(idx)).normalized()
+			var idx: = segment.curve.point_count - 1
+			return (segment.curve.get_point_in(idx) - segment.curve.get_point_position(idx)).normalized()
 
 class PathNode:
 	var root_link: Link
@@ -50,25 +50,28 @@ var graph: Dictionary = {}
 
 func _ready() -> void:
 	for child in get_children():
-		if !(child is Path3D):
+		if !(child is Segment):
 			continue
-		var path: Path3D = child
+		var segment: Segment = child
 
-		if path.curve.point_count < 2:
+		if segment.curve.point_count < 2:
 			continue
 
-		var curve = path.curve
+		var curve = segment.curve
 		var begin_pos: = Vector3i(curve.get_point_position(0).round())
 		var end_pos: = Vector3i(curve.get_point_position(curve.point_count - 1).round())
 
 		var node1 = graph.get(begin_pos, PathNode.new())
 		var node2 = graph.get(end_pos, PathNode.new())
 
-		node1.links.append(Link.new(path, PathSide.Begin, node2))
-		node2.links.append(Link.new(path, PathSide.End, node1))
+		node1.links.append(Link.new(segment, PathSide.Begin, node2))
+		node2.links.append(Link.new(segment, PathSide.End, node1))
 
 		graph[begin_pos] = node1
 		graph[end_pos] = node2
+
+		segment.begin_node = node1
+		segment.end_node = node2
 
 	for node in graph.values() as Array[PathNode]:
 		if node.links.size() <= 2:

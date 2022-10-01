@@ -9,10 +9,30 @@
 config_version=5
 
 _global_script_classes=[{
+"base": "Segment",
+"class": &"EntranceSegment",
+"language": &"GDScript",
+"path": "res://map/EntranceSegment.gd"
+}, {
+"base": "Segment",
+"class": &"ExitSegment",
+"language": &"GDScript",
+"path": "res://map/ExitSegment.gd"
+}, {
 "base": "Node",
 "class": &"Game",
 "language": &"GDScript",
 "path": "res://game/Game.gd"
+}, {
+"base": "Segment",
+"class": &"PlatformSegment",
+"language": &"GDScript",
+"path": "res://map/PlatformSegment.gd"
+}, {
+"base": "Path3D",
+"class": &"Segment",
+"language": &"GDScript",
+"path": "res://map/Segment.gd"
 }, {
 "base": "Control",
 "class": &"TransitionScreen",
@@ -20,7 +40,11 @@ _global_script_classes=[{
 "path": "res://game/loading/TransitionScreen.gd"
 }]
 _global_script_class_icons={
+"EntranceSegment": "",
+"ExitSegment": "",
 "Game": "",
+"PlatformSegment": "",
+"Segment": "",
 "TransitionScreen": ""
 }
 
