@@ -1,0 +1,91 @@
+[gd_scene load_steps=12 format=3 uid="uid://bvxdxk5xh2k2d"]
+
+[ext_resource type="Script" path="res://map/Map.gd" id="1_l8pm7"]
+[ext_resource type="Material" uid="uid://bgy0pukxb4bkd" path="res://material/terrain.tres" id="1_tjimc"]
+[ext_resource type="Script" path="res://map/Paths.gd" id="2_blw77"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_2tmmf"]
+material = ExtResource("1_tjimc")
+size = Vector2(1000, 1000)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nqkfa"]
+size = Vector3(10, 1, 240)
+
+[sub_resource type="Curve3D" id="Curve3D_mg3gu"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 219, 0, 91),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_ftjfs"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 219, 0, 91),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_7m10w"]
+_data = {
+"points": PackedVector3Array(-60, 0, -25, 60, 0, 25, 118, 0, -28, -72, 0, -13, 72, 0, 13, 245, 0, 37),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_wsvnn"]
+_data = {
+"points": PackedVector3Array(-60, 0, -25, 60, 0, 25, 125, 0, -41, -72, 0, -13, 72, 0, 13, 245, 0, 37),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_ry1hg"]
+_data = {
+"points": PackedVector3Array(53, 0, -11, -53, 0, 11, 370, 0, 39, 72, 0, 13, -72, 0, -13, 245, 0, 37),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_34tis"]
+_data = {
+"points": PackedVector3Array(-53, 0, 11, 53, 0, -11, 370, 0, 39, -38, 0, 0, 38, 0, 0, 472, 0, 26),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[node name="Map" type="Node3D"]
+script = ExtResource("1_l8pm7")
+
+[node name="MeshInstance3d" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+mesh = SubResource("PlaneMesh_2tmmf")
+
+[node name="platformmockup" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.382683, 0, 0.92388, 0, 1, 0, -0.92388, 0, 0.382683, 12, 0.5, -80)
+mesh = SubResource("BoxMesh_nqkfa")
+
+[node name="Paths" type="Node3D" parent="."]
+script = ExtResource("2_blw77")
+platform_segments = [NodePath("Path3d4"), NodePath("Path3d")]
+entry_segments = [NodePath("Path3d6")]
+exit_segments = [NodePath("Path3d6")]
+
+[node name="Path3d" type="Path3D" parent="Paths"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101, 0, -119)
+curve = SubResource("Curve3D_mg3gu")
+
+[node name="Path3d4" type="Path3D" parent="Paths"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 0, -132)
+curve = SubResource("Curve3D_ftjfs")
+
+[node name="Path3d2" type="Path3D" parent="Paths"]
+curve = SubResource("Curve3D_7m10w")
+
+[node name="Path3d3" type="Path3D" parent="Paths"]
+curve = SubResource("Curve3D_wsvnn")
+
+[node name="Path3d5" type="Path3D" parent="Paths"]
+curve = SubResource("Curve3D_ry1hg")
+
+[node name="Path3d6" type="Path3D" parent="Paths"]
+curve = SubResource("Curve3D_34tis")
