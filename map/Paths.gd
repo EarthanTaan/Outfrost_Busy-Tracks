@@ -11,8 +11,8 @@ class Link:
 		self.other_node = other_node
 
 	func _to_string() -> String:
-		return "{segment: %d, side: %s, other_node: %d}" % [
-			segment.get_instance_id(),
+		return "{segment: %s, side: %s, other_node: %d}" % [
+			segment.name,
 			side_str(),
 			other_node.get_instance_id()
 		]
@@ -37,6 +37,14 @@ class PathNode:
 	func _to_string() -> String:
 		return "{root_link: %s, links: %s}" % [ root_link, links ]
 
+	func route_from(inbound_segment: Segment) -> Segment:
+		if !root_link || links.size() < 1:
+			return null
+		if root_link.segment == inbound_segment:
+			return links[0].segment
+		else:
+			return root_link.segment
+
 var platform_segments: Array[PlatformSegment]
 var entrance_segments: Array[EntranceSegment]
 var exit_segments: Array[ExitSegment]
@@ -60,8 +68,8 @@ func _ready() -> void:
 			continue
 
 		var curve = segment.curve
-		var begin_pos: = Vector3i(curve.get_point_position(0).round())
-		var end_pos: = Vector3i(curve.get_point_position(curve.point_count - 1).round())
+		var begin_pos: = Vector3i(segment.to_global(curve.get_point_position(0)).round())
+		var end_pos: = Vector3i(segment.to_global(curve.get_point_position(curve.point_count - 1)).round())
 
 		var node1 = graph.get(begin_pos, PathNode.new())
 		var node2 = graph.get(end_pos, PathNode.new())
@@ -74,6 +82,8 @@ func _ready() -> void:
 
 		segment.begin_node = node1
 		segment.end_node = node2
+
+#	print(graph)
 
 	for node in graph.values() as Array[PathNode]:
 		if node.links.size() <= 2:

@@ -27,9 +27,31 @@ class CarMovement:
 		if speed != 0.0:
 			if direction == Segment.Side.End:
 				path_follow.progress += speed * delta
+				if path_follow.progress_ratio >= 1.0:
+					var current_segment = path_follow.get_parent() as Segment
+					cross_node(current_segment.end_node, current_segment)
 			else:
 				path_follow.progress -= speed * delta
+				if path_follow.progress_ratio <= 0.0:
+					var current_segment = path_follow.get_parent() as Segment
+					cross_node(current_segment.begin_node, current_segment)
+
 		car.global_transform = path_follow.global_transform
+
+	func cross_node(path_node, current_segment: Segment) -> void:
+		var next_segment = path_node.route_from(current_segment)
+		if !next_segment:
+			return
+
+		current_segment.remove_child(path_follow)
+		next_segment.add_child(path_follow)
+
+		if next_segment.begin_node == path_node:
+			direction = Segment.Side.End
+			path_follow.progress_ratio = 0.0
+		else:
+			direction = Segment.Side.Begin
+			path_follow.progress_ratio = 1.0
 
 @export var accel: float = 2.0
 
