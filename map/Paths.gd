@@ -33,6 +33,10 @@ class Link:
 class PathNode:
 	var root_link: Link
 	var links: Array[Link]
+	var switch_state: int = 0:
+		set(value):
+			if value < links.size():
+				switch_state = value
 
 	func _to_string() -> String:
 		return "{root_link: %s, links: %s}" % [ root_link, links ]
@@ -41,9 +45,22 @@ class PathNode:
 		if !root_link || links.size() < 1:
 			return null
 		if root_link.segment == inbound_segment:
-			return links[0].segment
+			return links[switch_state].segment
 		else:
 			return root_link.segment
+
+	func points_transform() -> Transform3D:
+		var t = Transform3D.IDENTITY
+		if !root_link:
+			return t
+		if root_link.side == Segment.Side.Begin:
+			t.origin = root_link.segment.to_global(root_link.segment.curve.get_point_position(0))
+		else:
+			t.origin = root_link.segment.to_global(root_link.segment.curve.get_point_position(root_link.segment.curve.point_count - 1))
+		t = t.rotated_local(Vector3.UP, Vector3.FORWARD.angle_to(root_link.segment.to_global(root_link.direction())))
+		return t
+
+@onready var points_overlay_scene: PackedScene = load("res://map/PointsOverlay.tscn")
 
 var platform_segments: Array[PlatformSegment]
 var entrance_segments: Array[EntranceSegment]
@@ -99,3 +116,8 @@ func _ready() -> void:
 				node.links.remove_at(1)
 			else:
 				node.root_link = node.links.pop_front()
+
+			var points_overlay: = points_overlay_scene.instantiate()
+			points_overlay.path_node = node
+			add_child(points_overlay)
+			points_overlay.global_transform = node.points_transform()

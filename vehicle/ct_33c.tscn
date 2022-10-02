@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnkc372yuol5j"]
+[gd_scene load_steps=4 format=3 uid="uid://1sdf78la7fuk"]
 
 [ext_resource type="PackedScene" uid="uid://nj4px1ybkr0o" path="res://assets/CT33C.gltf" id="1_vtf8n"]
 [ext_resource type="Texture2D" uid="uid://bedmyo45fqenu" path="res://assets/CT33_UV.png" id="2_a1e00"]

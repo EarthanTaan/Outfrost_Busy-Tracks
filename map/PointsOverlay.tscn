@@ -1,86 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://cbhp1utpvjo2o"]
+[gd_scene load_steps=5 format=3 uid="uid://cbhp1utpvjo2o"]
 
 [ext_resource type="Script" path="res://map/PointsOverlay.gd" id="1_4i1d0"]
 [ext_resource type="Material" uid="uid://csi8qqvuks05g" path="res://material/points_indicator_inactive.tres" id="2_prppk"]
 
-[sub_resource type="Curve3D" id="Curve3D_khmvo"]
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5),
-"tilts": PackedFloat32Array(0, 0)
-}
-point_count = 2
-
-[sub_resource type="Curve3D" id="Curve3D_erpnb"]
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, 0, -5),
-"tilts": PackedFloat32Array(0, 0)
-}
-point_count = 2
-
-[sub_resource type="Curve3D" id="Curve3D_uvfpp"]
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, -5),
-"tilts": PackedFloat32Array(0, 0)
-}
-point_count = 2
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_01ivf"]
 size = Vector3(2.4, 1, 5)
 
+[sub_resource type="BoxMesh" id="BoxMesh_vxx7i"]
+material = ExtResource("2_prppk")
+size = Vector3(0.8, 0.2, 5)
+
 [node name="PointsOverlay" type="Node3D"]
 script = ExtResource("1_4i1d0")
-
-[node name="Indicator1" type="CSGPolygon3D" parent="."]
-flip_faces = true
-polygon = PackedVector2Array(-0.4, 0, -0.4, 0.2, 0.4, 0.2, 0.4, 0)
-mode = 2
-path_node = NodePath("../Path1")
-path_interval_type = 0
-path_interval = 1.0
-path_simplify_angle = 1.0
-path_rotation = 0
-path_local = false
-path_continuous_u = true
-path_u_distance = 1.0
-path_joined = false
-material = ExtResource("2_prppk")
-
-[node name="Indicator2" type="CSGPolygon3D" parent="."]
-polygon = PackedVector2Array(-0.4, 0, -0.4, 0.2, 0.4, 0.2, 0.4, 0)
-mode = 2
-path_node = NodePath("../Path2")
-path_interval_type = 0
-path_interval = 1.0
-path_simplify_angle = 1.0
-path_rotation = 0
-path_local = false
-path_continuous_u = true
-path_u_distance = 1.0
-path_joined = false
-material = ExtResource("2_prppk")
-
-[node name="Indicator3" type="CSGPolygon3D" parent="."]
-polygon = PackedVector2Array(-0.4, 0, -0.4, 0.2, 0.4, 0.2, 0.4, 0)
-mode = 2
-path_node = NodePath("../Path3")
-path_interval_type = 0
-path_interval = 1.0
-path_simplify_angle = 1.0
-path_rotation = 0
-path_local = false
-path_continuous_u = true
-path_u_distance = 1.0
-path_joined = false
-material = ExtResource("2_prppk")
-
-[node name="Path1" type="Path3D" parent="."]
-curve = SubResource("Curve3D_khmvo")
-
-[node name="Path2" type="Path3D" parent="."]
-curve = SubResource("Curve3D_erpnb")
-
-[node name="Path3" type="Path3D" parent="."]
-curve = SubResource("Curve3D_uvfpp")
 
 [node name="Area2" type="Area3D" parent="."]
 
@@ -93,3 +24,18 @@ shape = SubResource("BoxShape3D_01ivf")
 [node name="CollisionShape3d" type="CollisionShape3D" parent="Area3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 0, -2.5)
 shape = SubResource("BoxShape3D_01ivf")
+
+[node name="Indicator1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5)
+cast_shadow = 0
+mesh = SubResource("BoxMesh_vxx7i")
+
+[node name="Indicator2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.92388, 0, 0.382683, 0, 1, 0, -0.382683, 0, 0.92388, -0.9, 0, -2.1)
+cast_shadow = 0
+mesh = SubResource("BoxMesh_vxx7i")
+
+[node name="Indicator3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.92388, 0, -0.382683, 0, 1, 0, 0.382683, 0, 0.92388, 0.9, 0, -2.1)
+cast_shadow = 0
+mesh = SubResource("BoxMesh_vxx7i")

@@ -2,7 +2,7 @@ extends Node3D
 
 @onready var paths: = $Paths
 
-@onready var dummy: = load("res://vehicle/Dummy.tscn")
+@onready var dummy: = load("res://vehicle/CommuterTrain.tscn")
 
 func _ready() -> void:
 	var train: Train = dummy.instantiate()

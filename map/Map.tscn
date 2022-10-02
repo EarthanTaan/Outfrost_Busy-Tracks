@@ -64,7 +64,7 @@ height = 2.0
 script = ExtResource("1_l8pm7")
 
 [node name="Camera3d" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 340, 128, 180)
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 300, 128, 180)
 current = true
 fov = 70.0
 near = 0.5
