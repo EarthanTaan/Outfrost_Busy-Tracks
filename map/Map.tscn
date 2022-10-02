@@ -57,8 +57,8 @@ _data = {
 point_count = 2
 
 [sub_resource type="SphereMesh" id="SphereMesh_d6wyh"]
-radius = 5.0
-height = 10.0
+radius = 1.0
+height = 2.0
 
 [node name="Map" type="Node3D"]
 script = ExtResource("1_l8pm7")
@@ -110,7 +110,11 @@ curve = SubResource("Curve3D_34tis")
 script = ExtResource("6_pif3w")
 
 [node name="MeshInstance3d2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 417, 6, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 370, 0, 39)
+mesh = SubResource("SphereMesh_d6wyh")
+
+[node name="MeshInstance3d3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 245, 0, 37)
 mesh = SubResource("SphereMesh_d6wyh")
 
 [node name="DirectionalLight3d" type="DirectionalLight3D" parent="."]

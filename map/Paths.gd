@@ -1,16 +1,11 @@
 extends Node3D
 
-enum PathSide {
-	Begin,
-	End,
-}
-
 class Link:
 	var segment: Segment
-	var side: PathSide
+	var side: Segment.Side
 	var other_node: PathNode
 
-	func _init(segment: Segment, side: PathSide, other_node: PathNode):
+	func _init(segment: Segment, side: Segment.Side, other_node: PathNode):
 		self.segment = segment
 		self.side = side
 		self.other_node = other_node
@@ -24,12 +19,12 @@ class Link:
 
 	func side_str() -> String:
 		match side:
-			PathSide.Begin: return "Begin"
-			PathSide.End: return "End"
+			Segment.Side.Begin: return "Begin"
+			Segment.Side.End: return "End"
 			_: return "Unknown"
 
 	func direction() -> Vector3:
-		if side == PathSide.Begin:
+		if side == Segment.Side.Begin:
 			return (segment.curve.get_point_out(0) - segment.curve.get_point_position(0)).normalized()
 		else:
 			var idx: = segment.curve.point_count - 1
@@ -71,8 +66,8 @@ func _ready() -> void:
 		var node1 = graph.get(begin_pos, PathNode.new())
 		var node2 = graph.get(end_pos, PathNode.new())
 
-		node1.links.append(Link.new(segment, PathSide.Begin, node2))
-		node2.links.append(Link.new(segment, PathSide.End, node1))
+		node1.links.append(Link.new(segment, Segment.Side.Begin, node2))
+		node2.links.append(Link.new(segment, Segment.Side.End, node1))
 
 		graph[begin_pos] = node1
 		graph[end_pos] = node2
