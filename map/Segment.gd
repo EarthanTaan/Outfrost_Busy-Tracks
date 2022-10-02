@@ -8,3 +8,6 @@ enum Side {
 
 var begin_node
 var end_node
+
+var begin_signal_clear: bool = false
+var end_signal_clear: bool = false

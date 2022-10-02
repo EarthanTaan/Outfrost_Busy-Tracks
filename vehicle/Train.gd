@@ -7,6 +7,7 @@ enum RunState {
 	Idle,
 	Moving,
 	Stopping,
+	Loading,
 }
 
 class CarMovement:
@@ -76,14 +77,19 @@ class CarMovement:
 		direction = new_direction
 
 @export var accel: float = 2.0
+@export var loading_time: float = 30.0
+
+var dest_platform: PlatformSegment = null
+var dest_exit: ExitSegment = null
 
 var max_offset: float = 0.0
-var current: Segment = null
 var dest: Segment = null
 
 var run_state: RunState = RunState.Idle
 var speed: float = 0.0
 var progress: Array[CarMovement] = []
+
+var loading_time_remaining: float = 0.0
 
 func _ready() -> void:
 	for car in get_children():
@@ -104,17 +110,27 @@ func _process(delta: float) -> void:
 			speed -= accel * delta
 			if speed <= 0.0:
 				speed = 0.0
+				if dest == dest_platform:
+					run_state = RunState.Loading
+					loading_time_remaining = loading_time
+				elif dest == dest_exit:
+					destroy_deferred()
+				else:
+					run_state = RunState.Idle
+		RunState.Loading:
+			loading_time_remaining -= delta
+			if loading_time_remaining <= 0.0:
 				run_state = RunState.Idle
 
 	for movement in progress:
 		movement.update(speed, delta)
 
 func spawn(at: Segment) -> void:
-	current = at
+	dest = at
 	for car in get_children():
 		max_offset = maxf(max_offset, car.position.z)
 	for car in get_children():
-		progress.append(CarMovement.new(car, car.position.z - (0.5 * max_offset), current))
+		progress.append(CarMovement.new(car, car.position.z - (0.5 * max_offset), at))
 		car.show.call_deferred()
 
 func go(direction: Segment.Side) -> void:
@@ -122,3 +138,8 @@ func go(direction: Segment.Side) -> void:
 		for movement in progress:
 			movement.direction = direction
 		run_state = RunState.Moving
+
+func destroy_deferred() -> void:
+	for movement in progress:
+		movement.path_follow.queue_free()
+	queue_free()
