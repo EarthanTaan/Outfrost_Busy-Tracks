@@ -10,7 +10,23 @@ extends Node3D
 @onready var indicator2: MeshInstance3D = $Indicator2
 @onready var indicator3: MeshInstance3D = $Indicator3
 
-var path_node
+var path_node:
+	set(node):
+		path_node = node
+		link_idx.clear()
+		if node.links.size() < 2:
+			return
+		var dir0_90: Vector3 = node.links[0].direction().rotated(Vector3.UP, TAU * 0.25)
+		var dir1: Vector3 = node.links[1].direction()
+		if dir0_90.dot(dir1) < 0.0:
+			link_idx[0] = 0
+			link_idx[1] = 1
+		else:
+			link_idx[0] = 1
+			link_idx[1] = 0
+		init_materials()
+
+var link_idx: = {}
 
 func _ready() -> void:
 	area_left.input_event.connect(func(_c, event: InputEvent, _p, _n, _s):
@@ -19,14 +35,29 @@ func _ready() -> void:
 	area_right.input_event.connect(func(_c, event: InputEvent, _p, _n, _s):
 		if event.is_action_pressed("click"):
 			switch_right())
-	indicator1.material_override = indicator_mat_active
-	indicator2.material_override = indicator_mat_active
-	indicator3.material_override = indicator_mat_inactive
+	init_materials()
 
 func switch_left() -> void:
+	if !path_node:
+		return
+	path_node.switch_state = link_idx[0]
 	indicator2.material_override = indicator_mat_active
 	indicator3.material_override = indicator_mat_inactive
 
 func switch_right() -> void:
+	if !path_node:
+		return
+	path_node.switch_state = link_idx[1]
 	indicator2.material_override = indicator_mat_inactive
 	indicator3.material_override = indicator_mat_active
+
+func init_materials() -> void:
+	if !path_node || !indicator1:
+		return
+	indicator1.material_override = indicator_mat_active
+	if path_node.switch_state == link_idx[0]:
+		indicator2.material_override = indicator_mat_active
+		indicator3.material_override = indicator_mat_inactive
+	else:
+		indicator2.material_override = indicator_mat_inactive
+		indicator3.material_override = indicator_mat_active
