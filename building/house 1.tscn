@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhvlywyoewsmd"]
+
+[ext_resource type="Texture2D" uid="uid://cqpdk27fiuntm" path="res://building/house1front.png" id="1_ol1ih"]
+[ext_resource type="Texture2D" uid="uid://bx5psy5fe1k2q" path="res://building/house1side.png" id="2_l25xq"]
+[ext_resource type="Texture2D" uid="uid://bq440h46kbaev" path="res://building/house1roof1.png" id="3_cdbvq"]
+
+[node name="house 1" type="Node3D"]
+
+[node name="Sprite3d" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.07929, 0)
+texture_filter = 0
+texture = ExtResource("1_ol1ih")
+
+[node name="Sprite3d4" type="Sprite3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.07929, -0.806896)
+texture_filter = 0
+texture = ExtResource("1_ol1ih")
+
+[node name="Sprite3d2" type="Sprite3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.272, 1.079, -0.48)
+texture = ExtResource("2_l25xq")
+
+[node name="Sprite3d3" type="Sprite3D" parent="."]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -2.23, 1.079, -0.369255)
+texture = ExtResource("2_l25xq")
+
+[node name="Sprite3d5" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 0, 2.17768, -0.21389)
+texture = ExtResource("3_cdbvq")
