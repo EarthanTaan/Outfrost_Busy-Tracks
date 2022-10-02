@@ -49,6 +49,7 @@ var platform_segments: Array[PlatformSegment]
 var entrance_segments: Array[EntranceSegment]
 var exit_segments: Array[ExitSegment]
 
+# Dictionary[Vector3i, PathNode]
 var graph: Dictionary = {}
 
 func _ready() -> void:
@@ -82,8 +83,6 @@ func _ready() -> void:
 
 		segment.begin_node = node1
 		segment.end_node = node2
-
-#	print(graph)
 
 	for node in graph.values() as Array[PathNode]:
 		if node.links.size() <= 2:
