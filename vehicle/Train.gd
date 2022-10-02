@@ -11,17 +11,21 @@ enum RunState {
 
 class CarMovement:
 	var car: Node3D
+	var offset_from_middle: float
 	var path_follow: PathFollow3D
+	var segment_half_length: float
 	var direction: Segment.Side = Segment.Side.End
 	var flip: bool = false
 
 	func _init(car: Node3D, offset: float, start: Segment) -> void:
 		self.car = car
+		offset_from_middle = offset
 		path_follow = PathFollow3D.new()
 		start.add_child(path_follow)
 		path_follow.loop = false
 		path_follow.rotation_mode = PathFollow3D.ROTATION_ORIENTED
 		path_follow.progress_ratio = 0.5
+		segment_half_length = path_follow.progress
 		path_follow.progress += offset
 
 	func update(speed: float, delta: float) -> void:
@@ -41,6 +45,13 @@ class CarMovement:
 		if flip:
 			car.rotate_y(TAU * 0.5)
 
+	func distance_to_dest(dest: Segment) -> float:
+		var result: = INF
+		var current_segment: = path_follow.get_parent() as Segment
+		if current_segment == dest:
+			result = absf(path_follow.progress - segment_half_length) + absf(offset_from_middle)
+		return result
+
 	func cross_node(path_node, current_segment: Segment) -> void:
 		var next_segment = path_node.route_from(current_segment)
 		if !next_segment:
@@ -48,6 +59,9 @@ class CarMovement:
 
 		current_segment.remove_child(path_follow)
 		next_segment.add_child(path_follow)
+
+		path_follow.progress_ratio = 0.5
+		segment_half_length = path_follow.progress
 
 		var new_direction: Segment.Side
 		if next_segment.begin_node == path_node:
@@ -81,8 +95,16 @@ func _process(delta: float) -> void:
 			pass
 		RunState.Moving:
 			speed = minf(speed + (accel * delta), MAX_SPEED)
+			var min_dist_to_dest: = INF
+			for movement in progress:
+				min_dist_to_dest = minf(min_dist_to_dest, movement.distance_to_dest(dest))
+			if min_dist_to_dest <= 0.5 * (speed * speed / accel):
+				run_state = RunState.Stopping
 		RunState.Stopping:
-			speed = maxf(speed - (accel * delta), 0.0)
+			speed -= accel * delta
+			if speed <= 0.0:
+				speed = 0.0
+				run_state = RunState.Idle
 
 	for movement in progress:
 		movement.update(speed, delta)
