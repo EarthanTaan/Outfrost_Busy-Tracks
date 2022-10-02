@@ -13,6 +13,7 @@ class CarMovement:
 	var car: Node3D
 	var path_follow: PathFollow3D
 	var direction: Segment.Side = Segment.Side.End
+	var flip: bool = false
 
 	func _init(car: Node3D, offset: float, start: Segment) -> void:
 		self.car = car
@@ -37,6 +38,8 @@ class CarMovement:
 					cross_node(current_segment.begin_node, current_segment)
 
 		car.global_transform = path_follow.global_transform
+		if flip:
+			car.rotate_y(TAU * 0.5)
 
 	func cross_node(path_node, current_segment: Segment) -> void:
 		var next_segment = path_node.route_from(current_segment)
@@ -46,12 +49,17 @@ class CarMovement:
 		current_segment.remove_child(path_follow)
 		next_segment.add_child(path_follow)
 
+		var new_direction: Segment.Side
 		if next_segment.begin_node == path_node:
-			direction = Segment.Side.End
+			new_direction = Segment.Side.End
 			path_follow.progress_ratio = 0.0
 		else:
-			direction = Segment.Side.Begin
+			new_direction = Segment.Side.Begin
 			path_follow.progress_ratio = 1.0
+
+		if new_direction != direction:
+			flip = !flip
+		direction = new_direction
 
 @export var accel: float = 2.0
 

@@ -1,0 +1,95 @@
+[gd_scene load_steps=8 format=3 uid="uid://drv6onhnajto7"]
+
+[sub_resource type="Gradient" id="Gradient_pkm81"]
+offsets = PackedFloat32Array(0, 0.011236, 0.983146, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.573838, 0.587212, 0.71875, 1, 0.859375, 0.859375, 0.859375, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_yybom"]
+gradient = SubResource("Gradient_pkm81")
+width = 200
+height = 200
+
+[sub_resource type="Gradient" id="Gradient_u5q7c"]
+offsets = PackedFloat32Array(0, 0.011236, 0.983146, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.573838, 0.587212, 0.71875, 1, 0.859375, 0.859375, 0.859375, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2bntc"]
+gradient = SubResource("Gradient_u5q7c")
+width = 40
+height = 20
+
+[sub_resource type="Gradient" id="Gradient_md6re"]
+offsets = PackedFloat32Array(0, 0.011236, 0.983146, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.573838, 0.587212, 0.71875, 1, 0.859375, 0.859375, 0.859375, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cffjw"]
+gradient = SubResource("Gradient_md6re")
+width = 200
+height = 20
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_k2b64"]
+gradient = SubResource("Gradient_pkm81")
+width = 200
+height = 100
+
+[node name="Node3d" type="Node3D"]
+
+[node name="Sprite3d" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+transparent = false
+double_sided = false
+texture = SubResource("GradientTexture2D_yybom")
+
+[node name="Sprite3d6" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 3.1, 0)
+transparent = false
+double_sided = false
+texture = SubResource("GradientTexture2D_2bntc")
+
+[node name="Sprite3d8" type="Sprite3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.7, 3.1, -1)
+transparent = false
+double_sided = false
+texture = SubResource("GradientTexture2D_cffjw")
+
+[node name="Sprite3d9" type="Sprite3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.3, 3.1, -1)
+transparent = false
+double_sided = false
+texture = SubResource("GradientTexture2D_cffjw")
+
+[node name="Sprite3d7" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 3.1, 0)
+transparent = false
+double_sided = false
+texture = SubResource("GradientTexture2D_2bntc")
+
+[node name="Sprite3d5" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 0, 3.1, -0.5)
+transparent = false
+double_sided = false
+texture = SubResource("GradientTexture2D_k2b64")
+
+[node name="Sprite3d10" type="Sprite3D" parent="."]
+transform = Transform3D(-1, 8.44439e-08, -2.26267e-08, 0, 0.258819, 0.965926, 8.74228e-08, 0.965926, -0.258819, 0, 3.1, -1.5)
+transparent = false
+double_sided = false
+texture = SubResource("GradientTexture2D_k2b64")
+
+[node name="Sprite3d2" type="Sprite3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, 2, -1)
+transparent = false
+double_sided = false
+texture = SubResource("GradientTexture2D_yybom")
+
+[node name="Sprite3d3" type="Sprite3D" parent="."]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -1, 2, -1)
+transparent = false
+double_sided = false
+texture = SubResource("GradientTexture2D_yybom")
+
+[node name="Sprite3d4" type="Sprite3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 2, -2)
+transparent = false
+double_sided = false
+texture = SubResource("GradientTexture2D_yybom")
