@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bvxdxk5xh2k2d"]
+[gd_scene load_steps=16 format=3 uid="uid://bvxdxk5xh2k2d"]
 
 [ext_resource type="Script" path="res://map/Map.gd" id="1_l8pm7"]
 [ext_resource type="Material" uid="uid://bgy0pukxb4bkd" path="res://material/terrain.tres" id="1_tjimc"]
@@ -56,8 +56,19 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="SphereMesh" id="SphereMesh_d6wyh"]
+radius = 5.0
+height = 10.0
+
 [node name="Map" type="Node3D"]
 script = ExtResource("1_l8pm7")
+
+[node name="Camera3d" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 340, 128, 180)
+current = true
+fov = 70.0
+near = 0.5
+far = 5000.0
 
 [node name="MeshInstance3d" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
@@ -69,9 +80,6 @@ mesh = SubResource("BoxMesh_nqkfa")
 
 [node name="Paths" type="Node3D" parent="."]
 script = ExtResource("2_blw77")
-platform_segments = [NodePath("PlatformSegment2"), NodePath("PlatformSegment2")]
-entry_segments = [NodePath("EntranceSegment1")]
-exit_segments = [NodePath("EntranceSegment1")]
 
 [node name="PlatformSegment1" type="Path3D" parent="Paths"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 0, -132)
@@ -100,3 +108,10 @@ script = ExtResource("4_qcdc7")
 [node name="EntranceSegment1" type="Path3D" parent="Paths"]
 curve = SubResource("Curve3D_34tis")
 script = ExtResource("6_pif3w")
+
+[node name="MeshInstance3d2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 417, 6, 0)
+mesh = SubResource("SphereMesh_d6wyh")
+
+[node name="DirectionalLight3d" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.707107, 0.653282, -0.270598, 0, 0.382683, 0.92388, 0.707107, -0.653282, 0.270598, 0, 3, 0)

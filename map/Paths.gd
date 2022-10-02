@@ -42,9 +42,9 @@ class PathNode:
 	func _to_string() -> String:
 		return "{root_link: %s, links: %s}" % [ root_link, links ]
 
-@export var platform_segments: Array[NodePath]
-@export var entry_segments: Array[NodePath]
-@export var exit_segments: Array[NodePath]
+var platform_segments: Array[PlatformSegment]
+var entrance_segments: Array[EntranceSegment]
+var exit_segments: Array[ExitSegment]
 
 var graph: Dictionary = {}
 
@@ -53,6 +53,13 @@ func _ready() -> void:
 		if !(child is Segment):
 			continue
 		var segment: Segment = child
+
+		if segment is PlatformSegment:
+			platform_segments.append(segment as PlatformSegment)
+		if segment is EntranceSegment:
+			entrance_segments.append(segment as EntranceSegment)
+		if segment is ExitSegment:
+			exit_segments.append(segment as ExitSegment)
 
 		if segment.curve.point_count < 2:
 			continue
