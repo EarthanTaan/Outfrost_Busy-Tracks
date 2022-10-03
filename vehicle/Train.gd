@@ -117,10 +117,10 @@ func _process(delta: float) -> void:
 			speed -= accel * delta
 			if speed <= 0.0:
 				speed = 0.0
-				if dest == dest_platform:
+				if dest is PlatformSegment:
 					run_state = RunState.Loading
 					loading_time_remaining = loading_time
-				elif dest == dest_exit:
+				elif dest is ExitSegment:
 					destroy_deferred()
 				else:
 					run_state = RunState.Idle

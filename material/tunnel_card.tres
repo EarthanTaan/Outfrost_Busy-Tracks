@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://crr4myufmcava"]
+
+[ext_resource type="Shader" uid="uid://cdpykt25sq7q7" path="res://material/tunnel_card_shader.tres" id="1_3s7ey"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_3s7ey")
