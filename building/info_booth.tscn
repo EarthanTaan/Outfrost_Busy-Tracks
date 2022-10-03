@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://bimqisghjnm7g"]
+
+[ext_resource type="PackedScene" uid="uid://eajb3o0fnrve" path="res://assets/InfoBooth.gltf" id="1_ftaly"]
+[ext_resource type="Texture2D" uid="uid://ccqy1wxna87vb" path="res://assets/InfoBooth_UV.png" id="2_xubnv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l0tg7"]
+albedo_texture = ExtResource("2_xubnv")
+
+[node name="InfoBooth" instance=ExtResource("1_ftaly")]
+
+[node name="InfoBooth2" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_l0tg7")
