@@ -105,4 +105,5 @@ common/physics_fps=160
 
 [rendering]
 
+anti_aliasing/quality/msaa_3d=2
 environment/default_environment="res://default_env.tres"
