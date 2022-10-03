@@ -17,7 +17,7 @@ gradient = SubResource("Gradient_ry1qn")
 width = 1
 
 [resource]
-albedo_color = Color(0.654902, 0.427451, 0.392157, 1)
+albedo_color = Color(0.475, 0.485833, 0.5, 1)
 metallic_specular = 0.4
 detail_enabled = true
 detail_mask = SubResource("GradientTexture1D_qtqkf")
