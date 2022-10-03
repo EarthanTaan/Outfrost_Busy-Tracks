@@ -12,8 +12,6 @@ func _ready() -> void:
 	train.dest_platform = $Paths/PlatformSegment1
 	train.spawn(paths.entrance_segments[0])
 	trains.append(train)
-	await get_tree().create_timer(2.0).timeout
-	paths.entrance_segments[0].begin_signal_clear = true
 
 func _process(delta: float) -> void:
 	for train in trains:

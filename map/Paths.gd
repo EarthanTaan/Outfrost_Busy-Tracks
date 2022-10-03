@@ -101,6 +101,27 @@ func _ready() -> void:
 		segment.begin_node = node1
 		segment.end_node = node2
 
+	for child in get_children():
+		if !(child is Segment):
+			continue
+		var segment: Segment = child
+
+		if (
+			segment.begin_node
+			&& segment.begin_node.links.size() > 1
+			&& segment.begin_semaphore.is_empty()
+		):
+			segment.begin_signal_clear = true
+			segment.begin_signal_always_clear = true
+
+		if (
+			segment.end_node
+			&& segment.end_node.links.size() > 1
+			&& segment.end_semaphore.is_empty()
+		):
+			segment.end_signal_clear = true
+			segment.end_signal_always_clear = true
+
 	for node in graph.values() as Array[PathNode]:
 		if node.links.size() <= 2:
 			node.root_link = node.links.pop_front()
