@@ -1,4 +1,4 @@
-[gd_scene load_steps=103 format=3 uid="uid://fup8cbio80ln"]
+[gd_scene load_steps=116 format=3 uid="uid://fup8cbio80ln"]
 
 [ext_resource type="Script" path="res://map/Map.gd" id="1_l8pm7"]
 [ext_resource type="Material" uid="uid://bgy0pukxb4bkd" path="res://material/terrain.tres" id="1_tjimc"]
@@ -535,6 +535,97 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="Curve3D" id="Curve3D_jimxv"]
+_data = {
+"points": PackedVector3Array(-29, 0, 0, 29, 0, 0, 121.4, 0, 48.1, -9.4, 0, -1.1, 9.4, 0, 1.1, 174.5, 0, 49.7, -18.4, 0, -4.7, 18.4, 0, 4.7, 228.2, 0, 59.6, -17, 0, -7.1, 17, 0, 7.1, 308.3, 0, 86.4, -13.7, 0, -9.4, 13.7, 0, 9.4, 367.1, 0, 119.7, -22.5, 0, -13.6, 22.5, 0, 13.6, 410.2, 0, 146.9),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0)
+}
+point_count = 6
+
+[sub_resource type="Curve3D" id="Curve3D_lleim"]
+_data = {
+"points": PackedVector3Array(-31, 0, 0, 31, 0, 0, 109, 0, 61.5, -9.3, 0, -1, 9.3, 0, 1, 169.1, 0, 63.6, -10.5, 0, -2.1, 10.5, 0, 2.1, 210.9, 0, 69.8, -11.9, 0, -4.5, 11.9, 0, 4.5, 286.8, 0, 91.2, -9.9, 0, -4.4, 9.9, 0, 4.4, 358.4, 0, 120.9, -17.1, 0, -9.7, 17.1, 0, 9.7, 410.2, 0, 146.9),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0)
+}
+point_count = 6
+
+[sub_resource type="Curve3D" id="Curve3D_n65pl"]
+_data = {
+"points": PackedVector3Array(-12.6, 0, -7, 12.6, 0, 7, 410.2, 0, 146.9, -12.1, 0, -7.5, 12.1, 0, 7.5, 446.6, 0, 168.3, -12.2, 0, -8, 12.2, 0, 8, 477.3, 0, 188),
+"tilts": PackedFloat32Array(0, 0, 0)
+}
+point_count = 3
+
+[sub_resource type="Curve3D" id="Curve3D_m0q5p"]
+_data = {
+"points": PackedVector3Array(-7.2, 0, -4.7, 7.2, 0, 4.7, 477.3, 0, 188, -12.9, 0, 0.3, 12.9, 0, -0.3, 507.8, 0, 196, -8, 0, -6.3, 8, 0, 6.3, 536.2, 0, 203.4),
+"tilts": PackedFloat32Array(0, 0, 0)
+}
+point_count = 3
+
+[sub_resource type="Curve3D" id="Curve3D_dr6ax"]
+_data = {
+"points": PackedVector3Array(-14.6, 0, -9.9, 14.6, 0, 9.9, 477.3, 0, 188, -28.1, 0, -21, 28.1, 0, 21, 558.7, 0, 246),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_tve17"]
+_data = {
+"points": PackedVector3Array(-21.3, 0, 3.3, 21.3, 0, -3.3, 537.4, 0, 6.3, -37, 0, 6, 37, 0, -6, 842, 0, -41),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_w07r5"]
+_data = {
+"points": PackedVector3Array(-36.9, 0, 4.4, 36.9, 0, -4.4, 536.7, 0, 1.4, -33, 0, 5.4, 33, 0, -5.4, 841, 0, -47),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_cg8s6"]
+_data = {
+"points": PackedVector3Array(49, 0, 37, -49, 0, -37, 828, 0, 416, 22.9, 0, 17.5, -22.9, 0, -17.5, 574.8, 0, 223.7),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_jghty"]
+_data = {
+"points": PackedVector3Array(38.5, 0, 29.6, -38.5, 0, -29.6, 821.689, 0, 423.208, 23.7, 0, 18.3, -23.7, 0, -18.3, 570, 0, 229.7),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_1e2jf"]
+_data = {
+"points": PackedVector3Array(-28.2, 0, -21.4, 28.2, 0, 21.4, 558.7, 0, 246, -42.4, 0, -33.2, 42.4, 0, 33.2, 810, 0, 440),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_p8fg2"]
+_data = {
+"points": PackedVector3Array(58, 0, -24, -58, 0, 24, -596.4, 0, 142.3, 39, 0, -16, -39, 0, 16, -865, 0, 253),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_h7gyr"]
+_data = {
+"points": PackedVector3Array(-42, 0, 18, 42, 0, -18, -861, 0, 271, -24, 0, 10, 24, 0, -10, -590.5, 0, 155.9),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_ec0bu"]
+_data = {
+"points": PackedVector3Array(-46, 0, 20, 46, 0, -20, -856.47, 0, 279.811, -46, 0, 20, 46, 0, -20, -588, 0, 163.4),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
 [sub_resource type="BoxMesh" id="BoxMesh_diuf4"]
 material = ExtResource("20_tfert")
 size = Vector3(200, 8, 200)
@@ -577,6 +668,7 @@ environment = ExtResource("2_pqq2f")
 
 [node name="MeshInstance3d" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_2tmmf")
+metadata/_edit_lock_ = true
 
 [node name="Paths" type="Node3D" parent="."]
 script = ExtResource("3_wean6")
@@ -871,6 +963,58 @@ script = ExtResource("4_qcdc7")
 [node name="Segment56" type="Path3D" parent="Paths"]
 curve = SubResource("Curve3D_t4an7")
 script = ExtResource("4_qcdc7")
+
+[node name="Segment57" type="Path3D" parent="Paths"]
+curve = SubResource("Curve3D_jimxv")
+script = ExtResource("4_qcdc7")
+
+[node name="Segment58" type="Path3D" parent="Paths"]
+curve = SubResource("Curve3D_lleim")
+script = ExtResource("4_qcdc7")
+
+[node name="Segment59" type="Path3D" parent="Paths"]
+curve = SubResource("Curve3D_n65pl")
+script = ExtResource("4_qcdc7")
+
+[node name="Segment60" type="Path3D" parent="Paths"]
+curve = SubResource("Curve3D_m0q5p")
+script = ExtResource("4_qcdc7")
+
+[node name="Segment61" type="Path3D" parent="Paths"]
+curve = SubResource("Curve3D_dr6ax")
+script = ExtResource("4_qcdc7")
+
+[node name="ExitSegment4" type="Path3D" parent="Paths"]
+curve = SubResource("Curve3D_tve17")
+script = ExtResource("7_eg27v")
+
+[node name="EntranceSegment4" type="Path3D" parent="Paths"]
+curve = SubResource("Curve3D_w07r5")
+script = ExtResource("6_pif3w")
+
+[node name="EntranceSegment5" type="Path3D" parent="Paths"]
+curve = SubResource("Curve3D_cg8s6")
+script = ExtResource("6_pif3w")
+
+[node name="EntranceSegment6" type="Path3D" parent="Paths"]
+curve = SubResource("Curve3D_jghty")
+script = ExtResource("6_pif3w")
+
+[node name="ExitSegment5" type="Path3D" parent="Paths"]
+curve = SubResource("Curve3D_1e2jf")
+script = ExtResource("7_eg27v")
+
+[node name="ExitSegment6" type="Path3D" parent="Paths"]
+curve = SubResource("Curve3D_p8fg2")
+script = ExtResource("7_eg27v")
+
+[node name="EntranceSegment7" type="Path3D" parent="Paths"]
+curve = SubResource("Curve3D_h7gyr")
+script = ExtResource("6_pif3w")
+
+[node name="EntranceSegment8" type="Path3D" parent="Paths"]
+curve = SubResource("Curve3D_ec0bu")
+script = ExtResource("6_pif3w")
 
 [node name="TrackLayout" type="Node3D" parent="."]
 
