@@ -5,9 +5,13 @@ signal clear()
 
 @onready var ui: Control = $SemaphoreUi
 
+@onready var light_green: Node3D = $MeshInstance3d/MeshInstance3d/Light_Green
+@onready var light_red: Node3D = $MeshInstance3d/MeshInstance3d/Light_Red
+
 func _ready() -> void:
 	$Area3d.input_event.connect(on_area_input_event)
 	$SemaphoreUi/Control/Panel/FakeButton.released.connect(on_button_released)
+	light_green.hide()
 
 func _input(event: InputEvent) -> void:
 	if !(event is InputEventMouseButton):
@@ -34,3 +38,11 @@ func on_area_input_event(camera: Node, event: InputEvent, position: Vector3, _no
 func on_button_released() -> void:
 	clear.emit()
 	ui.hide()
+
+func clear_feedback(clear: bool) -> void:
+	if clear:
+		light_green.show()
+		light_red.hide()
+	else:
+		light_green.hide()
+		light_red.show()

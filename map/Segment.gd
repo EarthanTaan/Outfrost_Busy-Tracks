@@ -14,9 +14,15 @@ enum Side {
 var begin_node
 var end_node
 
-var begin_signal_clear: bool = false
+var begin_signal_clear: bool = false:
+	set(clear):
+		if !begin_semaphore.is_empty():
+			get_node(begin_semaphore).clear_feedback(clear)
 var begin_signal_always_clear: bool = false
-var end_signal_clear: bool = false
+var end_signal_clear: bool = false:
+	set(clear):
+		if !end_semaphore.is_empty():
+			get_node(end_semaphore).clear_feedback(clear)
 var end_signal_always_clear: bool = false
 
 var occupied: bool = false
