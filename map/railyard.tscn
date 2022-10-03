@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://qbj0fgqxml6j"]
+
+[ext_resource type="PackedScene" uid="uid://g17qnx2vdfr8" path="res://assets/Railyard.gltf" id="1_kji6x"]
+
+[node name="Railyard" instance=ExtResource("1_kji6x")]
