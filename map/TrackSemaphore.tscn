@@ -14,12 +14,12 @@ size = Vector3(0.4, 6, 0.4)
 
 [sub_resource type="BoxMesh" id="BoxMesh_ostbv"]
 material = ExtResource("2_61ta3")
-size = Vector3(1, 2.2, 0.4)
+size = Vector3(0.8, 2, 0.4)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_nl3ns"]
 material = ExtResource("3_pb7hh")
-top_radius = 0.2
-bottom_radius = 0.2
+top_radius = 0.16
+bottom_radius = 0.16
 height = 0.1
 radial_segments = 12
 rings = 1
@@ -40,17 +40,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1, 0.4)
 mesh = SubResource("BoxMesh_ostbv")
 
 [node name="Light_Green" type="MeshInstance3D" parent="MeshInstance3d/MeshInstance3d"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.8, 0.2)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.7, 0.2)
 mesh = SubResource("CylinderMesh_nl3ns")
 surface_material_override/0 = ExtResource("3_8fsaj")
 
 [node name="Light_Red" type="MeshInstance3D" parent="MeshInstance3d/MeshInstance3d"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -0.2, 0.2)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -0.1, 0.2)
 mesh = SubResource("CylinderMesh_nl3ns")
 surface_material_override/0 = ExtResource("4_b7gm1")
 
 [node name="Light_Off1" type="MeshInstance3D" parent="MeshInstance3d/MeshInstance3d"]
-transform = Transform3D(0.98, 0, 0, 0, -4.28372e-08, -0.98, 0, 0.98, -4.28372e-08, 0, 0.8, 0.17)
+transform = Transform3D(0.98, 0, 0, 0, -4.28372e-08, -0.98, 0, 0.98, -4.28372e-08, 0, 0.7, 0.17)
 mesh = SubResource("CylinderMesh_nl3ns")
 
 [node name="Light_Off2" type="MeshInstance3D" parent="MeshInstance3d/MeshInstance3d"]
@@ -58,11 +58,11 @@ transform = Transform3D(0.98, 0, 0, 0, -4.28372e-08, -0.98, 0, 0.98, -4.28372e-0
 mesh = SubResource("CylinderMesh_nl3ns")
 
 [node name="Light_Off3" type="MeshInstance3D" parent="MeshInstance3d/MeshInstance3d"]
-transform = Transform3D(0.98, 0, 0, 0, -4.28372e-08, -0.98, 0, 0.98, -4.28372e-08, 0, -0.2, 0.17)
+transform = Transform3D(0.98, 0, 0, 0, -4.28372e-08, -0.98, 0, 0.98, -4.28372e-08, 0, -0.0999999, 0.17)
 mesh = SubResource("CylinderMesh_nl3ns")
 
 [node name="Light_Off4" type="MeshInstance3D" parent="MeshInstance3d/MeshInstance3d"]
-transform = Transform3D(0.98, 0, 0, 0, -4.28372e-08, -0.98, 0, 0.98, -4.28372e-08, 0, -0.7, 0.17)
+transform = Transform3D(0.98, 0, 0, 0, -4.28372e-08, -0.98, 0, 0.98, -4.28372e-08, 0, -0.5, 0.17)
 mesh = SubResource("CylinderMesh_nl3ns")
 
 [node name="Area3d" type="Area3D" parent="."]
@@ -82,14 +82,13 @@ offset_bottom = 400.0
 theme = ExtResource("2_dmt6l")
 
 [node name="Control" type="Control" parent="SemaphoreUi"]
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 0
 offset_left = -100.0
 offset_top = -160.0
 offset_right = 100.0
 
 [node name="ColorRect" type="ColorRect" parent="SemaphoreUi/Control"]
-layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
@@ -103,7 +102,6 @@ rotation = -1.02974
 color = Color(0.14, 0.14, 0.14, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="SemaphoreUi/Control"]
-layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
@@ -119,14 +117,12 @@ scale = Vector2(-1, 1)
 color = Color(0.14, 0.14, 0.14, 1)
 
 [node name="Panel" type="Panel" parent="SemaphoreUi/Control"]
-layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 100.0
 grow_horizontal = 2
 
 [node name="FakeButton" type="ColorRect" parent="SemaphoreUi/Control/Panel"]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -140,7 +136,6 @@ color = Color(0.0588235, 0.6, 0.0588235, 0)
 script = ExtResource("3_i3m3m")
 
 [node name="Label" type="Label" parent="SemaphoreUi/Control/Panel/FakeButton"]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

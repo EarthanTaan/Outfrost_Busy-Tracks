@@ -1,4 +1,4 @@
-[gd_scene load_steps=116 format=3 uid="uid://fup8cbio80ln"]
+[gd_scene load_steps=117 format=3 uid="uid://fup8cbio80ln"]
 
 [ext_resource type="Script" path="res://map/Map.gd" id="1_l8pm7"]
 [ext_resource type="Material" uid="uid://bgy0pukxb4bkd" path="res://material/terrain.tres" id="1_tjimc"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://map/Segment.gd" id="4_qcdc7"]
 [ext_resource type="Script" path="res://map/PlatformSegment.gd" id="4_y0m4m"]
 [ext_resource type="Script" path="res://map/EntranceSegment.gd" id="6_pif3w"]
+[ext_resource type="PackedScene" uid="uid://criq6ra7mgwb0" path="res://map/TrackSemaphore.tscn" id="7_avcn5"]
 [ext_resource type="Script" path="res://map/ExitSegment.gd" id="7_eg27v"]
 [ext_resource type="PackedScene" uid="uid://cx1548b6366u6" path="res://map/railyard.tscn" id="8_mh0s5"]
 [ext_resource type="PackedScene" uid="uid://dhs5mli64px4h" path="res://assets/StationPlatform_InnerCity.gltf" id="9_yrns1"]
@@ -676,18 +677,50 @@ script = ExtResource("3_wean6")
 [node name="PlatformSegment" type="Path3D" parent="Paths"]
 curve = SubResource("Curve3D_2c3vt")
 script = ExtResource("4_y0m4m")
+begin_semaphore = NodePath("TrackSemaphore2")
+end_semaphore = NodePath("TrackSemaphore")
+
+[node name="TrackSemaphore" parent="Paths/PlatformSegment" instance=ExtResource("7_avcn5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 86, 0, -42)
+
+[node name="TrackSemaphore2" parent="Paths/PlatformSegment" instance=ExtResource("7_avcn5")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -87, 0, -47.4)
 
 [node name="PlatformSegment2" type="Path3D" parent="Paths"]
 curve = SubResource("Curve3D_r33kc")
 script = ExtResource("4_y0m4m")
+begin_semaphore = NodePath("TrackSemaphore2")
+end_semaphore = NodePath("TrackSemaphore")
+
+[node name="TrackSemaphore" parent="Paths/PlatformSegment2" instance=ExtResource("7_avcn5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 86, 0, -28.6)
+
+[node name="TrackSemaphore2" parent="Paths/PlatformSegment2" instance=ExtResource("7_avcn5")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -87, 0, -34)
 
 [node name="PlatformSegment3" type="Path3D" parent="Paths"]
 curve = SubResource("Curve3D_vc4fa")
 script = ExtResource("4_y0m4m")
+begin_semaphore = NodePath("TrackSemaphore2")
+end_semaphore = NodePath("TrackSemaphore")
+
+[node name="TrackSemaphore" parent="Paths/PlatformSegment3" instance=ExtResource("7_avcn5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 121, 0, -22)
+
+[node name="TrackSemaphore2" parent="Paths/PlatformSegment3" instance=ExtResource("7_avcn5")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -133, 0, -27.2)
 
 [node name="PlatformSegment4" type="Path3D" parent="Paths"]
 curve = SubResource("Curve3D_b062s")
 script = ExtResource("4_y0m4m")
+begin_semaphore = NodePath("TrackSemaphore2")
+end_semaphore = NodePath("TrackSemaphore")
+
+[node name="TrackSemaphore" parent="Paths/PlatformSegment4" instance=ExtResource("7_avcn5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 143, 0, -9)
+
+[node name="TrackSemaphore2" parent="Paths/PlatformSegment4" instance=ExtResource("7_avcn5")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -133, 0, -14.2)
 
 [node name="Segment" type="Path3D" parent="Paths"]
 curve = SubResource("Curve3D_bahaj")
@@ -704,6 +737,10 @@ script = ExtResource("7_eg27v")
 [node name="EntranceSegment" type="Path3D" parent="Paths"]
 curve = SubResource("Curve3D_gosp6")
 script = ExtResource("6_pif3w")
+end_semaphore = NodePath("TrackSemaphore")
+
+[node name="TrackSemaphore" parent="Paths/EntranceSegment" instance=ExtResource("7_avcn5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -436.4, 0, -18.2)
 
 [node name="Segment3" type="Path3D" parent="Paths"]
 curve = SubResource("Curve3D_a4jho")
@@ -720,10 +757,15 @@ script = ExtResource("7_eg27v")
 [node name="EntranceSegment2" type="Path3D" parent="Paths"]
 curve = SubResource("Curve3D_jehxl")
 script = ExtResource("6_pif3w")
+end_semaphore = NodePath("TrackSemaphore")
+
+[node name="TrackSemaphore" parent="Paths/EntranceSegment2" instance=ExtResource("7_avcn5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 359.3, 0, -47.4)
 
 [node name="Segment5" type="Path3D" parent="Paths"]
 curve = SubResource("Curve3D_fpdvq")
 script = ExtResource("4_qcdc7")
+crossing_segments = [NodePath("../Segment7")]
 
 [node name="Segment6" type="Path3D" parent="Paths"]
 curve = SubResource("Curve3D_53lv5")
@@ -732,6 +774,7 @@ script = ExtResource("4_qcdc7")
 [node name="Segment7" type="Path3D" parent="Paths"]
 curve = SubResource("Curve3D_207ks")
 script = ExtResource("4_qcdc7")
+crossing_segments = [NodePath("../Segment5")]
 
 [node name="ExitSegment3" type="Path3D" parent="Paths"]
 curve = SubResource("Curve3D_si2tw")
@@ -740,6 +783,10 @@ script = ExtResource("7_eg27v")
 [node name="EntranceSegment3" type="Path3D" parent="Paths"]
 curve = SubResource("Curve3D_pudb8")
 script = ExtResource("6_pif3w")
+end_semaphore = NodePath("TrackSemaphore")
+
+[node name="TrackSemaphore" parent="Paths/EntranceSegment3" instance=ExtResource("7_avcn5")]
+transform = Transform3D(-0.827247, 0, 0.561838, 0, 1, 0, -0.561838, 0, -0.827247, 347.6, 0, -115.5)
 
 [node name="Segment8" type="Path3D" parent="Paths"]
 curve = SubResource("Curve3D_pbmfi")
@@ -828,26 +875,74 @@ script = ExtResource("4_qcdc7")
 [node name="PlatformSegment5" type="Path3D" parent="Paths"]
 curve = SubResource("Curve3D_u1xjx")
 script = ExtResource("4_y0m4m")
+begin_semaphore = NodePath("TrackSemaphore2")
+end_semaphore = NodePath("TrackSemaphore")
+
+[node name="TrackSemaphore" parent="Paths/PlatformSegment5" instance=ExtResource("7_avcn5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 143, 0, -4)
+
+[node name="TrackSemaphore2" parent="Paths/PlatformSegment5" instance=ExtResource("7_avcn5")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -153.1, 0, -8.5)
 
 [node name="PlatformSegment6" type="Path3D" parent="Paths"]
 curve = SubResource("Curve3D_iyd8s")
 script = ExtResource("4_y0m4m")
+begin_semaphore = NodePath("TrackSemaphore2")
+end_semaphore = NodePath("TrackSemaphore")
+
+[node name="TrackSemaphore" parent="Paths/PlatformSegment6" instance=ExtResource("7_avcn5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 131, 0, 9.3)
+
+[node name="TrackSemaphore2" parent="Paths/PlatformSegment6" instance=ExtResource("7_avcn5")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -151, 0, 3.9)
 
 [node name="PlatformSegment7" type="Path3D" parent="Paths"]
 curve = SubResource("Curve3D_fd3gr")
 script = ExtResource("4_y0m4m")
+begin_semaphore = NodePath("TrackSemaphore2")
+end_semaphore = NodePath("TrackSemaphore")
+
+[node name="TrackSemaphore" parent="Paths/PlatformSegment7" instance=ExtResource("7_avcn5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 131, 0, 14.8)
+
+[node name="TrackSemaphore2" parent="Paths/PlatformSegment7" instance=ExtResource("7_avcn5")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -151, 0, 9.4)
 
 [node name="PlatformSegment8" type="Path3D" parent="Paths"]
 curve = SubResource("Curve3D_4cm6y")
 script = ExtResource("4_y0m4m")
+begin_semaphore = NodePath("TrackSemaphore2")
+end_semaphore = NodePath("TrackSemaphore")
+
+[node name="TrackSemaphore" parent="Paths/PlatformSegment8" instance=ExtResource("7_avcn5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 131, 0, 28.2)
+
+[node name="TrackSemaphore2" parent="Paths/PlatformSegment8" instance=ExtResource("7_avcn5")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -151, 0, 22.8)
 
 [node name="PlatformSegment9" type="Path3D" parent="Paths"]
 curve = SubResource("Curve3D_00nhj")
 script = ExtResource("4_y0m4m")
+begin_semaphore = NodePath("TrackSemaphore2")
+end_semaphore = NodePath("TrackSemaphore")
+
+[node name="TrackSemaphore" parent="Paths/PlatformSegment9" instance=ExtResource("7_avcn5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 131, 0, 50.8)
+
+[node name="TrackSemaphore2" parent="Paths/PlatformSegment9" instance=ExtResource("7_avcn5")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -141, 0, 45.4)
 
 [node name="PlatformSegment10" type="Path3D" parent="Paths"]
 curve = SubResource("Curve3D_46ujl")
 script = ExtResource("4_y0m4m")
+begin_semaphore = NodePath("TrackSemaphore2")
+end_semaphore = NodePath("TrackSemaphore")
+
+[node name="TrackSemaphore" parent="Paths/PlatformSegment10" instance=ExtResource("7_avcn5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 131, 0, 64.2)
+
+[node name="TrackSemaphore2" parent="Paths/PlatformSegment10" instance=ExtResource("7_avcn5")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -141, 0, 58.8)
 
 [node name="Segment29" type="Path3D" parent="Paths"]
 curve = SubResource("Curve3D_n6n2i")
@@ -991,14 +1086,26 @@ script = ExtResource("7_eg27v")
 [node name="EntranceSegment4" type="Path3D" parent="Paths"]
 curve = SubResource("Curve3D_w07r5")
 script = ExtResource("6_pif3w")
+begin_semaphore = NodePath("TrackSemaphore")
+
+[node name="TrackSemaphore" parent="Paths/EntranceSegment4" instance=ExtResource("7_avcn5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 469, 0, 3.7)
 
 [node name="EntranceSegment5" type="Path3D" parent="Paths"]
 curve = SubResource("Curve3D_cg8s6")
 script = ExtResource("6_pif3w")
+end_semaphore = NodePath("TrackSemaphore")
+
+[node name="TrackSemaphore" parent="Paths/EntranceSegment5" instance=ExtResource("7_avcn5")]
+transform = Transform3D(0.608761, 0, 0.793353, 0, 1, 0, -0.793353, 0, 0.608761, 547.8, 0, 199.7)
 
 [node name="EntranceSegment6" type="Path3D" parent="Paths"]
 curve = SubResource("Curve3D_jghty")
 script = ExtResource("6_pif3w")
+end_semaphore = NodePath("TrackSemaphore")
+
+[node name="TrackSemaphore" parent="Paths/EntranceSegment6" instance=ExtResource("7_avcn5")]
+transform = Transform3D(0.608761, 0, 0.793353, 0, 1, 0, -0.793353, 0, 0.608761, 543, 0, 205.6)
 
 [node name="ExitSegment5" type="Path3D" parent="Paths"]
 curve = SubResource("Curve3D_1e2jf")
@@ -1011,14 +1118,23 @@ script = ExtResource("7_eg27v")
 [node name="EntranceSegment7" type="Path3D" parent="Paths"]
 curve = SubResource("Curve3D_h7gyr")
 script = ExtResource("6_pif3w")
+end_semaphore = NodePath("TrackSemaphore")
+
+[node name="TrackSemaphore" parent="Paths/EntranceSegment7" instance=ExtResource("7_avcn5")]
+transform = Transform3D(0.382683, 0, -0.92388, 0, 1, 0, 0.92388, 0, 0.382683, -577.7, 0, 153.3)
 
 [node name="EntranceSegment8" type="Path3D" parent="Paths"]
 curve = SubResource("Curve3D_ec0bu")
 script = ExtResource("6_pif3w")
+end_semaphore = NodePath("TrackSemaphore")
+
+[node name="TrackSemaphore" parent="Paths/EntranceSegment8" instance=ExtResource("7_avcn5")]
+transform = Transform3D(0.382683, 0, -0.92388, 0, 1, 0, 0.92388, 0, 0.382683, -576.7, 0, 161.3)
 
 [node name="TrackLayout" type="Node3D" parent="."]
 
 [node name="Railyard" parent="TrackLayout" instance=ExtResource("8_mh0s5")]
+metadata/_edit_lock_ = true
 
 [node name="StationStructures" type="Node3D" parent="."]
 
