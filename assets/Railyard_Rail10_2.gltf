@@ -1,0 +1,192 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v3.3.27",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                1
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Sleeper.017",
+            "translation" : [
+                0.001007080078125,
+                0,
+                0
+            ]
+        },
+        {
+            "children" : [
+                0
+            ],
+            "mesh" : 1,
+            "name" : "Rail10_2",
+            "translation" : [
+                477.0160217285156,
+                0.30000001192092896,
+                187.8929901123047
+            ]
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Cube.039",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3
+                }
+            ]
+        },
+        {
+            "name" : "NurbsPath.018",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 4,
+                        "NORMAL" : 5,
+                        "TEXCOORD_0" : 6
+                    },
+                    "indices" : 7
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 19770,
+            "max" : [
+                60.266326904296875,
+                1.7881393432617188e-07,
+                16.70950698852539
+            ],
+            "min" : [
+                -0.7127461433410645,
+                -0.28000015020370483,
+                -0.9660208225250244
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 19770,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 19770,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 29664,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5126,
+            "count" : 506,
+            "max" : [
+                60.22433853149414,
+                0.15000025928020477,
+                16.587276458740234
+            ],
+            "min" : [
+                -0.46101003885269165,
+                -2.980232238769531e-07,
+                -0.6781370043754578
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 5,
+            "componentType" : 5126,
+            "count" : 506,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 6,
+            "componentType" : 5126,
+            "count" : 506,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 7,
+            "componentType" : 5123,
+            "count" : 2496,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 237240,
+            "byteOffset" : 0,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 237240,
+            "byteOffset" : 237240,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 158160,
+            "byteOffset" : 474480,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 59328,
+            "byteOffset" : 632640,
+            "target" : 34963
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 6072,
+            "byteOffset" : 691968,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 6072,
+            "byteOffset" : 698040,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 4048,
+            "byteOffset" : 704112,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 4992,
+            "byteOffset" : 708160,
+            "target" : 34963
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 713152,
+            "uri" : "Railyard_Rail10_2.bin"
+        }
+    ]
+}

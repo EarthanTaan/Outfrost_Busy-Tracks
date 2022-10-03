@@ -35,6 +35,11 @@ _global_script_classes=[{
 "path": "res://map/Segment.gd"
 }, {
 "base": "Node3D",
+"class": &"TrackSemaphore",
+"language": &"GDScript",
+"path": "res://map/TrackSemaphore.gd"
+}, {
+"base": "Node3D",
 "class": &"Train",
 "language": &"GDScript",
 "path": "res://vehicle/Train.gd"
@@ -50,6 +55,7 @@ _global_script_class_icons={
 "Game": "",
 "PlatformSegment": "",
 "Segment": "",
+"TrackSemaphore": "",
 "Train": "",
 "TransitionScreen": ""
 }
@@ -99,4 +105,5 @@ common/physics_fps=160
 
 [rendering]
 
+anti_aliasing/quality/msaa_3d=2
 environment/default_environment="res://default_env.tres"

@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://coa05l0i3ekkd"]
+
+[ext_resource type="PackedScene" uid="uid://x0le87wtluyn" path="res://assets/TimeLCD.gltf" id="1_2gugl"]
+[ext_resource type="Material" uid="uid://1si0b2q0mxy7" path="res://material/platform_display_pole.tres" id="2_0n337"]
+[ext_resource type="Material" uid="uid://s4crha7kprmo" path="res://material/platform_display_lcd.tres" id="3_rrilu"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_8hbvc"]
+material = ExtResource("3_rrilu")
+size = Vector2(0.7, 0.3)
+
+[node name="platform_display" type="Node3D"]
+
+[node name="TimeLCD" parent="." instance=ExtResource("1_2gugl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="TimeSign" parent="TimeLCD" index="0"]
+surface_material_override/0 = ExtResource("2_0n337")
+
+[node name="MeshInstance3d" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.015, 2.2, 0.5)
+cast_shadow = 0
+mesh = SubResource("QuadMesh_8hbvc")
+
+[node name="MeshInstance3d2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.015, 2.2, -0.5)
+cast_shadow = 0
+mesh = SubResource("QuadMesh_8hbvc")
+
+[node name="MeshInstance3d3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -0.015, 2.2, -0.5)
+cast_shadow = 0
+mesh = SubResource("QuadMesh_8hbvc")
+
+[node name="MeshInstance3d4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -0.015, 2.2, 0.5)
+cast_shadow = 0
+mesh = SubResource("QuadMesh_8hbvc")
+
+[editable path="TimeLCD"]
