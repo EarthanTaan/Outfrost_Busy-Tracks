@@ -1,4 +1,4 @@
-[gd_scene load_steps=83 format=3 uid="uid://fup8cbio80ln"]
+[gd_scene load_steps=87 format=3 uid="uid://fup8cbio80ln"]
 
 [ext_resource type="Script" path="res://map/Map.gd" id="1_l8pm7"]
 [ext_resource type="Material" uid="uid://bgy0pukxb4bkd" path="res://material/terrain.tres" id="1_tjimc"]
@@ -22,6 +22,10 @@
 [ext_resource type="PackedScene" uid="uid://coa05l0i3ekkd" path="res://building/platform_display.tscn" id="18_scvjy"]
 [ext_resource type="PackedScene" uid="uid://dhvlywyoewsmd" path="res://building/house 1.tscn" id="19_dlnn2"]
 [ext_resource type="Material" uid="uid://3h0ofrxlqqo8" path="res://material/street.tres" id="20_tfert"]
+[ext_resource type="PackedScene" uid="uid://dc3my2fanvndv" path="res://trees/tree1.tscn" id="22_neqcg"]
+[ext_resource type="PackedScene" uid="uid://dxib5paksdjsh" path="res://building/house2.tscn" id="22_rn578"]
+[ext_resource type="PackedScene" uid="uid://blq02fr42mqyq" path="res://trees/tree2.tscn" id="23_4thrb"]
+[ext_resource type="PackedScene" uid="uid://bn0qo6nqhs17l" path="res://building/house3.tscn" id="23_87cnu"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_2tmmf"]
 material = ExtResource("1_tjimc")
@@ -803,6 +807,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -164.6, 5.5, -65)
 [node name="house 3" parent="Backdrop" instance=ExtResource("19_dlnn2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.600006, 5.5, -161)
 
+[node name="tree1" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 84.4, 5.5, -73)
+
+[node name="tree2" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 105.4, 5.5, -70)
+
 [node name="house 4" parent="Backdrop" instance=ExtResource("19_dlnn2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.600006, 5.5, 86)
 
@@ -812,12 +822,61 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92.6, 5.5, 86)
 [node name="house 6" parent="Backdrop" instance=ExtResource("19_dlnn2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91.4, 5.5, 86)
 
+[node name="house2" parent="Backdrop" instance=ExtResource("22_rn578")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71, 5.5, -168)
+
+[node name="house4" parent="Backdrop" instance=ExtResource("22_rn578")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -92, 5.5, -189)
+
+[node name="house3" parent="Backdrop" instance=ExtResource("23_87cnu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 138, 5.5, -168)
+
 [node name="Terrain" type="MeshInstance3D" parent="Backdrop"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -170, 1.5, -155)
 mesh = SubResource("BoxMesh_diuf4")
 
 [node name="Terrain10" type="MeshInstance3D" parent="Backdrop"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 1.5, 179)
+mesh = SubResource("BoxMesh_diuf4")
+
+[node name="Terrain14" type="MeshInstance3D" parent="Backdrop"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91, 1.5, 179)
+mesh = SubResource("BoxMesh_diuf4")
+
+[node name="Terrain17" type="MeshInstance3D" parent="Backdrop"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 679, 1.5, 78)
+mesh = SubResource("BoxMesh_diuf4")
+
+[node name="Terrain18" type="MeshInstance3D" parent="Backdrop"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 679, 1.5, -111)
+mesh = SubResource("BoxMesh_diuf4")
+
+[node name="Terrain19" type="MeshInstance3D" parent="Backdrop"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 581, 1.5, -195)
+mesh = SubResource("BoxMesh_diuf4")
+
+[node name="Terrain20" type="MeshInstance3D" parent="Backdrop"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 443, 1.5, -333)
+mesh = SubResource("BoxMesh_diuf4")
+
+[node name="Terrain15" type="MeshInstance3D" parent="Backdrop"]
+transform = Transform3D(0.92388, 0, -0.382683, 0, 1, 0, 0.382683, 0, 0.92388, 244.7, 1.5, 209.6)
+mesh = SubResource("BoxMesh_diuf4")
+
+[node name="Terrain16" type="MeshInstance3D" parent="Backdrop"]
+transform = Transform3D(0.866026, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866026, 410.7, 1.5, 291.6)
+mesh = SubResource("BoxMesh_diuf4")
+
+[node name="Terrain11" type="MeshInstance3D" parent="Backdrop"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -162, 1.5, 179)
+mesh = SubResource("BoxMesh_diuf4")
+
+[node name="Terrain12" type="MeshInstance3D" parent="Backdrop"]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -332.1, 1.5, 201.5)
+mesh = SubResource("BoxMesh_diuf4")
+
+[node name="Terrain13" type="MeshInstance3D" parent="Backdrop"]
+transform = Transform3D(0.92388, 0, 0.382683, 0, 1, 0, -0.382683, 0, 0.92388, -505.5, 1.5, 260.1)
 mesh = SubResource("BoxMesh_diuf4")
 
 [node name="Terrain6" type="MeshInstance3D" parent="Backdrop"]
@@ -836,12 +895,20 @@ mesh = SubResource("BoxMesh_diuf4")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91, 1.5, -324)
 mesh = SubResource("BoxMesh_diuf4")
 
+[node name="Terrain22" type="MeshInstance3D" parent="Backdrop"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 254, 1.5, -324)
+mesh = SubResource("BoxMesh_diuf4")
+
 [node name="Terrain4" type="MeshInstance3D" parent="Backdrop"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 160, 1.5, -145)
 mesh = SubResource("BoxMesh_a0fvm")
 
 [node name="Terrain5" type="MeshInstance3D" parent="Backdrop"]
 transform = Transform3D(0.737277, 0, 0.67559, 0, 1, 0, -0.67559, 0, 0.737277, 255.5, 1.5, -182.1)
+mesh = SubResource("BoxMesh_a0fvm")
+
+[node name="Terrain21" type="MeshInstance3D" parent="Backdrop"]
+transform = Transform3D(0.737277, 0, 0.67559, 0, 1, 0, -0.67559, 0, 0.737277, 314.5, 1.5, -236.1)
 mesh = SubResource("BoxMesh_a0fvm")
 
 [node name="Terrain2" type="MeshInstance3D" parent="Backdrop"]

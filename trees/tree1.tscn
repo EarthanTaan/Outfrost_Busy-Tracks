@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://dc3my2fanvndv"]
+
+[ext_resource type="Texture2D" uid="uid://cw7g7lriilrmf" path="res://trees/tree1test.png" id="1_ijx6x"]
+
+[node name="tree1" type="Node3D"]
+
+[node name="Scale" type="Node3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+
+[node name="Sprite3d" type="Sprite3D" parent="Scale"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)
+alpha_cut = 1
+texture_filter = 4
+render_priority = 3
+texture = ExtResource("1_ijx6x")
+
+[node name="Sprite3d2" type="Sprite3D" parent="Scale"]
+transform = Transform3D(0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, 0.5, 0, 1.1, 0)
+alpha_cut = 1
+texture_filter = 4
+render_priority = 3
+texture = ExtResource("1_ijx6x")
+
+[node name="Sprite3d3" type="Sprite3D" parent="Scale"]
+transform = Transform3D(-0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, -0.5, 0, 1.1, 0)
+alpha_cut = 1
+texture_filter = 4
+render_priority = 3
+texture = ExtResource("1_ijx6x")

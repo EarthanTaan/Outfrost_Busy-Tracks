@@ -14,6 +14,7 @@ transform = Transform3D(13, 0, 0, 0, 13, 0, 0, 0, 13, 0, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.071, 0.415279)
 shaded = true
 double_sided = false
+alpha_cut = 1
 texture_filter = 4
 render_priority = 3
 texture = ExtResource("1_ol1ih")
@@ -22,6 +23,7 @@ texture = ExtResource("1_ol1ih")
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.029, 1.071, -0.427721)
 shaded = true
 double_sided = false
+alpha_cut = 1
 texture_filter = 4
 render_priority = 3
 texture = ExtResource("1_ol1ih")
@@ -30,20 +32,25 @@ texture = ExtResource("1_ol1ih")
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.26828, 1.071, -0.0607211)
 shaded = true
 double_sided = false
+alpha_cut = 1
 texture_filter = 4
+render_priority = 3
 texture = ExtResource("2_l25xq")
 
 [node name="Sprite3d3" type="Sprite3D" parent="Scale"]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -2.24048, 1.071, 0.0482789)
 shaded = true
 double_sided = false
+alpha_cut = 1
 texture_filter = 4
+render_priority = 3
 texture = ExtResource("2_l25xq")
 
 [node name="Sprite3d5" type="Sprite3D" parent="Scale"]
 transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 0.006, 2.151, 0.208895)
 shaded = true
 double_sided = false
+alpha_cut = 1
 texture_filter = 4
 render_priority = 2
 texture = ExtResource("3_cdbvq")
@@ -52,6 +59,7 @@ texture = ExtResource("3_cdbvq")
 transform = Transform3D(1, 1.45851e-07, -3.90805e-08, 0, 0.258819, 0.965926, -1.50996e-07, 0.965926, -0.258819, 0.006, 2.151, -0.227391)
 shaded = true
 double_sided = false
+alpha_cut = 1
 texture_filter = 4
 render_priority = 2
 texture = ExtResource("3_cdbvq")
@@ -60,6 +68,7 @@ texture = ExtResource("3_cdbvq")
 transform = Transform3D(-4.37114e-08, -1.17462, 0.34202, 0, 0.427525, 0.939693, -1, 5.13441e-08, -1.49502e-08, 2.16828, 2.14857, -0.00662929)
 shaded = true
 double_sided = false
+alpha_cut = 1
 texture_filter = 4
 render_priority = 2
 texture = ExtResource("4_hpjro")
@@ -68,6 +77,7 @@ texture = ExtResource("4_hpjro")
 transform = Transform3D(-4.37114e-08, 3.82137e-15, -1, 8.74228e-08, 1, 0, -1, 8.74228e-08, 4.37114e-08, 1.2675, 1.171, -0.0607211)
 shaded = true
 double_sided = false
+alpha_cut = 1
 texture_filter = 4
 texture = ExtResource("2_l25xq")
 
@@ -75,6 +85,7 @@ texture = ExtResource("2_l25xq")
 transform = Transform3D(-4.37114e-08, 3.82137e-15, -1, 8.74228e-08, 1, 0, -1, 8.74228e-08, 4.37114e-08, -0.381036, 1.171, -0.0607211)
 shaded = true
 double_sided = false
+alpha_cut = 1
 texture_filter = 4
 texture = ExtResource("2_l25xq")
 
@@ -82,6 +93,7 @@ texture = ExtResource("2_l25xq")
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.403709, 1.171, -0.0607211)
 shaded = true
 double_sided = false
+alpha_cut = 1
 texture_filter = 4
 texture = ExtResource("2_l25xq")
 
@@ -89,6 +101,7 @@ texture = ExtResource("2_l25xq")
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.24482, 1.171, -0.0607211)
 shaded = true
 double_sided = false
+alpha_cut = 1
 texture_filter = 4
 texture = ExtResource("2_l25xq")
 
@@ -96,6 +109,7 @@ texture = ExtResource("2_l25xq")
 transform = Transform3D(1.31134e-07, 1.17462, -0.34202, 8.88178e-16, 0.427525, 0.939693, 1, -1.54032e-07, 4.48505e-08, -2.13172, 2.14857, -0.00662929)
 shaded = true
 double_sided = false
+alpha_cut = 1
 texture_filter = 4
 render_priority = 2
 texture = ExtResource("4_hpjro")
@@ -104,22 +118,25 @@ texture = ExtResource("4_hpjro")
 transform = Transform3D(-4.37114e-08, 4.15, 4.37114e-08, 0, -1.81402e-07, 1, 1, 1.81402e-07, 1.91069e-15, -1.63172, 2.20158, -0.00662929)
 shaded = true
 double_sided = false
+alpha_cut = 1
 texture_filter = 4
-render_priority = 4
+render_priority = 3
 texture = ExtResource("4_hpjro")
 
 [node name="Sprite3d14" type="Sprite3D" parent="Scale"]
 transform = Transform3D(-4.37114e-08, 4.15, 4.37114e-08, 0, -1.81402e-07, 1, 1, 1.81402e-07, 1.91069e-15, -0.0134994, 2.20158, -0.00662929)
 shaded = true
 double_sided = false
+alpha_cut = 1
 texture_filter = 4
-render_priority = 4
+render_priority = 3
 texture = ExtResource("4_hpjro")
 
 [node name="Sprite3d15" type="Sprite3D" parent="Scale"]
 transform = Transform3D(-4.37114e-08, 4.15, 4.37114e-08, 0, -1.81402e-07, 1, 1, 1.81402e-07, 1.91069e-15, 1.64174, 2.20158, -0.00662929)
 shaded = true
 double_sided = false
+alpha_cut = 1
 texture_filter = 4
-render_priority = 4
+render_priority = 3
 texture = ExtResource("4_hpjro")

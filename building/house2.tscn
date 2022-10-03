@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxib5paksdjsh"]
+
+[ext_resource type="Texture2D" uid="uid://cy5flfk2b3rex" path="res://building/house2front.png" id="1_o3kcm"]
+[ext_resource type="Texture2D" uid="uid://dcd7l3267jg5u" path="res://building/house2roof.png" id="2_7f4m3"]
+[ext_resource type="Texture2D" uid="uid://ct5a6fwi6aowi" path="res://building/house2side.png" id="3_eqgfg"]
+
+[node name="house2" type="Node3D"]
+
+[node name="Scale" type="Node3D" parent="."]
+transform = Transform3D(13, 0, 0, 0, 13, 0, 0, 0, 13, 0, 0, 0)
+
+[node name="Sprite3d" type="Sprite3D" parent="Scale"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.18, 1)
+shaded = true
+double_sided = false
+alpha_cut = 1
+texture_filter = 4
+render_priority = 3
+texture = ExtResource("1_o3kcm")
+
+[node name="Sprite3d3" type="Sprite3D" parent="Scale"]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 0.009, 1.18, -1.359)
+shaded = true
+double_sided = false
+alpha_cut = 1
+texture_filter = 4
+render_priority = 3
+texture = ExtResource("1_o3kcm")
+
+[node name="Sprite3d2" type="Sprite3D" parent="Scale"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 2.358, -0.18)
+transparent = false
+shaded = true
+double_sided = false
+alpha_cut = 1
+texture_filter = 4
+render_priority = 4
+texture = ExtResource("2_7f4m3")
+
+[node name="Sprite3d4" type="Sprite3D" parent="Scale"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.05251, 1.18, -0.18)
+shaded = true
+double_sided = false
+alpha_cut = 1
+texture_filter = 4
+render_priority = 3
+texture = ExtResource("3_eqgfg")
+
+[node name="Sprite3d5" type="Sprite3D" parent="Scale"]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.055, 1.18, -0.18)
+shaded = true
+double_sided = false
+alpha_cut = 1
+texture_filter = 4
+render_priority = 3
+texture = ExtResource("3_eqgfg")

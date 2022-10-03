@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://blq02fr42mqyq"]
+
+[ext_resource type="Texture2D" uid="uid://bplluvexfna2j" path="res://trees/tree2.png" id="1_plrlc"]
+
+[node name="tree2" type="Node3D"]
+
+[node name="Scale" type="Node3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+
+[node name="Sprite3d" type="Sprite3D" parent="Scale"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.44, 0)
+alpha_cut = 1
+texture_filter = 4
+render_priority = 3
+texture = ExtResource("1_plrlc")
+
+[node name="Sprite3d2" type="Sprite3D" parent="Scale"]
+transform = Transform3D(0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, 0.5, 0, 1.44, 0)
+alpha_cut = 1
+texture_filter = 4
+render_priority = 3
+texture = ExtResource("1_plrlc")
+
+[node name="Sprite3d3" type="Sprite3D" parent="Scale"]
+transform = Transform3D(-0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, -0.5, 0, 1.44, 0)
+alpha_cut = 1
+texture_filter = 4
+render_priority = 3
+texture = ExtResource("1_plrlc")

@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bplluvexfna2j"
-path.s3tc="res://.godot/imported/tree2.png-51d522eeb58b224cb02af64c0ced6ab0.s3tc.ctex"
-path.etc2="res://.godot/imported/tree2.png-51d522eeb58b224cb02af64c0ced6ab0.etc2.ctex"
+uid="uid://cy5flfk2b3rex"
+path.s3tc="res://.godot/imported/house2front.png-9877ef69ab7c0304373b33c20e229105.s3tc.ctex"
+path.etc2="res://.godot/imported/house2front.png-9877ef69ab7c0304373b33c20e229105.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc", "etc2"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://trees/tree2.png"
-dest_files=["res://.godot/imported/tree2.png-51d522eeb58b224cb02af64c0ced6ab0.s3tc.ctex", "res://.godot/imported/tree2.png-51d522eeb58b224cb02af64c0ced6ab0.etc2.ctex"]
+source_file="res://building/house2front.png"
+dest_files=["res://.godot/imported/house2front.png-9877ef69ab7c0304373b33c20e229105.s3tc.ctex", "res://.godot/imported/house2front.png-9877ef69ab7c0304373b33c20e229105.etc2.ctex"]
 
 [params]
 
