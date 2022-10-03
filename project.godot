@@ -62,7 +62,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="LD51"
+config/name="Busy Tracks"
 run/main_scene="res://game/Game.tscn"
 config/features=PackedStringArray("4.0")
 config/icon="res://icon.png"
