@@ -15,12 +15,18 @@
     "nodes" : [
         {
             "mesh" : 0,
-            "name" : "StaionBuilding"
+            "name" : "StaionBuildingA",
+            "rotation" : [
+                0,
+                -1,
+                0,
+                1.6292068494294654e-07
+            ]
         }
     ],
     "meshes" : [
         {
-            "name" : "Cube.001",
+            "name" : "Cube.017",
             "primitives" : [
                 {
                     "attributes" : {
@@ -37,68 +43,68 @@
         {
             "bufferView" : 0,
             "componentType" : 5126,
-            "count" : 2076,
+            "count" : 3412,
             "max" : [
-                71.2320785522461,
+                71.23210906982422,
                 20.170000076293945,
-                12.940001487731934
+                33.23208236694336
             ],
             "min" : [
-                -71.2320785522461,
-                -10,
-                -25.160003662109375
+                -71.23210906982422,
+                -10.000314712524414,
+                -33.23208236694336
             ],
             "type" : "VEC3"
         },
         {
             "bufferView" : 1,
             "componentType" : 5126,
-            "count" : 2076,
+            "count" : 3412,
             "type" : "VEC3"
         },
         {
             "bufferView" : 2,
             "componentType" : 5126,
-            "count" : 2076,
+            "count" : 3412,
             "type" : "VEC2"
         },
         {
             "bufferView" : 3,
             "componentType" : 5123,
-            "count" : 4584,
+            "count" : 7452,
             "type" : "SCALAR"
         }
     ],
     "bufferViews" : [
         {
             "buffer" : 0,
-            "byteLength" : 24912,
+            "byteLength" : 40944,
             "byteOffset" : 0,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 24912,
-            "byteOffset" : 24912,
+            "byteLength" : 40944,
+            "byteOffset" : 40944,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 16608,
-            "byteOffset" : 49824,
+            "byteLength" : 27296,
+            "byteOffset" : 81888,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 9168,
-            "byteOffset" : 66432,
+            "byteLength" : 14904,
+            "byteOffset" : 109184,
             "target" : 34963
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 75600,
-            "uri" : "StaionBuilding.bin"
+            "byteLength" : 124088,
+            "uri" : "StationBuilding.bin"
         }
     ]
 }

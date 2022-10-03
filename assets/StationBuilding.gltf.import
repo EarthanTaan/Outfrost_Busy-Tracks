@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cy88ywtwvirm6"
-path="res://.godot/imported/StaionBuilding.gltf-508c7119cfbc7b131fa982334774a37e.scn"
+uid="uid://d2chaj0bbn4tr"
+path="res://.godot/imported/StationBuilding.gltf-9a3123703f1be2721a1cfeb52349c962.scn"
 
 [deps]
 
-source_file="res://assets/StaionBuilding.gltf"
-dest_files=["res://.godot/imported/StaionBuilding.gltf-508c7119cfbc7b131fa982334774a37e.scn"]
+source_file="res://assets/StationBuilding.gltf"
+dest_files=["res://.godot/imported/StationBuilding.gltf-9a3123703f1be2721a1cfeb52349c962.scn"]
 
 [params]
 
@@ -18,7 +18,7 @@ nodes/root_name="Scene Root"
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 meshes/ensure_tangents=true
-meshes/generate_lods=true
+meshes/generate_lods=false
 meshes/create_shadow_meshes=true
 meshes/light_baking=1
 meshes/lightmap_texel_size=0.2
