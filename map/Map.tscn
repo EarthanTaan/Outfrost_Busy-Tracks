@@ -1,8 +1,9 @@
-[gd_scene load_steps=44 format=3 uid="uid://fup8cbio80ln"]
+[gd_scene load_steps=45 format=3 uid="uid://fup8cbio80ln"]
 
 [ext_resource type="Script" path="res://map/Map.gd" id="1_l8pm7"]
 [ext_resource type="Material" uid="uid://bgy0pukxb4bkd" path="res://material/terrain.tres" id="1_tjimc"]
 [ext_resource type="Environment" uid="uid://c34dco8b4sy14" path="res://map/map_env.tres" id="2_pqq2f"]
+[ext_resource type="Script" path="res://map/CameraPivot.gd" id="2_ri0d4"]
 [ext_resource type="Script" path="res://map/Paths.gd" id="3_wean6"]
 [ext_resource type="Script" path="res://map/Segment.gd" id="4_qcdc7"]
 [ext_resource type="Script" path="res://map/PlatformSegment.gd" id="4_y0m4m"]
@@ -168,12 +169,17 @@ edge_fade = 0.585634
 [node name="Map" type="Node3D"]
 script = ExtResource("1_l8pm7")
 
-[node name="Camera3d" type="Camera3D" parent="."]
-transform = Transform3D(-4.37114e-08, -0.573576, 0.819152, 0, 0.819152, 0.573576, -1, 2.50718e-08, -3.58063e-08, -337, 23, -24)
+[node name="CameraPivot" type="Node3D" parent="."]
+transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 43, 0, 21)
+script = ExtResource("2_ri0d4")
+movement_aabb = Rect2(-360, -60, 800, 160)
+
+[node name="Camera3d" type="Camera3D" parent="CameraPivot"]
+transform = Transform3D(1, 0, 0, 0, 0.819152, 0.573576, 0, -0.573576, 0.819152, 0, 9, 12)
 current = true
 fov = 65.0
 near = 0.5
-far = 5000.0
+far = 3000.0
 
 [node name="DirectionalLight3d" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.707107, 0.653282, -0.270598, 0, 0.382683, 0.92388, 0.707107, -0.653282, 0.270598, 0, 153, 0)
