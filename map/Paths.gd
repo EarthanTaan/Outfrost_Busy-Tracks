@@ -25,10 +25,15 @@ class Link:
 
 	func direction() -> Vector3:
 		if side == Segment.Side.Begin:
-			return (segment.curve.get_point_out(0) - segment.curve.get_point_position(0)).normalized()
+			var point_out: = segment.curve.get_point_out(0)
+			if point_out == Vector3.ZERO:
+				return Vector3.RIGHT
+			return point_out.normalized()
 		else:
-			var idx: = segment.curve.point_count - 1
-			return (segment.curve.get_point_in(idx) - segment.curve.get_point_position(idx)).normalized()
+			var point_in: = segment.curve.get_point_in(segment.curve.point_count - 1)
+			if point_in == Vector3.ZERO:
+				return Vector3.RIGHT
+			return point_in.normalized()
 
 class PathNode:
 	var root_link: Link
@@ -57,7 +62,7 @@ class PathNode:
 			t.origin = root_link.segment.to_global(root_link.segment.curve.get_point_position(0))
 		else:
 			t.origin = root_link.segment.to_global(root_link.segment.curve.get_point_position(root_link.segment.curve.point_count - 1))
-		t = t.rotated_local(Vector3.UP, Vector3.FORWARD.angle_to(root_link.segment.to_global(root_link.direction())))
+		t = t.rotated_local(Vector3.UP, - Vector3.FORWARD.angle_to(root_link.segment.to_global(root_link.direction())))
 		return t
 
 @onready var points_overlay_scene: PackedScene = load("res://map/PointsOverlay.tscn")
@@ -136,10 +141,10 @@ func _ready() -> void:
 			var dir0: = node.links[0].direction()
 			var dir1: = node.links[1].direction()
 			var dir2: = node.links[2].direction()
-			if dir0.dot(dir1) > 0.0:
+			if dir0.dot(dir1) > 0.7:
 				node.root_link = node.links[2]
 				node.links.remove_at(2)
-			elif dir0.dot(dir2) > 0.0:
+			elif dir0.dot(dir2) > 0.7:
 				node.root_link = node.links[1]
 				node.links.remove_at(1)
 			else:

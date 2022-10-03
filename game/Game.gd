@@ -5,6 +5,7 @@ extends Node
 @onready var transition_screen: TransitionScreen = $UI/TransitionScreen
 
 var debug: RefCounted
+var is_running: bool = false
 
 func _ready() -> void:
 	if OS.has_feature("debug") && FileAccess.file_exists("res://debug.gd"):
@@ -22,7 +23,9 @@ func _process(delta: float) -> void:
 		back_to_menu()
 
 func on_start_game() -> void:
+	is_running = true
 	main_menu.hide()
 
 func back_to_menu() -> void:
+	is_running = false
 	main_menu.show()

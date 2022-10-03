@@ -10,12 +10,13 @@ func _ready() -> void:
 	var train: Train = dummy.instantiate()
 	add_child(train)
 	train.dest_platform = $Paths/PlatformSegment
-	train.spawn(paths.entrance_segments[0])
+	train.spawn($Paths/EntranceSegment2)
 	trains.append(train)
 
 	train = dummy.instantiate()
 	add_child(train)
-	train.spawn($Paths/PlatformSegment2)
+	train.dest_platform = $Paths/PlatformSegment2
+	train.spawn($Paths/EntranceSegment)
 	trains.append(train)
 
 func _process(delta: float) -> void:
