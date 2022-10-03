@@ -1,0 +1,104 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v3.3.27",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "OverPass"
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Cube.094",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 2742,
+            "max" : [
+                17,
+                6.070000171661377,
+                76.18000030517578
+            ],
+            "min" : [
+                -17,
+                -6.854534149169922e-07,
+                -55.81999969482422
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 2742,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 2742,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 5313,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 32904,
+            "byteOffset" : 0,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 32904,
+            "byteOffset" : 32904,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 21936,
+            "byteOffset" : 65808,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 10626,
+            "byteOffset" : 87744,
+            "target" : 34963
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 98372,
+            "uri" : "PlatformOverpass.bin"
+        }
+    ]
+}
