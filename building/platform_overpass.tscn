@@ -1,5 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://cfxntpemqgsbf"]
+[gd_scene load_steps=3 format=3 uid="uid://dqaiukuhra8l6"]
 
-[ext_resource type="PackedScene" uid="uid://cxjy1e2bhqf4g" path="res://assets/PlatformOverpass.gltf" id="1_q8j4m"]
+[ext_resource type="PackedScene" uid="uid://bajl7t2i7sx8f" path="res://assets/PlatformOverpass.gltf" id="1_q8j4m"]
+[ext_resource type="Material" uid="uid://hcj7uj45da68" path="res://material/platform.tres" id="2_ipxkt"]
 
 [node name="PlatformOverpass" instance=ExtResource("1_q8j4m")]
+
+[node name="OverPass" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_ipxkt")

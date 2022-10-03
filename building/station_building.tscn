@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://3elopegk72vo"]
+[gd_scene load_steps=4 format=3 uid="uid://eurfk3bvs2ni"]
 
 [ext_resource type="PackedScene" uid="uid://d2chaj0bbn4tr" path="res://assets/StationBuilding.gltf" id="1_balnp"]
 [ext_resource type="Texture2D" uid="uid://fvdpijldd5yu" path="res://assets/StationBuilding_UV.png" id="2_wfkb1"]
