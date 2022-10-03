@@ -8,10 +8,10 @@ var trains: Array[Train] = []
 
 func _ready() -> void:
 	var train: Train = dummy.instantiate()
-	add_child(train)
-	train.dest_platform = $Paths/PlatformSegment1
-	train.spawn(paths.entrance_segments[0])
-	trains.append(train)
+#	add_child(train)
+#	train.dest_platform = $Paths/PlatformSegment1
+#	train.spawn(paths.entrance_segments[0])
+#	trains.append(train)
 
 	train = dummy.instantiate()
 	add_child(train)
