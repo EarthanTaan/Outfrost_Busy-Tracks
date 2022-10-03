@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cmyhje0055jiq"]
 
 [ext_resource type="Theme" uid="uid://cgpmko4d01n84" path="res://game/ui-theme/theme.tres" id="1"]
-[ext_resource type="PackedScene" uid="uid://bvxdxk5xh2k2d" path="res://map/Map.tscn" id="2_ogjsq"]
+[ext_resource type="PackedScene" uid="uid://fup8cbio80ln" path="res://map/Map.tscn" id="2_ogjsq"]
 [ext_resource type="PackedScene" uid="uid://dmfdkwcu73843" path="res://game/menu/MainMenu.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://bjbey6bjjepho" path="res://game/loading/TransitionScreen.tscn" id="4"]
 [ext_resource type="Script" path="res://game/Game.gd" id="5"]
@@ -20,7 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 1
+mouse_filter = 2
 theme = ExtResource("1")
 
 [node name="MainMenu" parent="UI" instance=ExtResource("3")]
