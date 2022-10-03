@@ -122,6 +122,13 @@ func _ready() -> void:
 			segment.end_signal_clear = true
 			segment.end_signal_always_clear = true
 
+		if !segment.begin_semaphore.is_empty():
+			get_node(segment.begin_semaphore).clear.connect(func():
+				try_clear_signal(segment, Segment.Side.Begin))
+		if !segment.end_semaphore.is_empty():
+			get_node(segment.end_semaphore).clear.connect(func():
+				try_clear_signal(segment, Segment.Side.End))
+
 	for node in graph.values() as Array[PathNode]:
 		if node.links.size() <= 2:
 			node.root_link = node.links.pop_front()
@@ -142,3 +149,26 @@ func _ready() -> void:
 			points_overlay.path_node = node
 			add_child(points_overlay)
 			points_overlay.global_transform = node.points_transform()
+
+func try_clear_signal(segment: Segment, side: Segment.Side) -> void:
+	if (
+		(side == Segment.Side.Begin && segment.begin_signal_clear)
+		|| (segment.end_signal_clear)
+	):
+		return
+
+	var route: Array[Segment] = []
+	var dest: = segment.find_route_dest(side, route)
+	if !dest:
+		return
+
+	for step in route:
+		step.occupied = true
+		for crossing in step.crossing_segments:
+			if !crossing.is_empty():
+				get_node(crossing).occupied = true
+
+	if side == Segment.Side.Begin:
+		segment.begin_signal_clear = true
+	else:
+		segment.end_signal_clear = true

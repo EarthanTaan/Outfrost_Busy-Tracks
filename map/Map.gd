@@ -19,21 +19,12 @@ func _process(delta: float) -> void:
 			continue
 
 		if train.dest.begin_signal_clear:
-			train.dest = find_route_dest(train.dest, train.dest.begin_node)
-			train.go(Segment.Side.Begin)
+			var dest = train.dest.find_route_dest(Segment.Side.Begin)
+			if dest:
+				train.dest = dest
+				train.go(Segment.Side.Begin)
 		elif train.dest.end_signal_clear:
-			train.dest = find_route_dest(train.dest, train.dest.end_node)
-			train.go(Segment.Side.End)
-
-func find_route_dest(start: Segment, last_node) -> Segment:
-	var dest_segment: Segment = last_node.route_from(start)
-	while dest_segment:
-		if dest_segment.begin_node == last_node && dest_segment.end_signal_clear:
-			last_node = dest_segment.end_node
-			dest_segment = dest_segment.end_node.route_from(dest_segment)
-		elif dest_segment.end_node == last_node && dest_segment.begin_signal_clear:
-			last_node = dest_segment.begin_node
-			dest_segment = dest_segment.begin_node.route_from(dest_segment)
-		else:
-			break
-	return dest_segment
+			var dest = train.dest.find_route_dest(Segment.Side.End)
+			if dest:
+				train.dest = dest
+				train.go(Segment.Side.End)
