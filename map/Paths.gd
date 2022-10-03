@@ -123,10 +123,10 @@ func _ready() -> void:
 			segment.end_signal_always_clear = true
 
 		if !segment.begin_semaphore.is_empty():
-			get_node(segment.begin_semaphore).clear.connect(func():
+			segment.get_node(segment.begin_semaphore).clear.connect(func():
 				try_clear_signal(segment, Segment.Side.Begin))
 		if !segment.end_semaphore.is_empty():
-			get_node(segment.end_semaphore).clear.connect(func():
+			segment.get_node(segment.end_semaphore).clear.connect(func():
 				try_clear_signal(segment, Segment.Side.End))
 
 	for node in graph.values() as Array[PathNode]:
@@ -166,7 +166,7 @@ func try_clear_signal(segment: Segment, side: Segment.Side) -> void:
 		step.occupied = true
 		for crossing in step.crossing_segments:
 			if !crossing.is_empty():
-				get_node(crossing).occupied = true
+				step.get_node(crossing).occupied = true
 
 	if side == Segment.Side.Begin:
 		segment.begin_signal_clear = true

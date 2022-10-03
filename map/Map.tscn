@@ -109,7 +109,10 @@ script = ExtResource("4_qcdc7")
 [node name="EntranceSegment1" type="Path3D" parent="Paths"]
 curve = SubResource("Curve3D_34tis")
 script = ExtResource("6_pif3w")
-begin_semaphore = NodePath("../../TrackSemaphore")
+begin_semaphore = NodePath("TrackSemaphore")
+
+[node name="TrackSemaphore" parent="Paths/EntranceSegment1" instance=ExtResource("7_uim0p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 375, 0, 33)
 
 [node name="MeshInstance3d2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 370, 0, 39)
@@ -121,6 +124,3 @@ mesh = SubResource("SphereMesh_d6wyh")
 
 [node name="DirectionalLight3d" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.707107, 0.653282, -0.270598, 0, 0.382683, 0.92388, 0.707107, -0.653282, 0.270598, 0, 3, 0)
-
-[node name="TrackSemaphore" parent="." instance=ExtResource("7_uim0p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 375, 0, 33)

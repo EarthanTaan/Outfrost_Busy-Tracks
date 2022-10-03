@@ -13,6 +13,11 @@ func _ready() -> void:
 	train.spawn(paths.entrance_segments[0])
 	trains.append(train)
 
+	train = dummy.instantiate()
+	add_child(train)
+	train.spawn(paths.platform_segments[1])
+	trains.append(train)
+
 func _process(delta: float) -> void:
 	for train in trains:
 		if train.run_state != Train.RunState.Idle:

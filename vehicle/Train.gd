@@ -22,7 +22,7 @@ class CarMovement:
 		self.car = car
 		offset_from_middle = offset
 		path_follow = PathFollow3D.new()
-		start.add_child(path_follow)
+		start.add_path_follow(path_follow)
 		path_follow.loop = false
 		path_follow.rotation_mode = PathFollow3D.ROTATION_ORIENTED
 		path_follow.progress_ratio = 0.5
@@ -58,8 +58,8 @@ class CarMovement:
 		if !next_segment:
 			return
 
-		current_segment.remove_child(path_follow)
-		next_segment.add_child(path_follow)
+		current_segment.remove_path_follow(path_follow)
+		next_segment.add_path_follow(path_follow)
 
 		path_follow.progress_ratio = 0.5
 		segment_half_length = path_follow.progress
@@ -141,5 +141,6 @@ func go(direction: Segment.Side) -> void:
 
 func destroy_deferred() -> void:
 	for movement in progress:
+		movement.path_follow.get_parent().remove_path_follow(movement.path_follow)
 		movement.path_follow.queue_free()
 	queue_free()

@@ -13,6 +13,9 @@ func _ready() -> void:
 		color = c)
 
 func _input(event: InputEvent) -> void:
+	if !find_parent("SemaphoreUi").visible:
+		return
+
 	if !(event is InputEventMouseButton):
 		return
 

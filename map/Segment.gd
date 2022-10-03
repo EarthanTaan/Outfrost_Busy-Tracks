@@ -6,8 +6,8 @@ enum Side {
 	End,
 }
 
-@export_node_path(TrackSemaphore) var begin_semaphore: NodePath
-@export_node_path(TrackSemaphore) var end_semaphore: NodePath
+@export var begin_semaphore: NodePath
+@export var end_semaphore: NodePath
 
 @export var crossing_segments: Array[NodePath]
 
@@ -20,6 +20,7 @@ var end_signal_clear: bool = false
 var end_signal_always_clear: bool = false
 
 var occupied: bool = false
+var followers: int = 0
 
 func find_route_dest(side: Side, route = null) -> Segment:
 	var last_node
@@ -49,3 +50,20 @@ func find_route_dest(side: Side, route = null) -> Segment:
 		else:
 			break
 	return dest_segment
+
+func add_path_follow(pf: PathFollow3D) -> void:
+	add_child(pf)
+	followers += 1
+	occupied = true
+	for crossing in crossing_segments:
+		if !crossing.is_empty():
+			get_node(crossing).occupied = true
+
+func remove_path_follow(pf: PathFollow3D) -> void:
+	remove_child(pf)
+	followers -= 1
+	if followers == 0:
+		occupied = false
+		for crossing in crossing_segments:
+			if !crossing.is_empty():
+				get_node(crossing).occupied = false
