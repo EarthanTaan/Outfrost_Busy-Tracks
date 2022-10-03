@@ -1,4 +1,4 @@
-[gd_scene load_steps=120 format=3 uid="uid://fup8cbio80ln"]
+[gd_scene load_steps=118 format=3 uid="uid://fup8cbio80ln"]
 
 [ext_resource type="Script" path="res://map/Map.gd" id="1_l8pm7"]
 [ext_resource type="Material" uid="uid://bgy0pukxb4bkd" path="res://material/terrain.tres" id="1_tjimc"]
@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://bqefjy7cia431" path="res://assets/StationPlatform_InterCity4.gltf" id="14_7lgnk"]
 [ext_resource type="PackedScene" uid="uid://eurfk3bvs2ni" path="res://building/station_building.tscn" id="15_ppmh8"]
 [ext_resource type="PackedScene" uid="uid://dqaiukuhra8l6" path="res://building/platform_overpass.tscn" id="16_3h60n"]
-[ext_resource type="PackedScene" uid="uid://bimqisghjnm7g" path="res://building/info_booth.tscn" id="17_grupa"]
+[ext_resource type="PackedScene" path="res://building/info_booth.tscn" id="17_grupa"]
 [ext_resource type="PackedScene" uid="uid://coa05l0i3ekkd" path="res://building/platform_display.tscn" id="18_scvjy"]
 [ext_resource type="PackedScene" uid="uid://dhvlywyoewsmd" path="res://building/house 1.tscn" id="19_dlnn2"]
 [ext_resource type="Material" uid="uid://3h0ofrxlqqo8" path="res://material/street.tres" id="20_tfert"]

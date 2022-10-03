@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://ddrlsohug35ej"]
+[gd_scene load_steps=5 format=3 uid="uid://ddrlsohug35ej"]
 
 [ext_resource type="PackedScene" uid="uid://b7dkelhv6vo5w" path="res://assets/Ms33C.gltf" id="1_73hcn"]
 [ext_resource type="Texture2D" uid="uid://xowlwu410ewu" path="res://vehicle/Ms33C_.png" id="2_o3jcs"]
+[ext_resource type="PackedScene" uid="uid://bpnjtik6jyvle" path="res://vehicle/bogie.tscn" id="3_apata"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ur0ol"]
 albedo_texture = ExtResource("2_o3jcs")
@@ -9,5 +10,11 @@ albedo_texture = ExtResource("2_o3jcs")
 [node name="Ms33C" instance=ExtResource("1_73hcn")]
 
 [node name="Ms33C2" parent="." index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.879624, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1.9, 0)
 surface_material_override/0 = SubResource("StandardMaterial3D_ur0ol")
+
+[node name="Bogie" parent="." index="1" instance=ExtResource("3_apata")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9, 0.6, 0)
+
+[node name="Bogie2" parent="." index="2" instance=ExtResource("3_apata")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9, 0.6, 0)

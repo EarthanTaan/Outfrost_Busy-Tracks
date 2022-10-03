@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://qd3g751mnd62"]
+[gd_scene load_steps=5 format=3 uid="uid://qd3g751mnd62"]
 
 [ext_resource type="PackedScene" uid="uid://cd1hyca817hrn" path="res://assets/Ms23C.gltf" id="1_jrff3"]
 [ext_resource type="Texture2D" uid="uid://c3wuqwq3ohtkw" path="res://vehicle/ms_23c.png" id="2_1bp7b"]
+[ext_resource type="PackedScene" uid="uid://bpnjtik6jyvle" path="res://vehicle/bogie.tscn" id="3_7uxte"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_25851"]
 albedo_texture = ExtResource("2_1bp7b")
@@ -10,4 +11,11 @@ detail_uv_layer = 1
 [node name="Ms23C" instance=ExtResource("1_jrff3")]
 
 [node name="Ms23C2" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9, 0)
 surface_material_override/0 = SubResource("StandardMaterial3D_25851")
+
+[node name="Bogie" parent="." index="1" instance=ExtResource("3_7uxte")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9, 0.6, 0)
+
+[node name="Bogie2" parent="." index="2" instance=ExtResource("3_7uxte")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9, 0.6, 0)

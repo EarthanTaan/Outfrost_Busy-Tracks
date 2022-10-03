@@ -102,6 +102,7 @@ func _ready() -> void:
 		car.hide()
 
 func _process(delta: float) -> void:
+#	DebugOverlay.display(dest.name)
 	match run_state:
 		RunState.Idle:
 			pass
