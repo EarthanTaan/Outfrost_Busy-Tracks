@@ -34,14 +34,13 @@ offset_bottom = 400.0
 theme = ExtResource("2_dmt6l")
 
 [node name="Control" type="Control" parent="SemaphoreUi"]
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 0
 offset_left = -100.0
 offset_top = -160.0
 offset_right = 100.0
 
 [node name="ColorRect" type="ColorRect" parent="SemaphoreUi/Control"]
-layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
@@ -55,7 +54,6 @@ rotation = -1.02974
 color = Color(0.14, 0.14, 0.14, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="SemaphoreUi/Control"]
-layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
@@ -71,14 +69,12 @@ scale = Vector2(-1, 1)
 color = Color(0.14, 0.14, 0.14, 1)
 
 [node name="Panel" type="Panel" parent="SemaphoreUi/Control"]
-layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 100.0
 grow_horizontal = 2
 
 [node name="FakeButton" type="ColorRect" parent="SemaphoreUi/Control/Panel"]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -92,7 +88,6 @@ color = Color(0.0588235, 0.6, 0.0588235, 0)
 script = ExtResource("3_i3m3m")
 
 [node name="Label" type="Label" parent="SemaphoreUi/Control/Panel/FakeButton"]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
