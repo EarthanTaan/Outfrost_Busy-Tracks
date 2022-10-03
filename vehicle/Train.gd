@@ -21,13 +21,19 @@ class CarMovement:
 	func _init(car: Node3D, offset: float, start: Segment) -> void:
 		self.car = car
 		offset_from_middle = offset
-		path_follow = PathFollow3D.new()
+		reinit_path_follower()
 		start.add_path_follow(path_follow)
-		path_follow.loop = false
-		path_follow.rotation_mode = PathFollow3D.ROTATION_ORIENTED
 		path_follow.progress_ratio = 0.5
 		segment_half_length = path_follow.progress
 		path_follow.progress += offset
+
+	func reinit_path_follower() -> void:
+		if path_follow:
+			path_follow.get_parent().remove_path_follow(path_follow)
+			path_follow.queue_free()
+		path_follow = PathFollow3D.new()
+		path_follow.loop = false
+		path_follow.rotation_mode = PathFollow3D.ROTATION_ORIENTED
 
 	func update(speed: float, delta: float) -> void:
 		if speed != 0.0:
@@ -58,7 +64,7 @@ class CarMovement:
 		if !next_segment:
 			return
 
-		current_segment.remove_path_follow(path_follow)
+		reinit_path_follower()
 		next_segment.add_path_follow(path_follow)
 
 		path_follow.progress_ratio = 0.5
