@@ -9,14 +9,14 @@ var trains: Array[Train] = []
 func _ready() -> void:
 	var train: Train = dummy.instantiate()
 	add_child(train)
-	train.dest_platform = $Paths/PlatformSegment
-	train.spawn(paths.entrance_segments[0])
+#	train.dest_platform = $Paths/PlatformSegment
+	train.spawn($Paths/PlatformSegment)
 	trains.append(train)
 
-	train = dummy.instantiate()
-	add_child(train)
-	train.spawn($Paths/PlatformSegment2)
-	trains.append(train)
+#	train = dummy.instantiate()
+#	add_child(train)
+#	train.spawn($Paths/PlatformSegment2)
+#	trains.append(train)
 
 func _process(delta: float) -> void:
 	for train in trains:
