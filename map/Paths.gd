@@ -62,7 +62,7 @@ class PathNode:
 			t.origin = root_link.segment.to_global(root_link.segment.curve.get_point_position(0))
 		else:
 			t.origin = root_link.segment.to_global(root_link.segment.curve.get_point_position(root_link.segment.curve.point_count - 1))
-		t = t.rotated_local(Vector3.UP, - Vector3.FORWARD.angle_to(root_link.segment.to_global(root_link.direction())))
+		t.basis = Basis(Quaternion(Vector3.BACK, root_link.direction()))
 		return t
 
 @onready var points_overlay_scene: PackedScene = load("res://map/PointsOverlay.tscn")

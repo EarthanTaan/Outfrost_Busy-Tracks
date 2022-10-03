@@ -14,28 +14,30 @@ size = Vector3(0.8, 0.2, 5)
 script = ExtResource("1_4i1d0")
 
 [node name="Area2" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
 
 [node name="CollisionShape3d" type="CollisionShape3D" parent="Area2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 0, -2.5)
 shape = SubResource("BoxShape3D_01ivf")
 
 [node name="Area3" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
 
 [node name="CollisionShape3d" type="CollisionShape3D" parent="Area3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 0, -2.5)
 shape = SubResource("BoxShape3D_01ivf")
 
 [node name="Indicator1" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 2.5)
 cast_shadow = 0
 mesh = SubResource("BoxMesh_vxx7i")
 
 [node name="Indicator2" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.92388, 0, 0.382683, 0, 1, 0, -0.382683, 0, 0.92388, -0.9, 0, -2.1)
+transform = Transform3D(0.92388, 0, 0.382683, 0, 1, 0, -0.382683, 0, 0.92388, -0.9, 0.6, -2.1)
 cast_shadow = 0
 mesh = SubResource("BoxMesh_vxx7i")
 
 [node name="Indicator3" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.92388, 0, -0.382683, 0, 1, 0, 0.382683, 0, 0.92388, 0.9, 0, -2.1)
+transform = Transform3D(0.92388, 0, -0.382683, 0, 1, 0, 0.382683, 0, 0.92388, 0.9, 0.6, -2.1)
 cast_shadow = 0
 mesh = SubResource("BoxMesh_vxx7i")
