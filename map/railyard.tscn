@@ -1,0 +1,70 @@
+[gd_scene load_steps=23 format=3 uid="uid://qbj0fgqxml6j"]
+
+[ext_resource type="PackedScene" uid="uid://x562kmcrjlxf" path="res://assets/Railyard_Rail1.gltf" id="1_koplq"]
+[ext_resource type="PackedScene" uid="uid://nk6ehadvvrvl" path="res://assets/Railyard_Rail1_2.gltf" id="2_mf464"]
+[ext_resource type="PackedScene" uid="uid://c1fp2epeolwxp" path="res://assets/Railyard_Rail2.gltf" id="3_d3l6i"]
+[ext_resource type="PackedScene" uid="uid://l16hwmurcmd4" path="res://assets/Railyard_Rail2_2.gltf" id="4_s3q14"]
+[ext_resource type="PackedScene" uid="uid://c16cqc6mp22mn" path="res://assets/Railyard_Rail3.gltf" id="5_pti4j"]
+[ext_resource type="PackedScene" uid="uid://cswcpcyswvjh1" path="res://assets/Railyard_Rail3_3.gltf" id="6_c2ryh"]
+[ext_resource type="PackedScene" uid="uid://coi3cj1hetkfk" path="res://assets/Railyard_Rail4.gltf" id="7_shrvb"]
+[ext_resource type="PackedScene" uid="uid://dhalealb45w5x" path="res://assets/Railyard_Rail4_1.gltf" id="8_p6txa"]
+[ext_resource type="PackedScene" uid="uid://dm1qlfe2vnckg" path="res://assets/Railyard_Rail5.gltf" id="9_l3u5s"]
+[ext_resource type="PackedScene" uid="uid://bv1cmjmwgdp7r" path="res://assets/Railyard_Rail5_1.gltf" id="10_4o8n8"]
+[ext_resource type="PackedScene" uid="uid://bqqikbvn5omte" path="res://assets/Railyard_Rail5_3.gltf" id="11_6ctg0"]
+[ext_resource type="PackedScene" uid="uid://c8vd8ach4f7gb" path="res://assets/Railyard_Rail6.gltf" id="12_bsqdj"]
+[ext_resource type="PackedScene" uid="uid://c1k3ml68esqlp" path="res://assets/Railyard_Rail6_1.gltf" id="13_8y0lp"]
+[ext_resource type="PackedScene" uid="uid://capseydv1ol0n" path="res://assets/Railyard_Rail6_2.gltf" id="14_3beap"]
+[ext_resource type="PackedScene" uid="uid://d0xmmw018sh28" path="res://assets/Railyard_Rail7.gltf" id="15_857qk"]
+[ext_resource type="PackedScene" uid="uid://cuundptkxfbbv" path="res://assets/Railyard_Rail7_1.gltf" id="16_qmidj"]
+[ext_resource type="PackedScene" uid="uid://b7y2edw0g488d" path="res://assets/Railyard_Rail8.gltf" id="17_hew1x"]
+[ext_resource type="PackedScene" uid="uid://cwcldxeqa1dw5" path="res://assets/Railyard_Rail9.gltf" id="18_pjh2j"]
+[ext_resource type="PackedScene" uid="uid://5wd5pt7a0vsp" path="res://assets/Railyard_Rail10.gltf" id="19_hk5n6"]
+[ext_resource type="PackedScene" uid="uid://nu62jughtx8x" path="res://assets/Railyard_Rail10_1.gltf" id="20_qfrwf"]
+[ext_resource type="PackedScene" uid="uid://c22yi4puvmv31" path="res://assets/Railyard_Rail10_2.gltf" id="21_ukngk"]
+[ext_resource type="PackedScene" uid="uid://c8p3ta4hmij8m" path="res://assets/Railyard_Rail11.gltf" id="22_4bc7i"]
+
+[node name="Railyard" type="Node3D"]
+
+[node name="Railyard_Rail1" parent="." instance=ExtResource("1_koplq")]
+
+[node name="Railyard_Rail1_2" parent="." instance=ExtResource("2_mf464")]
+
+[node name="Railyard_Rail2" parent="." instance=ExtResource("3_d3l6i")]
+
+[node name="Railyard_Rail2_2" parent="." instance=ExtResource("4_s3q14")]
+
+[node name="Railyard_Rail3" parent="." instance=ExtResource("5_pti4j")]
+
+[node name="Railyard_Rail3_3" parent="." instance=ExtResource("6_c2ryh")]
+
+[node name="Railyard_Rail4" parent="." instance=ExtResource("7_shrvb")]
+
+[node name="Railyard_Rail4_1" parent="." instance=ExtResource("8_p6txa")]
+
+[node name="Railyard_Rail5" parent="." instance=ExtResource("9_l3u5s")]
+
+[node name="Railyard_Rail5_1" parent="." instance=ExtResource("10_4o8n8")]
+
+[node name="Railyard_Rail5_3" parent="." instance=ExtResource("11_6ctg0")]
+
+[node name="Railyard_Rail6" parent="." instance=ExtResource("12_bsqdj")]
+
+[node name="Railyard_Rail6_1" parent="." instance=ExtResource("13_8y0lp")]
+
+[node name="Railyard_Rail6_2" parent="." instance=ExtResource("14_3beap")]
+
+[node name="Railyard_Rail7" parent="." instance=ExtResource("15_857qk")]
+
+[node name="Railyard_Rail7_1" parent="." instance=ExtResource("16_qmidj")]
+
+[node name="Railyard_Rail8" parent="." instance=ExtResource("17_hew1x")]
+
+[node name="Railyard_Rail9" parent="." instance=ExtResource("18_pjh2j")]
+
+[node name="Railyard_Rail10" parent="." instance=ExtResource("19_hk5n6")]
+
+[node name="Railyard_Rail10_1" parent="." instance=ExtResource("20_qfrwf")]
+
+[node name="Railyard_Rail10_2" parent="." instance=ExtResource("21_ukngk")]
+
+[node name="Railyard_Rail11" parent="." instance=ExtResource("22_4bc7i")]

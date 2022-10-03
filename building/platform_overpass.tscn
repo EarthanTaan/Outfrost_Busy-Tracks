@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfxntpemqgsbf"]
+
+[ext_resource type="PackedScene" uid="uid://cxjy1e2bhqf4g" path="res://assets/PlatformOverpass.gltf" id="1_q8j4m"]
+
+[node name="PlatformOverpass" instance=ExtResource("1_q8j4m")]
