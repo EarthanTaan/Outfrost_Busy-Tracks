@@ -6,6 +6,7 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ur0ol"]
 albedo_texture = ExtResource("2_o3jcs")
+texture_filter = 4
 
 [node name="Ms33C" instance=ExtResource("1_73hcn")]
 

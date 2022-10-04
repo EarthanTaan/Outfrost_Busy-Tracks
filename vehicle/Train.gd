@@ -1,7 +1,7 @@
 class_name Train
 extends Node3D
 
-const MAX_SPEED: float = 15.0 # m/s
+const MAX_SPEED: float = 18.0 # m/s
 
 enum RunState {
 	Idle,
@@ -64,6 +64,11 @@ class CarMovement:
 		if !next_segment:
 			return
 
+		if current_segment.begin_node == path_node && !current_segment.begin_signal_always_clear:
+			current_segment.begin_signal_clear = false
+		if current_segment.end_node == path_node && !current_segment.end_signal_always_clear:
+			current_segment.end_signal_clear = false
+
 		reinit_path_follower()
 		next_segment.add_path_follow(path_follow)
 
@@ -82,7 +87,7 @@ class CarMovement:
 			flip = !flip
 		direction = new_direction
 
-@export var accel: float = 2.0
+@export var accel: float = 2.5
 @export var loading_time: float = 30.0
 
 var dest_platform: PlatformSegment = null

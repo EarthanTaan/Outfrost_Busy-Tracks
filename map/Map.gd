@@ -42,6 +42,7 @@ var spawn_timer: float = SPAWN_INTERVALS[spawn_interval_idx]
 func _ready() -> void:
 	var train: Train = dummy.instantiate()
 	add_child(train)
+	train.tree_exiting.connect(func(): self.trains.erase(train))
 	train.spawn($Paths/PlatformSegment2)
 	trains.append(train)
 
@@ -64,6 +65,8 @@ func _process(delta: float) -> void:
 	spawn_timer -= delta
 	if spawn_timer <= 0.0:
 		spawn_interval_idx += 1
+		if spawn_interval_idx >= SPAWN_INTERVALS.size():
+			return
 		spawn_timer = SPAWN_INTERVALS[spawn_interval_idx]
 		var entrance
 		for i in range(8):
@@ -74,5 +77,6 @@ func _process(delta: float) -> void:
 			return
 		var train: Train = dummy.instantiate()
 		add_child(train)
+		train.tree_exiting.connect(func(): self.trains.erase(train))
 		train.spawn(entrance)
 		trains.append(train)

@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://bqefjy7cia431" path="res://assets/StationPlatform_InterCity4.gltf" id="14_7lgnk"]
 [ext_resource type="PackedScene" uid="uid://eurfk3bvs2ni" path="res://building/station_building.tscn" id="15_ppmh8"]
 [ext_resource type="PackedScene" uid="uid://dqaiukuhra8l6" path="res://building/platform_overpass.tscn" id="16_3h60n"]
-[ext_resource type="PackedScene" path="res://building/info_booth.tscn" id="17_grupa"]
+[ext_resource type="PackedScene" uid="uid://do0825qy75a8h" path="res://building/info_booth.tscn" id="17_grupa"]
 [ext_resource type="PackedScene" uid="uid://coa05l0i3ekkd" path="res://building/platform_display.tscn" id="18_scvjy"]
 [ext_resource type="PackedScene" uid="uid://dhvlywyoewsmd" path="res://building/house 1.tscn" id="19_dlnn2"]
 [ext_resource type="Material" uid="uid://3h0ofrxlqqo8" path="res://material/street.tres" id="20_tfert"]
@@ -1105,7 +1105,7 @@ script = ExtResource("7_eg27v")
 [node name="EntranceSegment4" type="Path3D" parent="Paths"]
 curve = SubResource("Curve3D_w07r5")
 script = ExtResource("6_pif3w")
-begin_semaphore = NodePath("TrackSemaphore")
+end_semaphore = NodePath("TrackSemaphore")
 
 [node name="TrackSemaphore" parent="Paths/EntranceSegment4" instance=ExtResource("7_avcn5")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 469, 0, 3.7)

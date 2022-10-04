@@ -16,11 +16,13 @@ var end_node
 
 var begin_signal_clear: bool = false:
 	set(clear):
+		begin_signal_clear = clear
 		if !begin_semaphore.is_empty():
 			get_node(begin_semaphore).clear_feedback(clear)
 var begin_signal_always_clear: bool = false
 var end_signal_clear: bool = false:
 	set(clear):
+		end_signal_clear = clear
 		if !end_semaphore.is_empty():
 			get_node(end_semaphore).clear_feedback(clear)
 var end_signal_always_clear: bool = false
