@@ -1,4 +1,4 @@
-[gd_scene load_steps=124 format=3 uid="uid://fup8cbio80ln"]
+[gd_scene load_steps=125 format=3 uid="uid://fup8cbio80ln"]
 
 [ext_resource type="Script" path="res://map/Map.gd" id="1_l8pm7"]
 [ext_resource type="Material" uid="uid://bgy0pukxb4bkd" path="res://material/terrain.tres" id="1_tjimc"]
@@ -72,7 +72,7 @@ point_count = 6
 
 [sub_resource type="Curve3D" id="Curve3D_ubi0s"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -71.1, 0, -31.3, 31, 0, 0, -31, 0, 0, -135.1, 0, -31.3, 23.9, 0, 0, -23.9, 0, 0, -206.2, 0, -31.5, 25, 0, -0.9, -25, 0, 0.9, -273.9, 0, -30.3, 22.2, 0, -1.5, -22.2, 0, 1.5, -391.8, 0, -24.2, 12.6, 0, -0.5, -12.6, 0, 0.5, -470.9, 0, -20.1),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -77, 0, -31.3, 31, 0, 0, -31, 0, 0, -135.1, 0, -31.3, 23.9, 0, 0, -23.9, 0, 0, -206.2, 0, -31.5, 25, 0, -0.9, -25, 0, 0.9, -273.9, 0, -30.3, 22.2, 0, -1.5, -22.2, 0, 1.5, -391.8, 0, -24.2, 12.6, 0, -0.5, -12.6, 0, 0.5, -470.9, 0, -20.1),
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0)
 }
 point_count = 6
@@ -638,6 +638,10 @@ size = Vector3(200, 8, 200)
 material = ExtResource("20_tfert")
 size = Vector3(180, 8, 180)
 
+[sub_resource type="BoxMesh" id="BoxMesh_gmysa"]
+material = ExtResource("20_tfert")
+size = Vector3(120, 8, 140)
+
 [sub_resource type="BoxMesh" id="BoxMesh_01gbx"]
 material = ExtResource("29_5qwbt")
 size = Vector3(20, 2, 50)
@@ -664,7 +668,7 @@ script = ExtResource("1_l8pm7")
 [node name="CameraPivot" type="Node3D" parent="."]
 transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 43, 0, 21)
 script = ExtResource("2_ri0d4")
-movement_aabb = Rect2(-420, -60, 920, 160)
+movement_aabb = Rect2(-520, -80, 1040, 280)
 
 [node name="Camera3d" type="Camera3D" parent="CameraPivot"]
 transform = Transform3D(1, 0, 0, 0, 0.819152, 0.573576, 0, -0.573576, 0.819152, 0, 9, 12)
@@ -1331,6 +1335,138 @@ transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107
 [node name="tree7" parent="Backdrop" instance=ExtResource("22_neqcg")]
 transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 6.4, 5.5, 89)
 
+[node name="tree78" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, -605.6, 0, 101)
+
+[node name="tree97" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, -591.6, 0, 49)
+
+[node name="tree98" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, -590.6, 0, 4)
+
+[node name="tree99" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, -567.6, 0, 21)
+
+[node name="tree100" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, -578.6, 0, 44)
+
+[node name="tree101" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, -520.6, 0, 8)
+
+[node name="tree102" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, -555.6, 0, 60)
+
+[node name="tree103" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, -578.6, 0, 87)
+
+[node name="tree104" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, -627.6, 0, 16)
+
+[node name="tree105" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, -588.6, 0, 112)
+
+[node name="tree106" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.991445, 0, -0.130526, 0, 1, 0, 0.130526, 0, -0.991445, -565.6, 0, 101)
+
+[node name="tree107" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.991445, 0, -0.130526, 0, 1, 0, 0.130526, 0, -0.991445, -578.6, 0, 101)
+
+[node name="tree108" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.991445, 0, -0.130526, 0, 1, 0, 0.130526, 0, -0.991445, -624.6, 0, 116)
+
+[node name="tree109" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.991445, 0, -0.130526, 0, 1, 0, 0.130526, 0, -0.991445, -619.6, 0, 133)
+
+[node name="tree110" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.991445, 0, -0.130526, 0, 1, 0, 0.130526, 0, -0.991445, -625.6, 0, 61)
+
+[node name="tree111" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.991445, 0, -0.130526, 0, 1, 0, 0.130526, 0, -0.991445, -626.6, 0, 74)
+
+[node name="tree112" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.991445, 0, -0.130526, 0, 1, 0, 0.130526, 0, -0.991445, -566.6, 0, 53)
+
+[node name="tree113" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.991445, 0, -0.130526, 0, 1, 0, 0.130526, 0, -0.991445, -555.6, 0, 26)
+
+[node name="tree114" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.991445, 0, -0.130526, 0, 1, 0, 0.130526, 0, -0.991445, -600.6, 0, 51)
+
+[node name="tree115" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.991445, 0, -0.130526, 0, 1, 0, 0.130526, 0, -0.991445, -591.6, 0, 22)
+
+[node name="tree116" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.991445, 0, -0.130526, 0, 1, 0, 0.130526, 0, -0.991445, -614.6, 0, 24)
+
+[node name="tree117" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.991445, 0, -0.130526, 0, 1, 0, 0.130526, 0, -0.991445, -626.6, 0, 33)
+
+[node name="tree118" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.991445, 0, -0.130526, 0, 1, 0, 0.130526, 0, -0.991445, -613.6, 0, 40)
+
+[node name="tree119" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.991445, 0, -0.130526, 0, 1, 0, 0.130526, 0, -0.991445, -607.6, 0, 72)
+
+[node name="tree120" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.991445, 0, -0.130526, 0, 1, 0, 0.130526, 0, -0.991445, -592.6, 0, 60)
+
+[node name="tree121" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, -595.6, 0, 74)
+
+[node name="tree122" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, -582.6, 0, 74)
+
+[node name="tree123" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, -541.6, 0, 23)
+
+[node name="tree124" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, -576.6, 0, -4)
+
+[node name="tree125" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, -564.6, 0, 0)
+
+[node name="tree126" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.130526, 0, -0.991445, 0, 1, 0, 0.991445, 0, -0.130526, -550.6, 0, -5)
+
+[node name="tree127" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.130526, 0, -0.991445, 0, 1, 0, 0.991445, 0, -0.130526, -537.6, 0, 2)
+
+[node name="tree128" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.130526, 0, -0.991445, 0, 1, 0, 0.991445, 0, -0.130526, -527.6, 0, -6)
+
+[node name="tree129" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.130526, 0, -0.991445, 0, 1, 0, 0.991445, 0, -0.130526, -600.6, 0, -4)
+
+[node name="tree130" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.130526, 0, -0.991445, 0, 1, 0, 0.991445, 0, -0.130526, -569.6, 0, 74)
+
+[node name="tree131" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.793353, 0, -0.608761, 0, 1, 0, 0.608761, 0, -0.793353, -568.6, 0, 62)
+
+[node name="tree132" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.793353, 0, -0.608761, 0, 1, 0, 0.608761, 0, -0.793353, -550.6, 0, 68)
+
+[node name="tree133" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.793353, 0, -0.608761, 0, 1, 0, 0.608761, 0, -0.793353, -533.6, 0, 13)
+
+[node name="tree134" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.793353, 0, -0.608761, 0, 1, 0, 0.608761, 0, -0.793353, -535.6, 0, 35)
+
+[node name="tree135" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.793353, 0, -0.608761, 0, 1, 0, 0.608761, 0, -0.793353, -552.6, 0, 47)
+
+[node name="tree136" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.793353, 0, -0.608761, 0, 1, 0, 0.608761, 0, -0.793353, -589.6, 0, 98)
+
+[node name="tree137" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.793353, 0, -0.608761, 0, 1, 0, 0.608761, 0, -0.793353, -600.6, 0, 114)
+
+[node name="tree138" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.793353, 0, -0.608761, 0, 1, 0, 0.608761, 0, -0.793353, -618.6, 0, 193)
+
+[node name="tree139" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.5, 0, -0.866026, 0, 1, 0, 0.866026, 0, 0.5, -597.6, 0, 184)
+
 [node name="tree35" parent="Backdrop" instance=ExtResource("22_neqcg")]
 transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, -213.6, 5.5, 133)
 
@@ -1375,6 +1511,264 @@ transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107
 
 [node name="tree33" parent="Backdrop" instance=ExtResource("23_4thrb")]
 transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, -74.6, 5.5, 91)
+
+[node name="tree77" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(-0.92388, 0, 0.382684, 0, 1, 0, -0.382684, 0, -0.92388, -614.6, 0, -1)
+
+[node name="tree79" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(-0.92388, 0, 0.382684, 0, 1, 0, -0.382684, 0, -0.92388, -567.6, 0, 39)
+
+[node name="tree80" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(-0.92388, 0, 0.382684, 0, 1, 0, -0.382684, 0, -0.92388, -602.6, 0, 90)
+
+[node name="tree81" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(-0.92388, 0, 0.382684, 0, 1, 0, -0.382684, 0, -0.92388, -578.6, 0, 10)
+
+[node name="tree82" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(-0.92388, 0, 0.382684, 0, 1, 0, -0.382684, 0, -0.92388, -624.6, 0, 46)
+
+[node name="tree83" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(-0.92388, 0, 0.382684, 0, 1, 0, -0.382684, 0, -0.92388, -629.6, 0, 93)
+
+[node name="tree84" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(-2.98023e-08, 0, -1, 0, 1, 0, 1, 0, -2.98023e-08, -614.6, 0, 86)
+
+[node name="tree85" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(-2.98023e-08, 0, -1, 0, 1, 0, 1, 0, -2.98023e-08, -611.6, 0, 122)
+
+[node name="tree86" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(-2.98023e-08, 0, -1, 0, 1, 0, 1, 0, -2.98023e-08, -618.6, 0, 101)
+
+[node name="tree87" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(-2.98023e-08, 0, -1, 0, 1, 0, 1, 0, -2.98023e-08, -609.6, 0, 60)
+
+[node name="tree88" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(-2.98023e-08, 0, -1, 0, 1, 0, 1, 0, -2.98023e-08, -583.6, 0, 28)
+
+[node name="tree89" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(-0.608762, 0, -0.793354, 0, 1, 0, 0.793354, 0, -0.608762, -603.6, 0, 14)
+
+[node name="tree90" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(-0.608762, 0, -0.793354, 0, 1, 0, 0.793354, 0, -0.608762, -600.6, 0, 38)
+
+[node name="tree91" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(-0.608762, 0, -0.793354, 0, 1, 0, 0.793354, 0, -0.608762, -549.6, 0, 9)
+
+[node name="tree92" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(-0.608762, 0, -0.793354, 0, 1, 0, 0.793354, 0, -0.608762, -580.6, 0, 61)
+
+[node name="tree93" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(-0.608762, 0, -0.793354, 0, 1, 0, 0.793354, 0, -0.608762, -558.6, 0, 83)
+
+[node name="tree94" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(-0.608762, 0, -0.793354, 0, 1, 0, 0.793354, 0, -0.608762, -527.6, 0, 24)
+
+[node name="tree95" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(-0.608762, 0, -0.793354, 0, 1, 0, 0.793354, 0, -0.608762, -536.6, 0, 56)
+
+[node name="tree96" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(-0.608762, 0, -0.793354, 0, 1, 0, 0.793354, 0, -0.608762, -549.6, 0, 37)
+
+[node name="tree140" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.793354, 0, -0.608762, 0, 1, 0, 0.608762, 0, 0.793354, 555.103, 0, 33.0563)
+
+[node name="tree141" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.793354, 0, -0.608762, 0, 1, 0, 0.608762, 0, 0.793354, 548.011, 0, 86.4388)
+
+[node name="tree142" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.793354, 0, -0.608762, 0, 1, 0, 0.608762, 0, 0.793354, 552.893, 0, 131.184)
+
+[node name="tree143" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.793354, 0, -0.608762, 0, 1, 0, 0.608762, 0, 0.793354, 527.871, 0, 117.332)
+
+[node name="tree144" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.793354, 0, -0.608762, 0, 1, 0, 0.608762, 0, 0.793354, 535.774, 0, 93.0928)
+
+[node name="tree145" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.793354, 0, -0.608762, 0, 1, 0, 0.608762, 0, 0.793354, 565.969, 0, 133.355)
+
+[node name="tree146" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.793354, 0, -0.608762, 0, 1, 0, 0.608762, 0, 0.793354, 510.883, 0, 80.2318)
+
+[node name="tree147" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.793354, 0, -0.608762, 0, 1, 0, 0.608762, 0, 0.793354, 530.162, 0, 50.4607)
+
+[node name="tree148" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.793354, 0, -0.608762, 0, 1, 0, 0.608762, 0, 0.793354, 542.813, 0, 51.3693)
+
+[node name="tree196" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.793354, 0, -0.608762, 0, 1, 0, 0.608762, 0, 0.793354, 533.813, 0, -51.6307)
+
+[node name="tree206" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.793354, 0, -0.608762, 0, 1, 0, 0.608762, 0, 0.793354, 538.813, 0, -25.6307)
+
+[node name="tree149" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 515.446, 0, 38.2773)
+
+[node name="tree150" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 528.334, 0, 36.5805)
+
+[node name="tree151" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 522.702, 0, 85.7361)
+
+[node name="tree152" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 515.321, 0, 113.941)
+
+[node name="tree153" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 556.672, 0, 83.2812)
+
+[node name="tree154" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 551.535, 0, 113.208)
+
+[node name="tree155" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 574.077, 0, 108.223)
+
+[node name="tree156" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 570.997, 0, 92.4902)
+
+[node name="tree157" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 560.872, 0, 61.5471)
+
+[node name="tree158" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 547.566, 0, 75.4024)
+
+[node name="tree159" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.991445, 0, -0.130526, 0, 1, 0, 0.130526, 0, 0.991445, 548.713, 0, 61.1305)
+
+[node name="tree160" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.991445, 0, -0.130526, 0, 1, 0, 0.130526, 0, 0.991445, 535.824, 0, 62.8274)
+
+[node name="tree161" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.991445, 0, -0.130526, 0, 1, 0, 0.130526, 0, 0.991445, 501.832, 0, 118.743)
+
+[node name="tree162" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.991445, 0, -0.130526, 0, 1, 0, 0.130526, 0, 0.991445, 527.637, 0, 138.544)
+
+[node name="tree191" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 543.637, 0, 158.544)
+
+[node name="tree192" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 530.637, 0, 150.544)
+
+[node name="tree193" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 532.637, 0, 163.544)
+
+[node name="tree194" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 517.637, 0, 150.544)
+
+[node name="tree195" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 550.637, 0, 186.544)
+
+[node name="tree163" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-4.47035e-08, 0, 1, 0, 1, 0, -1, 0, -4.47035e-08, 566.607, 0, 172.085)
+
+[node name="tree164" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-4.47035e-08, 0, 1, 0, 1, 0, -1, 0, -4.47035e-08, 522.936, 0, 64.5242)
+
+[node name="tree165" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 523.51, 0, 76.5521)
+
+[node name="tree166" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 504.881, 0, 72.9529)
+
+[node name="tree167" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 553.206, 0, 147.701)
+
+[node name="tree168" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 494.317, 0, 107.628)
+
+[node name="tree169" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 509.605, 0, 93.5122)
+
+[node name="tree170" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 539.632, 0, 38.119)
+
+[node name="tree171" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 559.449, 0, 20.8201)
+
+[node name="tree172" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 525.521, 0, 99.4859)
+
+[node name="tree173" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 553.565, 0, 44.3537)
+
+[node name="tree174" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 540.212, 0, 126.802)
+
+[node name="tree175" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(-0.130526, 0, 0.991445, 0, 1, 0, -0.991445, 0, -0.130526, 565.984, 0, 46.7532)
+
+[node name="tree176" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(-0.130526, 0, 0.991445, 0, 1, 0, -0.991445, 0, -0.130526, 567.992, 0, 31.3594)
+
+[node name="tree177" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(-0.130526, 0, 0.991445, 0, 1, 0, -0.991445, 0, -0.130526, 564.421, 0, 73.1834)
+
+[node name="tree178" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(-0.130526, 0, 0.991445, 0, 1, 0, -0.991445, 0, -0.130526, 542.82, 0, 108.303)
+
+[node name="tree197" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.793354, 0, -0.608762, 0, 1, 0, 0.608762, 0, 0.793354, 553.774, 0, -69.9072)
+
+[node name="tree198" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 569.535, 0, -49.7922)
+
+[node name="tree199" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 543.521, 0, -63.5141)
+
+[node name="tree200" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(-0.130526, 0, 0.991445, 0, 1, 0, -0.991445, 0, -0.130526, 560.82, 0, -54.6967)
+
+[node name="tree201" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.5, 0, 0.866026, 0, 1, 0, -0.866026, 0, -0.5, 568.093, 0, -37.5418)
+
+[node name="tree202" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.5, 0, 0.866026, 0, 1, 0, -0.866026, 0, -0.5, 551.515, 0, -18.1725)
+
+[node name="tree203" parent="Backdrop" instance=ExtResource("22_neqcg")]
+transform = Transform3D(-0.991445, 0, 0.130526, 0, 1, 0, -0.130526, 0, -0.991445, 544.652, 0, -42.7875)
+
+[node name="tree204" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(-0.793354, 0, 0.608762, 0, 1, 0, -0.608762, 0, -0.793354, 563.434, 0, -20.1551)
+
+[node name="tree205" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, 550.826, 0, -34.9214)
+
+[node name="tree179" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(0.5, 0, 0.866026, 0, 1, 0, -0.866026, 0, 0.5, 564.476, 0, 119.573)
+
+[node name="tree180" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(0.5, 0, 0.866026, 0, 1, 0, -0.866026, 0, 0.5, 558.369, 0, 96.1699)
+
+[node name="tree181" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(0.5, 0, 0.866026, 0, 1, 0, -0.866026, 0, 0.5, 511.591, 0, 131.579)
+
+[node name="tree182" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(0.5, 0, 0.866026, 0, 1, 0, -0.866026, 0, 0.5, 535.538, 0, 75.9772)
+
+[node name="tree183" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(0.5, 0, 0.866026, 0, 1, 0, -0.866026, 0, 0.5, 510.855, 0, 57.037)
+
+[node name="tree184" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(0.5, 0, 0.866026, 0, 1, 0, -0.866026, 0, 0.5, 567.821, 0, 153.579)
+
+[node name="tree187" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(0.5, 0, 0.866026, 0, 1, 0, -0.866026, 0, 0.5, 548.821, 0, 171.579)
+
+[node name="tree188" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(0.5, 0, 0.866026, 0, 1, 0, -0.866026, 0, 0.5, 567.821, 0, 188.579)
+
+[node name="tree189" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(0.5, 0, 0.866026, 0, 1, 0, -0.866026, 0, 0.5, 541.821, 0, 143.579)
+
+[node name="tree190" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(0.382683, 0, 0.92388, 0, 1, 0, -0.92388, 0, 0.382683, 498.821, 0, 61.5786)
+
+[node name="tree185" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(0.5, 0, 0.866026, 0, 1, 0, -0.866026, 0, 0.5, 492.567, 0, 86.6776)
+
+[node name="tree186" parent="Backdrop" instance=ExtResource("23_4thrb")]
+transform = Transform3D(0.5, 0, 0.866026, 0, 1, 0, -0.866026, 0, 0.5, 507.936, 0, 103.818)
 
 [node name="tree34" parent="Backdrop" instance=ExtResource("23_4thrb")]
 transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, -157.6, 5.5, 135)
@@ -1632,6 +2026,10 @@ transform = Transform3D(-8.9407e-08, 0, -1, 0, 1, 0, 1, 0, -8.9407e-08, -315, 5.
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -170, 1.5, -155)
 mesh = SubResource("BoxMesh_diuf4")
 
+[node name="Terrain37" type="MeshInstance3D" parent="Backdrop"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -170, 1.5, -355)
+mesh = SubResource("BoxMesh_diuf4")
+
 [node name="Terrain10" type="MeshInstance3D" parent="Backdrop"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 1.5, 179)
 mesh = SubResource("BoxMesh_diuf4")
@@ -1641,11 +2039,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91, 1.5, 179)
 mesh = SubResource("BoxMesh_diuf4")
 
 [node name="Terrain17" type="MeshInstance3D" parent="Backdrop"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 679, 1.5, 78)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 679, 1.5, 117)
+mesh = SubResource("BoxMesh_diuf4")
+
+[node name="Terrain41" type="MeshInstance3D" parent="Backdrop"]
+transform = Transform3D(0.793353, 0, -0.608761, 0, 1, 0, 0.608761, 0, 0.793353, 717.6, 1.5, 199)
 mesh = SubResource("BoxMesh_diuf4")
 
 [node name="Terrain18" type="MeshInstance3D" parent="Backdrop"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 679, 1.5, -111)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 679, 1.5, -72)
 mesh = SubResource("BoxMesh_diuf4")
 
 [node name="Terrain19" type="MeshInstance3D" parent="Backdrop"]
@@ -1660,20 +2062,60 @@ mesh = SubResource("BoxMesh_diuf4")
 transform = Transform3D(0.92388, 0, -0.382683, 0, 1, 0, 0.382683, 0, 0.92388, 244.7, 1.5, 209.6)
 mesh = SubResource("BoxMesh_diuf4")
 
+[node name="Terrain29" type="MeshInstance3D" parent="Backdrop"]
+transform = Transform3D(0.92388, 0, -0.382683, 0, 1, 0, 0.382683, 0, 0.92388, 177.7, 1.5, 396.6)
+mesh = SubResource("BoxMesh_diuf4")
+
 [node name="Terrain16" type="MeshInstance3D" parent="Backdrop"]
 transform = Transform3D(0.866026, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866026, 410.7, 1.5, 291.6)
+mesh = SubResource("BoxMesh_diuf4")
+
+[node name="Terrain40" type="MeshInstance3D" parent="Backdrop"]
+transform = Transform3D(0.793354, 0, -0.608762, 0, 1, 0, 0.608762, 0, 0.793354, 565.9, 1.5, 385.1)
+mesh = SubResource("BoxMesh_diuf4")
+
+[node name="Terrain43" type="MeshInstance3D" parent="Backdrop"]
+transform = Transform3D(0.793354, 0, -0.608762, 0, 1, 0, 0.608762, 0, 0.793354, 444.8, 1.5, 542.9)
+mesh = SubResource("BoxMesh_diuf4")
+
+[node name="Terrain30" type="MeshInstance3D" parent="Backdrop"]
+transform = Transform3D(0.866026, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866026, 315.7, 1.5, 460.6)
 mesh = SubResource("BoxMesh_diuf4")
 
 [node name="Terrain11" type="MeshInstance3D" parent="Backdrop"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -162, 1.5, 179)
 mesh = SubResource("BoxMesh_diuf4")
 
+[node name="Terrain27" type="MeshInstance3D" parent="Backdrop"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -162, 1.5, 379)
+mesh = SubResource("BoxMesh_diuf4")
+
+[node name="Terrain28" type="MeshInstance3D" parent="Backdrop"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 1.5, 379)
+mesh = SubResource("BoxMesh_diuf4")
+
 [node name="Terrain12" type="MeshInstance3D" parent="Backdrop"]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -332.1, 1.5, 201.5)
 mesh = SubResource("BoxMesh_diuf4")
 
+[node name="Terrain31" type="MeshInstance3D" parent="Backdrop"]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -278.1, 1.5, 381.5)
+mesh = SubResource("BoxMesh_diuf4")
+
 [node name="Terrain13" type="MeshInstance3D" parent="Backdrop"]
 transform = Transform3D(0.92388, 0, 0.382683, 0, 1, 0, -0.382683, 0, 0.92388, -505.5, 1.5, 260.1)
+mesh = SubResource("BoxMesh_diuf4")
+
+[node name="Terrain32" type="MeshInstance3D" parent="Backdrop"]
+transform = Transform3D(0.92388, 0, 0.382683, 0, 1, 0, -0.382683, 0, 0.92388, -427.5, 1.5, 444.1)
+mesh = SubResource("BoxMesh_diuf4")
+
+[node name="Terrain26" type="MeshInstance3D" parent="Backdrop"]
+transform = Transform3D(0.92388, 0, 0.382683, 0, 1, 0, -0.382683, 0, 0.92388, -689.5, 1.5, 322.1)
+mesh = SubResource("BoxMesh_diuf4")
+
+[node name="Terrain33" type="MeshInstance3D" parent="Backdrop"]
+transform = Transform3D(0.92388, 0, 0.382683, 0, 1, 0, -0.382683, 0, 0.92388, -613.5, 1.5, 506.1)
 mesh = SubResource("BoxMesh_diuf4")
 
 [node name="Terrain6" type="MeshInstance3D" parent="Backdrop"]
@@ -1704,16 +2146,52 @@ mesh = SubResource("BoxMesh_a0fvm")
 transform = Transform3D(0.737277, 0, 0.67559, 0, 1, 0, -0.67559, 0, 0.737277, 255.5, 1.5, -182.1)
 mesh = SubResource("BoxMesh_a0fvm")
 
+[node name="Terrain42" type="MeshInstance3D" parent="Backdrop"]
+transform = Transform3D(0.608761, 0, 0.793353, 0, 1, 0, -0.793353, 0, 0.608761, 718.5, 1.5, 353.9)
+mesh = SubResource("BoxMesh_a0fvm")
+
+[node name="Terrain39" type="MeshInstance3D" parent="Backdrop"]
+transform = Transform3D(0.939692, 0, 0.34202, 0, 1, 0, -0.34202, 0, 0.939692, 512.5, 1.5, -160.1)
+mesh = SubResource("BoxMesh_gmysa")
+
 [node name="Terrain21" type="MeshInstance3D" parent="Backdrop"]
 transform = Transform3D(0.737277, 0, 0.67559, 0, 1, 0, -0.67559, 0, 0.737277, 314.5, 1.5, -236.1)
+mesh = SubResource("BoxMesh_a0fvm")
+
+[node name="Terrain38" type="MeshInstance3D" parent="Backdrop"]
+transform = Transform3D(0.923879, 0, 0.382683, 0, 1, 0, -0.382683, 0, 0.923879, -742.5, 1.5, 95.9)
 mesh = SubResource("BoxMesh_a0fvm")
 
 [node name="Terrain2" type="MeshInstance3D" parent="Backdrop"]
 transform = Transform3D(0.991445, 0, 0.130526, 0, 1, 0, -0.130526, 0, 0.991445, -356, 1.5, -143)
 mesh = SubResource("BoxMesh_diuf4")
 
+[node name="Terrain36" type="MeshInstance3D" parent="Backdrop"]
+transform = Transform3D(0.991445, 0, 0.130526, 0, 1, 0, -0.130526, 0, 0.991445, -356, 1.5, -343)
+mesh = SubResource("BoxMesh_diuf4")
+
 [node name="Terrain3" type="MeshInstance3D" parent="Backdrop"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -541.6, 1.5, -130.9)
+mesh = SubResource("BoxMesh_diuf4")
+
+[node name="Terrain35" type="MeshInstance3D" parent="Backdrop"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -541.6, 1.5, -330.9)
+mesh = SubResource("BoxMesh_diuf4")
+
+[node name="Terrain23" type="MeshInstance3D" parent="Backdrop"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -735.6, 1.5, -130.9)
+mesh = SubResource("BoxMesh_diuf4")
+
+[node name="Terrain34" type="MeshInstance3D" parent="Backdrop"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -735.6, 1.5, -330.9)
+mesh = SubResource("BoxMesh_diuf4")
+
+[node name="Terrain24" type="MeshInstance3D" parent="Backdrop"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -735.6, 1.5, 50.1)
+mesh = SubResource("BoxMesh_diuf4")
+
+[node name="Terrain25" type="MeshInstance3D" parent="Backdrop"]
+transform = Transform3D(0.92388, 0, 0.382683, 0, 1, 0, -0.382683, 0, 0.92388, -785.6, 1.5, 203.1)
 mesh = SubResource("BoxMesh_diuf4")
 
 [node name="Sprite3d" type="Sprite3D" parent="Backdrop"]
@@ -2030,7 +2508,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.05176e-05, -5, 22)
 mesh = SubResource("QuadMesh_nh7ju")
 
 [node name="Tunnel13" type="MeshInstance3D" parent="Backdrop"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -560.7, 8, -21.7)
+transform = Transform3D(-4.37114e-08, -0.0348995, 0.999391, 0, 0.999391, 0.0348995, -1, 1.52551e-09, -4.36848e-08, -560.7, 7.1, -21.7)
 mesh = SubResource("BoxMesh_01gbx")
 
 [node name="MeshInstance3d" type="MeshInstance3D" parent="Backdrop/Tunnel13"]
@@ -2042,7 +2520,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -5, 0)
 mesh = SubResource("BoxMesh_031qe")
 
 [node name="Tunnel14" type="MeshInstance3D" parent="Backdrop"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -610.7, 8, -21.7)
+transform = Transform3D(-4.37114e-08, -0.0348995, 0.999391, 0, 0.999391, 0.0348995, -1, 1.52551e-09, -4.36848e-08, -610.6, 5.35, -21.7)
 mesh = SubResource("BoxMesh_01gbx")
 
 [node name="MeshInstance3d" type="MeshInstance3D" parent="Backdrop/Tunnel14"]
@@ -2114,7 +2592,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.05176e-05, -5, 22)
 mesh = SubResource("QuadMesh_mjavy")
 
 [node name="Tunnel11" type="MeshInstance3D" parent="Backdrop"]
-transform = Transform3D(-0.382683, 0, 0.92388, 0, 1, 0, -0.92388, 0, -0.382683, -659.8, 8, 180.5)
+transform = Transform3D(-0.382683, -0.0322429, 0.923317, 0, 0.999391, 0.0348995, -0.92388, 0.0133555, -0.38245, -659.8, 7.1, 180.5)
 mesh = SubResource("BoxMesh_ysjqt")
 
 [node name="MeshInstance3d" type="MeshInstance3D" parent="Backdrop/Tunnel11"]
@@ -2122,6 +2600,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, -5, 0)
 mesh = SubResource("BoxMesh_031qe")
 
 [node name="MeshInstance3d2" type="MeshInstance3D" parent="Backdrop/Tunnel11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, -5, 0)
+mesh = SubResource("BoxMesh_031qe")
+
+[node name="Tunnel15" type="MeshInstance3D" parent="Backdrop"]
+transform = Transform3D(-0.382683, -0.0483521, 0.922614, 0, 0.99863, 0.052336, -0.92388, 0.0200281, -0.382159, -705.7, 4.9, 199.5)
+mesh = SubResource("BoxMesh_ysjqt")
+
+[node name="MeshInstance3d" type="MeshInstance3D" parent="Backdrop/Tunnel15"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, -5, 0)
+mesh = SubResource("BoxMesh_031qe")
+
+[node name="MeshInstance3d2" type="MeshInstance3D" parent="Backdrop/Tunnel15"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, -5, 0)
 mesh = SubResource("BoxMesh_031qe")
 

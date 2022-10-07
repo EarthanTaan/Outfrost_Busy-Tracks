@@ -8,7 +8,7 @@ const MOVEMENT_SPEED: float = 160.0
 @export var movement_aabb: Rect2
 
 var min_zoom_translation: Vector3 = Vector3(0.0, 63.0, 63.0)
-var min_zoom_rotation: Vector3 = Vector3(-45.0, 0.0, 0.0)
+var min_zoom_rotation: Vector3 = Vector3(-40.0, 0.0, 0.0)
 
 var max_zoom_translation: Vector3 = Vector3(0.0, 9.0, 12.0)
 var max_zoom_rotation: Vector3 = Vector3(-35.0, 0.0, 0.0)
