@@ -401,7 +401,7 @@ point_count = 4
 
 [sub_resource type="Curve3D" id="Curve3D_lgxbh"]
 _data = {
-"points": PackedVector3Array(-7.5, 0, -1.1, 7.5, 0, 1.1, 327.9, 0, -5.2, -7.8, 0, -2.1, 7.8, 0, 2.1, 349.3, 0, 0, -8.4, 0, -1.1, 8.4, 0, 1.1, 372.9, 0, 4.9),
+"points": PackedVector3Array(-7.5, 0, -1.1, 7.5, 0, 1.1, 327.1, 0, -5.3, -7.8, 0, -2.1, 7.8, 0, 2.1, 349.3, 0, 0, -8.4, 0, -1.1, 8.4, 0, 1.1, 372.9, 0, 4.9),
 "tilts": PackedFloat32Array(0, 0, 0)
 }
 point_count = 3

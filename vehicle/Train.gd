@@ -48,7 +48,8 @@ class CarMovement:
 					var current_segment = path_follow.get_parent() as Segment
 					cross_node(current_segment.begin_node, current_segment)
 
-		car.global_transform = path_follow.global_transform
+		if path_follow.is_inside_tree():
+			car.global_transform = path_follow.global_transform
 		if flip:
 			car.rotate_y(TAU * 0.5)
 
@@ -86,6 +87,8 @@ class CarMovement:
 		if new_direction != direction:
 			flip = !flip
 		direction = new_direction
+
+signal gone()
 
 @export var accel: float = 2.5
 @export var loading_time: float = 30.0
@@ -126,6 +129,7 @@ func _process(delta: float) -> void:
 					run_state = RunState.Loading
 					loading_time_remaining = loading_time
 				elif dest is ExitSegment:
+					gone.emit()
 					destroy_deferred()
 				else:
 					run_state = RunState.Idle

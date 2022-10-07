@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cmyhje0055jiq"]
+[gd_scene load_steps=7 format=3 uid="uid://cmyhje0055jiq"]
 
 [ext_resource type="Theme" uid="uid://cgpmko4d01n84" path="res://game/ui-theme/theme.tres" id="1"]
 [ext_resource type="PackedScene" uid="uid://fup8cbio80ln" path="res://map/Map.tscn" id="2_ogjsq"]
 [ext_resource type="PackedScene" uid="uid://dmfdkwcu73843" path="res://game/menu/MainMenu.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://bjbey6bjjepho" path="res://game/loading/TransitionScreen.tscn" id="4"]
 [ext_resource type="Script" path="res://game/Game.gd" id="5"]
+[ext_resource type="StyleBox" path="res://game/ui-theme/panel_style_transparent.tres" id="6_8pues"]
 
 [node name="Game" type="Node"]
 script = ExtResource("5")
@@ -24,6 +25,61 @@ mouse_filter = 2
 theme = ExtResource("1")
 
 [node name="MainMenu" parent="UI" instance=ExtResource("3")]
+layout_mode = 1
 
 [node name="TransitionScreen" parent="UI" instance=ExtResource("4")]
 visible = false
+layout_mode = 1
+
+[node name="StopwatchPanel" type="Panel" parent="UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -240.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 76.0
+grow_horizontal = 0
+theme_override_styles/panel = ExtResource("6_8pues")
+
+[node name="StopwatchLabel" type="Label" parent="UI/StopwatchPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_right = -8.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 36
+text = "00:00.000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BlinkTimer" type="Timer" parent="UI/StopwatchPanel"]
+wait_time = 0.5
+
+[node name="CountPanel" type="Panel" parent="UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -380.0
+offset_top = 20.0
+offset_right = -260.0
+offset_bottom = 76.0
+grow_horizontal = 0
+theme_override_styles/panel = ExtResource("6_8pues")
+
+[node name="CountLabel" type="Label" parent="UI/CountPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_right = -8.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 36
+text = "00/20"
+horizontal_alignment = 1
+vertical_alignment = 1
