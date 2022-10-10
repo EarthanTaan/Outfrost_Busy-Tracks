@@ -12,7 +12,12 @@ extends Node3D
 
 var path_node:
 	set(node):
+		if path_node != null:
+			path_node.locked.disconnect(on_switch_locked)
+
 		path_node = node
+		node.locked.connect(on_switch_locked)
+
 		link_idx.clear()
 		if node.links.size() < 2:
 			return
@@ -36,6 +41,16 @@ func _ready() -> void:
 		if event.is_action_pressed("click"):
 			switch_right())
 	init_materials()
+
+func on_switch_locked(locked: bool) -> void:
+	if locked:
+		if path_node.switch_state == link_idx[0]:
+			indicator3.hide()
+		else:
+			indicator2.hide()
+	else:
+		indicator2.show()
+		indicator3.show()
 
 func switch_left() -> void:
 	if !path_node || path_node.switch_locked:

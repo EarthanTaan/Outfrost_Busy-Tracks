@@ -36,13 +36,18 @@ class Link:
 			return point_in.normalized()
 
 class PathNode:
+	signal locked(value: bool)
+
 	var root_link: Link
 	var links: Array[Link]
 	var switch_state: int = 0:
 		set(value):
 			if value < links.size():
 				switch_state = value
-	var switch_locked: bool = false
+	var switch_locked: bool = false:
+		set(value):
+			switch_locked = value
+			locked.emit(value)
 
 	func _to_string() -> String:
 		return "{root_link: %s, links: %s}" % [ root_link, links ]
