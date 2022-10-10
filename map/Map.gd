@@ -61,12 +61,12 @@ func _process(delta: float) -> void:
 			continue
 
 		if train.dest.begin_signal_clear:
-			var dest = train.dest.find_route_dest(Segment.Side.Begin)
+			var dest = train.dest.find_dest(Segment.Side.Begin)
 			if dest:
 				train.dest = dest
 				train.go(Segment.Side.Begin)
 		elif train.dest.end_signal_clear:
-			var dest = train.dest.find_route_dest(Segment.Side.End)
+			var dest = train.dest.find_dest(Segment.Side.End)
 			if dest:
 				train.dest = dest
 				train.go(Segment.Side.End)

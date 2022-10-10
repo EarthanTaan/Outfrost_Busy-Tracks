@@ -71,6 +71,8 @@ class CarMovement:
 			current_segment.end_signal_clear = false
 
 		reinit_path_follower()
+		if current_segment.followers == 0:
+			path_node.switch_locked = false
 		next_segment.add_path_follow(path_follow)
 
 		path_follow.progress_ratio = 0.5

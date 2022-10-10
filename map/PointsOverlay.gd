@@ -38,14 +38,14 @@ func _ready() -> void:
 	init_materials()
 
 func switch_left() -> void:
-	if !path_node:
+	if !path_node || path_node.switch_locked:
 		return
 	path_node.switch_state = link_idx[0]
 	indicator2.material_override = indicator_mat_active
 	indicator3.material_override = indicator_mat_inactive
 
 func switch_right() -> void:
-	if !path_node:
+	if !path_node || path_node.switch_locked:
 		return
 	path_node.switch_state = link_idx[1]
 	indicator2.material_override = indicator_mat_inactive

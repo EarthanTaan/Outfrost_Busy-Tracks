@@ -42,6 +42,7 @@ class PathNode:
 		set(value):
 			if value < links.size():
 				switch_state = value
+	var switch_locked: bool = false
 
 	func _to_string() -> String:
 		return "{root_link: %s, links: %s}" % [ root_link, links ]
@@ -162,16 +163,22 @@ func try_clear_signal(segment: Segment, side: Segment.Side) -> void:
 	):
 		return
 
-	var route: Array[Segment] = []
-	var dest: = segment.find_route_dest(side, route)
+	var route_segments: Array[Segment] = []
+	var route_nodes: Array[PathNode] = []
+	var dest: = segment.find_route_dest(side, route_segments, route_nodes)
 	if !dest:
 		return
 
-	for step in route:
-		step.occupied = true
-		for crossing in step.crossing_segments:
+	for seg in route_segments:
+		print(seg)
+		seg.occupied = true
+		for crossing in seg.crossing_segments:
 			if !crossing.is_empty():
-				step.get_node(crossing).occupied = true
+				seg.get_node(crossing).occupied = true
+
+	for node in route_nodes:
+		print(node)
+		node.switch_locked = true
 
 	if side == Segment.Side.Begin:
 		segment.begin_signal_clear = true
