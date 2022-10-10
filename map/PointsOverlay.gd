@@ -4,8 +4,7 @@ extends Node3D
 @onready var indicator_mat_hover: Material = load("res://material/points_indicator_hover.tres")
 @onready var indicator_mat_active: Material = load("res://material/points_indicator_active.tres")
 
-@onready var area_left: Area3D = $Area2
-@onready var area_right: Area3D = $Area3
+@onready var area: Area3D = $Area3d
 @onready var indicator1: MeshInstance3D = $Indicator1
 @onready var indicator2: MeshInstance3D = $Indicator2
 @onready var indicator3: MeshInstance3D = $Indicator3
@@ -34,12 +33,9 @@ var path_node:
 var link_idx: = {}
 
 func _ready() -> void:
-	area_left.input_event.connect(func(_c, event: InputEvent, _p, _n, _s):
+	area.input_event.connect(func(_c, event: InputEvent, _p, _n, _s):
 		if event.is_action_pressed("click"):
-			switch_left())
-	area_right.input_event.connect(func(_c, event: InputEvent, _p, _n, _s):
-		if event.is_action_pressed("click"):
-			switch_right())
+			switch())
 	init_materials()
 
 func on_switch_locked(locked: bool) -> void:
@@ -52,19 +48,17 @@ func on_switch_locked(locked: bool) -> void:
 		indicator2.show()
 		indicator3.show()
 
-func switch_left() -> void:
+func switch() -> void:
 	if !path_node || path_node.switch_locked:
 		return
-	path_node.switch_state = link_idx[0]
-	indicator2.material_override = indicator_mat_active
-	indicator3.material_override = indicator_mat_inactive
-
-func switch_right() -> void:
-	if !path_node || path_node.switch_locked:
-		return
-	path_node.switch_state = link_idx[1]
-	indicator2.material_override = indicator_mat_inactive
-	indicator3.material_override = indicator_mat_active
+	if path_node.switch_state == link_idx[0]:
+		path_node.switch_state = link_idx[1]
+		indicator2.material_override = indicator_mat_inactive
+		indicator3.material_override = indicator_mat_active
+	else:
+		path_node.switch_state = link_idx[0]
+		indicator2.material_override = indicator_mat_active
+		indicator3.material_override = indicator_mat_inactive
 
 func init_materials() -> void:
 	if !path_node || !indicator1:
