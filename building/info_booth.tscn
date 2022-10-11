@@ -1,13 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://do0825qy75a8h"]
+[gd_scene load_steps=6 format=3 uid="uid://do0825qy75a8h"]
 
 [ext_resource type="PackedScene" uid="uid://eajb3o0fnrve" path="res://assets/InfoBooth.gltf" id="1_ftaly"]
+[ext_resource type="Script" path="res://building/BuildingIllumination.gd" id="2_3gv8x"]
 [ext_resource type="Texture2D" uid="uid://ccqy1wxna87vb" path="res://assets/InfoBooth_UV.png" id="2_xubnv"]
+[ext_resource type="Texture2D" uid="uid://bqb61g5x0n4a5" path="res://assets/InfoBooth_emission.png" id="4_t1t3h"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l0tg7"]
 albedo_texture = ExtResource("2_xubnv")
+emission_enabled = true
+emission_energy_multiplier = 1.25
+emission_texture = ExtResource("4_t1t3h")
 texture_filter = 4
 
 [node name="InfoBooth" instance=ExtResource("1_ftaly")]
+script = ExtResource("2_3gv8x")
+mesh_instance_path = NodePath("InfoBooth2")
 
 [node name="InfoBooth2" parent="." index="0"]
 surface_material_override/0 = SubResource("StandardMaterial3D_l0tg7")

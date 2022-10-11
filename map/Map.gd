@@ -1,6 +1,6 @@
 extends Node3D
 
-const DAY_DURATION: float = 900.0
+const DAY_DURATION: float = 750.0
 const SUN_START_ANGLE: float = - TAU * 0.375
 const SUN_END_ANGLE: float = TAU * 0.375
 const NIGHT_LIGHT_GLOW_START: float = 0.0

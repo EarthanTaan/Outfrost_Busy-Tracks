@@ -1370,45 +1370,59 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26, 1
 
 [node name="station_lamp55" parent="StationStructures" instance=ExtResource("22_rp1tt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 5.5, -38)
+range = 9.0
 
 [node name="station_lamp56" parent="StationStructures" instance=ExtResource("22_rp1tt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 5.5, -18)
+range = 9.0
 
 [node name="station_lamp57" parent="StationStructures" instance=ExtResource("22_rp1tt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 5.5, 0)
+range = 9.0
 
 [node name="station_lamp58" parent="StationStructures" instance=ExtResource("22_rp1tt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 5.5, 19)
+range = 9.0
 
 [node name="station_lamp59" parent="StationStructures" instance=ExtResource("22_rp1tt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 5.5, 55)
+range = 9.0
 
 [node name="station_lamp60" parent="StationStructures" instance=ExtResource("22_rp1tt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 5.5, 37)
+range = 9.0
 
 [node name="station_lamp61" parent="StationStructures" instance=ExtResource("22_rp1tt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 5.5, -38)
+range = 9.0
 
 [node name="station_lamp62" parent="StationStructures" instance=ExtResource("22_rp1tt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 5.5, -18)
+range = 9.0
 
 [node name="station_lamp63" parent="StationStructures" instance=ExtResource("22_rp1tt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 5.5, 0)
+range = 9.0
 
 [node name="station_lamp64" parent="StationStructures" instance=ExtResource("22_rp1tt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 5.5, 19)
+range = 9.0
 
 [node name="station_lamp65" parent="StationStructures" instance=ExtResource("22_rp1tt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 5.5, 55)
+range = 9.0
 
 [node name="station_lamp66" parent="StationStructures" instance=ExtResource("22_rp1tt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 5.5, 37)
+range = 9.0
 
 [node name="station_lamp91" parent="StationStructures" instance=ExtResource("22_rp1tt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 5.5, 73)
+range = 9.0
 
 [node name="station_lamp92" parent="StationStructures" instance=ExtResource("22_rp1tt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 5.5, 73)
+range = 9.0
 
 [node name="Backdrop" type="Node3D" parent="."]
 

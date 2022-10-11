@@ -36,6 +36,8 @@ func _ready() -> void:
 	area.input_event.connect(func(_c, event: InputEvent, _p, _n, _s):
 		if event.is_action_pressed("click"):
 			switch())
+	area.mouse_entered.connect(on_mouse_entered)
+	area.mouse_exited.connect(on_mouse_exited)
 	init_materials()
 
 func on_switch_locked(locked: bool) -> void:
@@ -59,6 +61,22 @@ func switch() -> void:
 		path_node.switch_state = link_idx[0]
 		indicator2.material_override = indicator_mat_active
 		indicator3.material_override = indicator_mat_inactive
+
+func on_mouse_entered() -> void:
+	if !path_node || !indicator1:
+		return
+	if path_node.switch_state == link_idx[0]:
+		indicator3.material_override = indicator_mat_hover
+	else:
+		indicator2.material_override = indicator_mat_hover
+
+func on_mouse_exited() -> void:
+	if !path_node || !indicator1:
+		return
+	if path_node.switch_state == link_idx[0]:
+		indicator3.material_override = indicator_mat_inactive
+	else:
+		indicator2.material_override = indicator_mat_inactive
 
 func init_materials() -> void:
 	if !path_node || !indicator1:

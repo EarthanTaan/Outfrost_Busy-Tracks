@@ -63,4 +63,5 @@ distance_fade_enabled = true
 distance_fade_begin = 240.0
 distance_fade_shadow = 300.0
 distance_fade_length = 120.0
-omni_range = 9.0
+omni_range = 16.0
+omni_attenuation = 1.4

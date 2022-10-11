@@ -10,6 +10,8 @@ signal clear()
 
 func _ready() -> void:
 	$Area3d.input_event.connect(on_area_input_event)
+	$Area3d.mouse_entered.connect(on_mouse_entered)
+	$Area3d.mouse_exited.connect(on_mouse_exited)
 	$SemaphoreUi/Control/Panel/FakeButton.released.connect(on_button_released)
 	light_green.hide()
 
@@ -38,6 +40,12 @@ func on_area_input_event(camera: Node, event: InputEvent, position: Vector3, _no
 func on_button_released() -> void:
 	clear.emit()
 	ui.hide()
+
+func on_mouse_entered() -> void:
+	%Highlight.show()
+
+func on_mouse_exited() -> void:
+	%Highlight.hide()
 
 func clear_feedback(clear: bool) -> void:
 	if clear:

@@ -1,13 +1,56 @@
-[gd_scene load_steps=4 format=3 uid="uid://eurfk3bvs2ni"]
+[gd_scene load_steps=6 format=3 uid="uid://eurfk3bvs2ni"]
 
 [ext_resource type="PackedScene" uid="uid://d2chaj0bbn4tr" path="res://assets/StationBuilding.gltf" id="1_balnp"]
 [ext_resource type="Texture2D" uid="uid://fvdpijldd5yu" path="res://assets/StationBuilding_UV.png" id="2_wfkb1"]
+[ext_resource type="Script" path="res://building/BuildingIllumination.gd" id="2_xske5"]
+[ext_resource type="Texture2D" uid="uid://7msqp00ick3d" path="res://assets/StationBuilding_emission.png" id="3_rjkpq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m3acl"]
 albedo_texture = ExtResource("2_wfkb1")
+emission_enabled = true
+emission_energy_multiplier = 1.25
+emission_texture = ExtResource("3_rjkpq")
 texture_filter = 4
 
 [node name="StationBuilding" instance=ExtResource("1_balnp")]
+script = ExtResource("2_xske5")
+mesh_instance_path = NodePath("StaionBuildingA")
 
 [node name="StaionBuildingA" parent="." index="0"]
 surface_material_override/0 = SubResource("StandardMaterial3D_m3acl")
+
+[node name="OmniLight3d" type="OmniLight3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.1, 0, 28.9)
+light_color = Color(0.898039, 0.839216, 0.721569, 1)
+light_energy = 2.0
+distance_fade_enabled = true
+distance_fade_begin = 120.0
+distance_fade_length = 60.0
+omni_range = 7.0
+
+[node name="OmniLight3d2" type="OmniLight3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.9, 0, 28.9)
+light_color = Color(0.898039, 0.839216, 0.721569, 1)
+light_energy = 2.0
+distance_fade_enabled = true
+distance_fade_begin = 120.0
+distance_fade_length = 60.0
+omni_range = 7.0
+
+[node name="OmniLight3d3" type="OmniLight3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.1, 0, -29.1)
+light_color = Color(0.898039, 0.839216, 0.721569, 1)
+light_energy = 2.0
+distance_fade_enabled = true
+distance_fade_begin = 120.0
+distance_fade_length = 60.0
+omni_range = 7.0
+
+[node name="OmniLight3d4" type="OmniLight3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.9, 0, -29.1)
+light_color = Color(0.898039, 0.839216, 0.721569, 1)
+light_energy = 2.0
+distance_fade_enabled = true
+distance_fade_begin = 120.0
+distance_fade_length = 60.0
+omni_range = 7.0
