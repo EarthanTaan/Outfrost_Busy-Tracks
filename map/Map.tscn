@@ -2349,6 +2349,9 @@ mesh = SubResource("BoxMesh_diuf4")
 [node name="Sprite3d" type="Sprite3D" parent="Backdrop"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -26, 6, -167)
 pixel_size = 0.05
+shaded = true
+alpha_cut = 1
+texture_filter = 4
 texture = ExtResource("27_3jq27")
 
 [node name="house 21" parent="Backdrop" instance=ExtResource("19_dlnn2")]
@@ -2393,106 +2396,169 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -89, 5
 [node name="Sprite3d6" type="Sprite3D" parent="Backdrop"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74, 6, -93)
 pixel_size = 0.05
+shaded = true
+alpha_cut = 1
+texture_filter = 4
 texture = ExtResource("27_3jq27")
 
 [node name="Sprite3d7" type="Sprite3D" parent="Backdrop"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74, 6, -58)
 pixel_size = 0.05
+shaded = true
+alpha_cut = 1
+texture_filter = 4
 texture = ExtResource("27_3jq27")
 
 [node name="Sprite3d8" type="Sprite3D" parent="Backdrop"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 6, -58)
 pixel_size = 0.05
+shaded = true
+alpha_cut = 1
+texture_filter = 4
 texture = ExtResource("27_3jq27")
 
 [node name="Sprite3d9" type="Sprite3D" parent="Backdrop"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114, 6, -58)
 pixel_size = 0.05
+shaded = true
+alpha_cut = 1
+texture_filter = 4
 texture = ExtResource("27_3jq27")
 
 [node name="Sprite3d10" type="Sprite3D" parent="Backdrop"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -134, 6, -58)
 pixel_size = 0.05
+shaded = true
+alpha_cut = 1
+texture_filter = 4
 texture = ExtResource("27_3jq27")
 
 [node name="Sprite3d11" type="Sprite3D" parent="Backdrop"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -154, 6, -58)
 pixel_size = 0.05
+shaded = true
+alpha_cut = 1
+texture_filter = 4
 texture = ExtResource("27_3jq27")
 
 [node name="Sprite3d12" type="Sprite3D" parent="Backdrop"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -174, 6, -58)
 pixel_size = 0.05
+shaded = true
+alpha_cut = 1
+texture_filter = 4
 texture = ExtResource("27_3jq27")
 
 [node name="Sprite3d13" type="Sprite3D" parent="Backdrop"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -194, 6, -58)
 pixel_size = 0.05
+shaded = true
+alpha_cut = 1
+texture_filter = 4
 texture = ExtResource("27_3jq27")
 
 [node name="Sprite3d14" type="Sprite3D" parent="Backdrop"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -214, 6, -58)
 pixel_size = 0.05
+shaded = true
+alpha_cut = 1
+texture_filter = 4
 texture = ExtResource("27_3jq27")
 
 [node name="Sprite3d15" type="Sprite3D" parent="Backdrop"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -234, 6, -58)
 pixel_size = 0.05
+shaded = true
+alpha_cut = 1
+texture_filter = 4
 texture = ExtResource("27_3jq27")
 
 [node name="Sprite3d16" type="Sprite3D" parent="Backdrop"]
 transform = Transform3D(2.98023e-08, 0, -1, 0, 1, 0, 1, 0, 2.98023e-08, -244, 6, -68)
 pixel_size = 0.05
+shaded = true
+alpha_cut = 1
+texture_filter = 4
 texture = ExtResource("27_3jq27")
 
 [node name="Sprite3d17" type="Sprite3D" parent="Backdrop"]
 transform = Transform3D(2.98023e-08, 0, -1, 0, 1, 0, 1, 0, 2.98023e-08, -244, 6, -88)
 pixel_size = 0.05
+shaded = true
+alpha_cut = 1
+texture_filter = 4
 texture = ExtResource("27_3jq27")
 
 [node name="Sprite3d20" type="Sprite3D" parent="Backdrop"]
 transform = Transform3D(-0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, -0.965926, -292, 6, 105)
 pixel_size = 0.05
+shaded = true
+alpha_cut = 1
+texture_filter = 4
 texture = ExtResource("27_3jq27")
 
 [node name="Sprite3d21" type="Sprite3D" parent="Backdrop"]
 transform = Transform3D(-0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, -0.965926, -273, 6, 99.9)
 pixel_size = 0.05
+shaded = true
+alpha_cut = 1
+texture_filter = 4
 texture = ExtResource("27_3jq27")
 
 [node name="Sprite3d18" type="Sprite3D" parent="Backdrop"]
 transform = Transform3D(2.98023e-08, 0, -1, 0, 1, 0, 1, 0, 2.98023e-08, -244, 6, -108)
 pixel_size = 0.05
+shaded = true
+alpha_cut = 1
+texture_filter = 4
 texture = ExtResource("27_3jq27")
 
 [node name="Sprite3d19" type="Sprite3D" parent="Backdrop"]
 transform = Transform3D(0.999493, 0, 0.0318295, 0, 1, 0, -0.0318295, 0, 0.999493, -234, 6, -118)
 pixel_size = 0.05
+shaded = true
+alpha_cut = 1
+texture_filter = 4
 texture = ExtResource("27_3jq27")
 
 [node name="Sprite3d2" type="Sprite3D" parent="Backdrop"]
 transform = Transform3D(0.385278, 0, 0.922801, 0, 1, 0, -0.922801, 0, 0.385278, 294.841, 7, 183.725)
 pixel_size = 0.05
+shaded = true
+alpha_cut = 1
+texture_filter = 4
 texture = ExtResource("27_3jq27")
 
 [node name="Sprite3d4" type="Sprite3D" parent="Backdrop"]
 transform = Transform3D(-0.79164, 0, 0.610988, 0, 1, 0, -0.610988, 0, -0.79164, 202.841, 7, 152.725)
 pixel_size = 0.05
+shaded = true
+alpha_cut = 1
+texture_filter = 4
 texture = ExtResource("27_3jq27")
 
 [node name="Sprite3d5" type="Sprite3D" parent="Backdrop"]
 transform = Transform3D(-0.79164, 0, 0.610988, 0, 1, 0, -0.610988, 0, -0.79164, 187.041, 7, 140.325)
 pixel_size = 0.05
+shaded = true
+alpha_cut = 1
+texture_filter = 4
 texture = ExtResource("27_3jq27")
 
 [node name="Sprite3d22" type="Sprite3D" parent="Backdrop"]
 transform = Transform3D(-0.9228, 0, 0.385278, 0, 1, 0, -0.385278, 0, -0.9228, 418.041, 6, 195.325)
 pixel_size = 0.05
+shaded = true
+alpha_cut = 1
+texture_filter = 4
 texture = ExtResource("27_3jq27")
 
 [node name="Sprite3d3" type="Sprite3D" parent="Backdrop"]
 transform = Transform3D(0.922801, 0, -0.385278, 0, 1, 0, 0.385278, 0, 0.922801, 282.152, 7, 189.155)
 pixel_size = 0.05
+shaded = true
+alpha_cut = 1
+texture_filter = 4
 texture = ExtResource("27_3jq27")
 
 [node name="tree62" parent="Backdrop" instance=ExtResource("22_neqcg")]
@@ -2579,36 +2645,57 @@ transform = Transform3D(-0.996865, 0, -0.0791201, 0, 1, 0, 0.0791201, 0, -0.9968
 [node name="Sprite3d23" type="Sprite3D" parent="Backdrop"]
 transform = Transform3D(0.991808, 0, 0.12774, 0, 1, 0, -0.12774, 0, 0.991808, 687.569, 7, -68.0826)
 pixel_size = 0.05
+shaded = true
+alpha_cut = 1
+texture_filter = 4
 texture = ExtResource("27_3jq27")
 
 [node name="Sprite3d25" type="Sprite3D" parent="Backdrop"]
 transform = Transform3D(0.79164, 0, -0.610988, 0, 1, 0, 0.610988, 0, 0.79164, 487.569, 7, -277.083)
 pixel_size = 0.05
+shaded = true
+alpha_cut = 1
+texture_filter = 4
 texture = ExtResource("27_3jq27")
 
 [node name="Sprite3d26" type="Sprite3D" parent="Backdrop"]
 transform = Transform3D(0.79164, 0, -0.610988, 0, 1, 0, 0.610988, 0, 0.79164, 471.718, 7, -289.256)
 pixel_size = 0.05
+shaded = true
+alpha_cut = 1
+texture_filter = 4
 texture = ExtResource("27_3jq27")
 
 [node name="Sprite3d27" type="Sprite3D" parent="Backdrop"]
 transform = Transform3D(0.79164, 0, -0.610988, 0, 1, 0, 0.610988, 0, 0.79164, 456.043, 7, -301.499)
 pixel_size = 0.05
+shaded = true
+alpha_cut = 1
+texture_filter = 4
 texture = ExtResource("27_3jq27")
 
 [node name="Sprite3d28" type="Sprite3D" parent="Backdrop"]
 transform = Transform3D(-0.610988, 0, -0.79164, 0, 1, 0, 0.79164, 0, -0.610988, 441.943, 7, -299.799)
 pixel_size = 0.05
+shaded = true
+alpha_cut = 1
+texture_filter = 4
 texture = ExtResource("27_3jq27")
 
 [node name="Sprite3d29" type="Sprite3D" parent="Backdrop"]
 transform = Transform3D(-0.610988, 0, -0.79164, 0, 1, 0, 0.79164, 0, -0.610988, 429.843, 7, -284.099)
 pixel_size = 0.05
+shaded = true
+alpha_cut = 1
+texture_filter = 4
 texture = ExtResource("27_3jq27")
 
 [node name="Sprite3d24" type="Sprite3D" parent="Backdrop"]
 transform = Transform3D(0.12774, 0, -0.991808, 0, 1, 0, 0.991808, 0, 0.12774, 676.523, 7, -76.3559)
 pixel_size = 0.05
+shaded = true
+alpha_cut = 1
+texture_filter = 4
 texture = ExtResource("27_3jq27")
 
 [node name="Tunnel" type="MeshInstance3D" parent="Backdrop"]
