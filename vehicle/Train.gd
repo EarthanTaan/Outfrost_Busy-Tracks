@@ -2,6 +2,8 @@ class_name Train
 extends Node3D
 
 const MAX_SPEED: float = 18.0 # m/s
+const NIGHT_LIGHT_THRESHOLD_START: float = 0.3
+const NIGHT_LIGHT_THRESHOLD_END: float = 0.65
 
 enum RunState {
 	Idle,
@@ -95,6 +97,10 @@ signal gone()
 @export var accel: float = 2.5
 @export var loading_time: float = 30.0
 
+@onready var interior_lighting_threshold: float = randf_range(
+	NIGHT_LIGHT_THRESHOLD_START,
+	NIGHT_LIGHT_THRESHOLD_END)
+
 var dest_platform: PlatformSegment = null
 var dest_exit: ExitSegment = null
 
@@ -107,12 +113,13 @@ var progress: Array[CarMovement] = []
 
 var loading_time_remaining: float = 0.0
 
+var interior_lighting_on: bool = false
+
 func _ready() -> void:
 	for car in get_children():
 		car.hide()
 
 func _process(delta: float) -> void:
-#	DebugOverlay.display(dest.name)
 	match run_state:
 		RunState.Idle:
 			pass
@@ -142,6 +149,8 @@ func _process(delta: float) -> void:
 
 	for movement in progress:
 		movement.update(speed, delta)
+
+	interior_lighting_on = Daytime.night_light > interior_lighting_threshold
 
 func spawn(at: Segment) -> void:
 	dest = at

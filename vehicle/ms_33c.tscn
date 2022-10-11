@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://ddrlsohug35ej"]
+[gd_scene load_steps=7 format=3 uid="uid://ddrlsohug35ej"]
 
 [ext_resource type="PackedScene" uid="uid://b7dkelhv6vo5w" path="res://assets/Ms33C.gltf" id="1_73hcn"]
+[ext_resource type="Script" path="res://vehicle/TrainCarLighting.gd" id="2_70pxj"]
 [ext_resource type="Texture2D" uid="uid://xowlwu410ewu" path="res://vehicle/Ms33C_.png" id="2_o3jcs"]
 [ext_resource type="Texture2D" uid="uid://c6efkxm6uunki" path="res://vehicle/Ms33C_emission.png" id="3_6hwxt"]
 [ext_resource type="PackedScene" uid="uid://bpnjtik6jyvle" path="res://vehicle/bogie.tscn" id="3_apata"]
@@ -12,6 +13,8 @@ emission_texture = ExtResource("3_6hwxt")
 texture_filter = 4
 
 [node name="Ms33C" instance=ExtResource("1_73hcn")]
+script = ExtResource("2_70pxj")
+mesh_instance_path = NodePath("Ms33C2")
 
 [node name="Ms33C2" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1.9, 0)

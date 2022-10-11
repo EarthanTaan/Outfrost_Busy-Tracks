@@ -691,7 +691,7 @@ directional_shadow_max_distance = 400.0
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("2_pqq2f")
 
-[node name="MeshInstance3d" type="MeshInstance3D" parent="."]
+[node name="Terrain" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_2tmmf")
 metadata/_edit_lock_ = true
 
