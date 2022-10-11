@@ -175,14 +175,12 @@ func try_clear_signal(segment: Segment, side: Segment.Side) -> void:
 		return
 
 	for seg in route_segments:
-		print(seg)
 		seg.occupied = true
 		for crossing in seg.crossing_segments:
 			if !crossing.is_empty():
 				seg.get_node(crossing).occupied = true
 
 	for node in route_nodes:
-		print(node)
 		node.switch_locked = true
 
 	if side == Segment.Side.Begin:
