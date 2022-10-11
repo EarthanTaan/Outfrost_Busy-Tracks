@@ -150,11 +150,30 @@ func spawn(at: Segment) -> void:
 	for car in get_children():
 		progress.append(CarMovement.new(car, car.position.z - (0.5 * max_offset), at))
 		car.show.call_deferred()
+		var headlights = car.find_child("Headlights")
+		if headlights:
+			if car.get_index() == car.get_parent().get_child_count() - 1:
+				headlights.show()
+			else:
+				headlights.hide()
 
 func go(direction: Segment.Side) -> void:
 	if run_state == RunState.Idle:
 		for movement in progress:
+			var car: = movement.car
+			var headlights = car.find_child("Headlights")
+			if (
+				headlights
+				&& (
+					car.get_index() == 0
+					|| car.get_index() == car.get_parent().get_child_count() - 1
+				)
+				&& direction != movement.direction
+			):
+				headlights.visible = !headlights.visible
+
 			movement.direction = direction
+
 		run_state = RunState.Moving
 
 func destroy_deferred() -> void:

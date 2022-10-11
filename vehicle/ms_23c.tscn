@@ -1,13 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://qd3g751mnd62"]
+[gd_scene load_steps=8 format=3 uid="uid://qd3g751mnd62"]
 
 [ext_resource type="PackedScene" uid="uid://cd1hyca817hrn" path="res://assets/Ms23C.gltf" id="1_jrff3"]
 [ext_resource type="Texture2D" uid="uid://c3wuqwq3ohtkw" path="res://vehicle/ms_23c.png" id="2_1bp7b"]
+[ext_resource type="Texture2D" uid="uid://bflsmjriqbaea" path="res://vehicle/ms_23c_emission.png" id="3_7ivfx"]
 [ext_resource type="PackedScene" uid="uid://bpnjtik6jyvle" path="res://vehicle/bogie.tscn" id="3_7uxte"]
+[ext_resource type="Material" uid="uid://bql7ifetdgu4x" path="res://material/light_white.tres" id="5_f6vpv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_25851"]
 albedo_texture = ExtResource("2_1bp7b")
+emission_enabled = true
+emission_texture = ExtResource("3_7ivfx")
 detail_uv_layer = 1
 texture_filter = 4
+
+[sub_resource type="BoxMesh" id="BoxMesh_g55t1"]
+material = ExtResource("5_f6vpv")
+size = Vector3(0.05, 0.16, 0.3)
 
 [node name="Ms23C" instance=ExtResource("1_jrff3")]
 
@@ -20,3 +28,27 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9, 0.6, 0)
 
 [node name="Bogie2" parent="." index="2" instance=ExtResource("3_7uxte")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9, 0.6, 0)
+
+[node name="Headlights" type="Node3D" parent="." index="3"]
+
+[node name="MeshInstance3d" type="MeshInstance3D" parent="Headlights" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 1.7, -0.71)
+mesh = SubResource("BoxMesh_g55t1")
+
+[node name="MeshInstance3d2" type="MeshInstance3D" parent="Headlights" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 1.7, 0.71)
+mesh = SubResource("BoxMesh_g55t1")
+
+[node name="SpotLight3d" type="SpotLight3D" parent="Headlights" index="2"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8.6, 1.7, 0)
+light_energy = 4.0
+light_indirect_energy = 2.0
+shadow_enabled = true
+shadow_reverse_cull_face = true
+distance_fade_enabled = true
+distance_fade_begin = 240.0
+distance_fade_shadow = 300.0
+distance_fade_length = 120.0
+spot_range = 40.0
+spot_angle = 35.0
+spot_angle_attenuation = 3.0
