@@ -36,4 +36,16 @@ transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -0.015, 
 cast_shadow = 0
 mesh = SubResource("QuadMesh_8hbvc")
 
+[node name="OmniLight3d" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2, 0)
+light_color = Color(0.25098, 0.25098, 1, 1)
+light_energy = 1.5
+light_indirect_energy = 0.5
+shadow_reverse_cull_face = true
+distance_fade_enabled = true
+distance_fade_begin = 80.0
+distance_fade_shadow = 100.0
+distance_fade_length = 80.0
+omni_attenuation = 2.4
+
 [editable path="TimeLCD"]

@@ -1,0 +1,5 @@
+[gd_resource type="PhysicalSkyMaterial" format=3 uid="uid://cxdg5ipligh4g"]
+
+[resource]
+ground_color = Color(0.329412, 0.254902, 0.211765, 1)
+energy_multiplier = 4.0

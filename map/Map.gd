@@ -1,5 +1,11 @@
 extends Node3D
 
+const DAY_DURATION: float = 90.0
+const SUN_START_ANGLE: float = - TAU * 0.375
+const SUN_END_ANGLE: float = TAU * 0.375
+const NIGHT_LIGHT_GLOW_START: float = 0.0
+const NIGHT_LIGHT_GLOW_FULL: float = 0.8
+
 const SPAWN_INTERVALS: Array[float] = [
 	60.0,
 	30.0,
@@ -35,6 +41,8 @@ signal game_finished()
 
 @onready var paths: = $Paths
 @onready var dummy: = load("res://vehicle/CommuterTrain.tscn")
+@onready var directional_light: DirectionalLight3D = %DirectionalLight
+@onready var environment: Environment = $WorldEnvironment.environment.duplicate()
 
 var trains: Array[Train] = []
 
@@ -44,11 +52,32 @@ var stopwatch: float = 0.0
 var trains_dispatched: int = 0
 var no_more_spawns: bool = false
 var game_finished_emitted: bool = false
+var day_time_elapsed: float = 0.0
 
 func _ready() -> void:
+	$WorldEnvironment.environment = environment
+
 	reset()
 
 func _process(delta: float) -> void:
+	day_time_elapsed = fmod(day_time_elapsed + delta, DAY_DURATION)
+	Daytime.set_time(day_time_elapsed / DAY_DURATION)
+	directional_light.light_energy = Daytime.day_light * 1.25
+	directional_light.rotation = Vector3(
+		- TAU / 6.0,
+		remap(day_time_elapsed, 0.0, DAY_DURATION, SUN_START_ANGLE, SUN_END_ANGLE),
+		0.0)
+	environment.glow_enabled = Daytime.night_light > NIGHT_LIGHT_GLOW_START
+	environment.glow_intensity = 1.25 * clamp(
+		remap(
+			Daytime.night_light,
+			NIGHT_LIGHT_GLOW_START,
+			NIGHT_LIGHT_GLOW_FULL,
+			0.0,
+			1.0),
+		0.0,
+		1.0)
+
 	if no_more_spawns && trains.is_empty():
 		if !game_finished_emitted:
 			game_finished.emit()
@@ -95,6 +124,9 @@ func _process(delta: float) -> void:
 			spawn_timer = SPAWN_INTERVALS[spawn_interval_idx]
 
 func reset() -> void:
+	directional_light.rotation_order = Node3D.ROTATION_ORDER_XYZ
+	directional_light.rotation = Vector3(deg_to_rad(- 60.0), TAU * 0.5, 0.0)
+
 	for t in trains:
 		t.destroy_deferred()
 	trains.clear()
@@ -112,3 +144,4 @@ func reset() -> void:
 	trains_dispatched = 0
 	no_more_spawns = false
 	game_finished_emitted = false
+	day_time_elapsed = 0.0

@@ -44,10 +44,28 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.7
 mesh = SubResource("CylinderMesh_nl3ns")
 surface_material_override/0 = ExtResource("3_8fsaj")
 
+[node name="OmniLight3d" type="OmniLight3D" parent="MeshInstance3d/MeshInstance3d/Light_Green"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+light_color = Color(0.180392, 0.901961, 0.239216, 1)
+light_indirect_energy = 0.5
+distance_fade_enabled = true
+distance_fade_begin = 240.0
+distance_fade_length = 120.0
+omni_range = 3.0
+
 [node name="Light_Red" type="MeshInstance3D" parent="MeshInstance3d/MeshInstance3d"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -0.1, 0.2)
 mesh = SubResource("CylinderMesh_nl3ns")
 surface_material_override/0 = ExtResource("4_b7gm1")
+
+[node name="OmniLight3d2" type="OmniLight3D" parent="MeshInstance3d/MeshInstance3d/Light_Red"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 4.76837e-07)
+light_color = Color(0.901961, 0.180392, 0.180392, 1)
+light_indirect_energy = 0.5
+distance_fade_enabled = true
+distance_fade_begin = 240.0
+distance_fade_length = 120.0
+omni_range = 3.0
 
 [node name="Light_Off1" type="MeshInstance3D" parent="MeshInstance3d/MeshInstance3d"]
 transform = Transform3D(0.98, 0, 0, 0, -4.28372e-08, -0.98, 0, 0.98, -4.28372e-08, 0, 0.7, 0.17)
@@ -82,13 +100,14 @@ offset_bottom = 400.0
 theme = ExtResource("2_dmt6l")
 
 [node name="Control" type="Control" parent="SemaphoreUi"]
-layout_mode = 3
+layout_mode = 1
 anchors_preset = 0
 offset_left = -100.0
 offset_top = -160.0
 offset_right = 100.0
 
 [node name="ColorRect" type="ColorRect" parent="SemaphoreUi/Control"]
+layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
@@ -102,6 +121,7 @@ rotation = -1.02974
 color = Color(0.14, 0.14, 0.14, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="SemaphoreUi/Control"]
+layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
@@ -117,12 +137,14 @@ scale = Vector2(-1, 1)
 color = Color(0.14, 0.14, 0.14, 1)
 
 [node name="Panel" type="Panel" parent="SemaphoreUi/Control"]
+layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 100.0
 grow_horizontal = 2
 
 [node name="FakeButton" type="ColorRect" parent="SemaphoreUi/Control/Panel"]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -136,6 +158,7 @@ color = Color(0.0588235, 0.6, 0.0588235, 0)
 script = ExtResource("3_i3m3m")
 
 [node name="Label" type="Label" parent="SemaphoreUi/Control/Panel/FakeButton"]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

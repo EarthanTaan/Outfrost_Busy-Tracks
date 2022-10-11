@@ -1,7 +1,7 @@
-[gd_scene load_steps=125 format=3 uid="uid://fup8cbio80ln"]
+[gd_scene load_steps=126 format=3 uid="uid://fup8cbio80ln"]
 
 [ext_resource type="Script" path="res://map/Map.gd" id="1_l8pm7"]
-[ext_resource type="Material" uid="uid://bgy0pukxb4bkd" path="res://material/terrain.tres" id="1_tjimc"]
+[ext_resource type="Material" uid="uid://cdnf2oofsfxou" path="res://material/terrain.tres" id="1_tjimc"]
 [ext_resource type="Environment" uid="uid://c34dco8b4sy14" path="res://map/map_env.tres" id="2_pqq2f"]
 [ext_resource type="Script" path="res://map/CameraPivot.gd" id="2_ri0d4"]
 [ext_resource type="Script" path="res://map/Paths.gd" id="3_wean6"]
@@ -25,6 +25,7 @@
 [ext_resource type="Material" uid="uid://3h0ofrxlqqo8" path="res://material/street.tres" id="20_tfert"]
 [ext_resource type="PackedScene" uid="uid://dc3my2fanvndv" path="res://trees/tree1.tscn" id="22_neqcg"]
 [ext_resource type="PackedScene" uid="uid://dxib5paksdjsh" path="res://building/house2.tscn" id="22_rn578"]
+[ext_resource type="PackedScene" uid="uid://c4xvrwlcmq62i" path="res://building/station_lamp.tscn" id="22_rp1tt"]
 [ext_resource type="PackedScene" uid="uid://blq02fr42mqyq" path="res://trees/tree2.tscn" id="23_4thrb"]
 [ext_resource type="PackedScene" uid="uid://bn0qo6nqhs17l" path="res://building/house3.tscn" id="23_87cnu"]
 [ext_resource type="Texture2D" uid="uid://t0oriklk2gql" path="res://building/ironfence.png" id="27_3jq27"]
@@ -677,9 +678,10 @@ fov = 65.0
 near = 0.5
 far = 3000.0
 
-[node name="DirectionalLight3d" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.707107, 0.653282, -0.270598, 0, 0.382683, 0.92388, 0.707107, -0.653282, 0.270598, 0, 153, 0)
-light_color = Color(1, 0.97, 0.88, 1)
+[node name="DirectionalLight" type="DirectionalLight3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 0.5, 0.866026, 0, -0.866026, 0.5, 0, 153, 0)
+light_color = Color(1, 0.968627, 0.878431, 1)
 light_energy = 1.25
 shadow_enabled = true
 directional_shadow_blend_splits = true
@@ -1257,6 +1259,156 @@ transform = Transform3D(1.35, 0, 0, 0, 1.35, 0, 0, 0, 1.35, -26, 1, -38)
 
 [node name="platform_display10" parent="StationStructures" instance=ExtResource("18_scvjy")]
 transform = Transform3D(1.35, 0, 0, 0, 1.35, 0, 0, 0, 1.35, 26, 1, -38)
+
+[node name="station_lamp43" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9, 1.4, 55)
+
+[node name="station_lamp44" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26, 1.4, 55)
+
+[node name="station_lamp46" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9, 1.4, 55)
+
+[node name="station_lamp48" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26, 1.4, 55)
+
+[node name="station_lamp49" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -78, 1.4, 55)
+
+[node name="station_lamp51" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -95, 1.4, 55)
+
+[node name="station_lamp52" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 95, 1.4, 55)
+
+[node name="station_lamp54" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 78, 1.4, 55)
+
+[node name="station_lamp45" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9, 1.4, 19)
+
+[node name="station_lamp47" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26, 1.4, 19)
+
+[node name="station_lamp50" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9, 1.4, 19)
+
+[node name="station_lamp53" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26, 1.4, 19)
+
+[node name="station_lamp67" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -78, 1.4, 19)
+
+[node name="station_lamp68" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -95, 1.4, 19)
+
+[node name="station_lamp69" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 95, 1.4, 19)
+
+[node name="station_lamp70" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 78, 1.4, 19)
+
+[node name="station_lamp71" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9, 1.4, 0)
+
+[node name="station_lamp72" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26, 1.4, 0)
+
+[node name="station_lamp73" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9, 1.4, 0)
+
+[node name="station_lamp74" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26, 1.4, 0)
+
+[node name="station_lamp75" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -78, 1.4, 0)
+
+[node name="station_lamp76" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -95, 1.4, 0)
+
+[node name="station_lamp77" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 95, 1.4, 0)
+
+[node name="station_lamp78" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 78, 1.4, 0)
+
+[node name="station_lamp79" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9, 1.4, -18)
+
+[node name="station_lamp80" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26, 1.4, -18)
+
+[node name="station_lamp81" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9, 1.4, -18)
+
+[node name="station_lamp82" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26, 1.4, -18)
+
+[node name="station_lamp83" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -78, 1.4, -18)
+
+[node name="station_lamp84" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -95, 1.4, -18)
+
+[node name="station_lamp85" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 95, 1.4, -18)
+
+[node name="station_lamp86" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 78, 1.4, -18)
+
+[node name="station_lamp87" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9, 1.4, -38)
+
+[node name="station_lamp88" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26, 1.4, -38)
+
+[node name="station_lamp89" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9, 1.4, -38)
+
+[node name="station_lamp90" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26, 1.4, -38)
+
+[node name="station_lamp55" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 5.5, -38)
+
+[node name="station_lamp56" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 5.5, -18)
+
+[node name="station_lamp57" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 5.5, 0)
+
+[node name="station_lamp58" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 5.5, 19)
+
+[node name="station_lamp59" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 5.5, 55)
+
+[node name="station_lamp60" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 5.5, 37)
+
+[node name="station_lamp61" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 5.5, -38)
+
+[node name="station_lamp62" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 5.5, -18)
+
+[node name="station_lamp63" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 5.5, 0)
+
+[node name="station_lamp64" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 5.5, 19)
+
+[node name="station_lamp65" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 5.5, 55)
+
+[node name="station_lamp66" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 5.5, 37)
+
+[node name="station_lamp91" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 5.5, 73)
+
+[node name="station_lamp92" parent="StationStructures" instance=ExtResource("22_rp1tt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 5.5, 73)
 
 [node name="Backdrop" type="Node3D" parent="."]
 

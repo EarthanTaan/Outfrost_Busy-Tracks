@@ -1,26 +1,29 @@
 [gd_resource type="Environment" load_steps=3 format=3 uid="uid://c34dco8b4sy14"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1kakg"]
-sky_top_color = Color(0.275, 0.394167, 0.55, 1)
-sky_horizon_color = Color(0.701961, 0.662745, 0.643137, 1)
-sky_curve = 0.0832178
-sky_energy_multiplier = 4.0
-ground_bottom_color = Color(0.329412, 0.254902, 0.211765, 1)
-ground_horizon_color = Color(0.88, 0.83996, 0.8184, 1)
-ground_curve = 0.00870548
-ground_energy_multiplier = 1.5
+[ext_resource type="Material" uid="uid://cxdg5ipligh4g" path="res://map/phys_sky.tres" id="1_tvxac"]
 
 [sub_resource type="Sky" id="Sky_xrx24"]
-sky_material = SubResource("ProceduralSkyMaterial_1kakg")
+sky_material = ExtResource("1_tvxac")
 
 [resource]
 background_mode = 2
 sky = SubResource("Sky_xrx24")
-ambient_light_color = Color(1, 1, 1, 1)
-sdfgi_min_cell_size = 0.390625
-sdfgi_cascade0_distance = 25.0
-sdfgi_max_distance = 400.0
-glow_intensity = 1.0
-volumetric_fog_density = 0.0
-volumetric_fog_albedo = Color(0.68, 0.75, 0.8, 1)
+ambient_light_color = Color(1, 0.933333, 0.8, 1)
+ambient_light_sky_contribution = 0.95
+sdfgi_min_cell_size = 1.25
+sdfgi_cascade0_distance = 80.0
+sdfgi_max_distance = 1280.0
+sdfgi_energy = 0.154
+glow_enabled = true
+glow_levels/3 = 0.75
+glow_levels/4 = 0.5
+glow_levels/5 = 0.5
+glow_levels/6 = 0.25
+glow_intensity = 1.25
+glow_strength = 1.2
+glow_blend_mode = 0
+volumetric_fog_density = 0.0005
+volumetric_fog_albedo = Color(0.678431, 0.74902, 0.8, 1)
+volumetric_fog_emission = Color(0.678431, 0.74902, 0.8, 1)
+volumetric_fog_emission_energy = 2.61
 volumetric_fog_length = 250.0
