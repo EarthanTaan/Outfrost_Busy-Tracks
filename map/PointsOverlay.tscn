@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cbhp1utpvjo2o"]
 
-[ext_resource type="Script" path="res://map/PointsOverlay.gd" id="1_4i1d0"]
+[ext_resource type="Script" uid="uid://saibk1buwngi" path="res://map/PointsOverlay.gd" id="1_4i1d0"]
 [ext_resource type="Material" uid="uid://csi8qqvuks05g" path="res://material/points_indicator_inactive.tres" id="2_prppk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_01ivf"]

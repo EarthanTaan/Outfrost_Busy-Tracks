@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://c4xvrwlcmq62i"]
 
 [ext_resource type="Material" uid="uid://1si0b2q0mxy7" path="res://material/platform_display_pole.tres" id="1_2lo7e"]
-[ext_resource type="Script" path="res://building/station_lamp.gd" id="1_e7fmr"]
+[ext_resource type="Script" uid="uid://c4qnrqu2rrqwr" path="res://building/station_lamp.gd" id="1_e7fmr"]
 [ext_resource type="Material" uid="uid://bql7ifetdgu4x" path="res://material/light_white.tres" id="2_n6tje"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_u3g1h"]

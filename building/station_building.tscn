@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://d2chaj0bbn4tr" path="res://assets/StationBuilding.gltf" id="1_balnp"]
 [ext_resource type="Texture2D" uid="uid://fvdpijldd5yu" path="res://assets/StationBuilding_UV.png" id="2_wfkb1"]
-[ext_resource type="Script" path="res://building/BuildingIllumination.gd" id="2_xske5"]
+[ext_resource type="Script" uid="uid://bep3digciiaju" path="res://building/BuildingIllumination.gd" id="2_xske5"]
 [ext_resource type="Texture2D" uid="uid://7msqp00ick3d" path="res://assets/StationBuilding_emission.png" id="3_rjkpq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m3acl"]

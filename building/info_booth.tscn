@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://do0825qy75a8h"]
 
 [ext_resource type="PackedScene" uid="uid://eajb3o0fnrve" path="res://assets/InfoBooth.gltf" id="1_ftaly"]
-[ext_resource type="Script" path="res://building/BuildingIllumination.gd" id="2_3gv8x"]
+[ext_resource type="Script" uid="uid://bep3digciiaju" path="res://building/BuildingIllumination.gd" id="2_3gv8x"]
 [ext_resource type="Texture2D" uid="uid://ccqy1wxna87vb" path="res://assets/InfoBooth_UV.png" id="2_xubnv"]
 [ext_resource type="Texture2D" uid="uid://bqb61g5x0n4a5" path="res://assets/InfoBooth_emission.png" id="4_t1t3h"]
 

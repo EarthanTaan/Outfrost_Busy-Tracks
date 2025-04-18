@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cd1hyca817hrn" path="res://assets/Ms23C.gltf" id="1_jrff3"]
 [ext_resource type="Texture2D" uid="uid://c3wuqwq3ohtkw" path="res://vehicle/ms_23c.png" id="2_1bp7b"]
-[ext_resource type="Script" path="res://vehicle/TrainCarLighting.gd" id="2_7xcpt"]
+[ext_resource type="Script" uid="uid://duplsj4f0nobj" path="res://vehicle/TrainCarLighting.gd" id="2_7xcpt"]
 [ext_resource type="Texture2D" uid="uid://bflsmjriqbaea" path="res://vehicle/ms_23c_emission.png" id="3_7ivfx"]
 [ext_resource type="PackedScene" uid="uid://bpnjtik6jyvle" path="res://vehicle/bogie.tscn" id="3_7uxte"]
 [ext_resource type="Material" uid="uid://bql7ifetdgu4x" path="res://material/light_white.tres" id="5_f6vpv"]
