@@ -124,7 +124,7 @@ func _process(delta: float) -> void:
 			spawn_timer = SPAWN_INTERVALS[spawn_interval_idx]
 
 func reset() -> void:
-	directional_light.rotation_order = Node3D.ROTATION_ORDER_XYZ
+	directional_light.rotation_order = EULER_ORDER_XYZ
 	directional_light.rotation = Vector3(deg_to_rad(- 60.0), TAU * 0.5, 0.0)
 
 	for t in trains:

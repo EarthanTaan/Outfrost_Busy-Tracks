@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://rwcw8nsul3v5" path="res://map/TrackSemaphore.gd" id="1_p35uf"]
 [ext_resource type="Material" uid="uid://1si0b2q0mxy7" path="res://material/platform_display_pole.tres" id="2_61ta3"]
-[ext_resource type="Theme" uid="uid://cgpmko4d01n84" path="res://game/ui-theme/theme.tres" id="2_dmt6l"]
+[ext_resource type="Theme" uid="uid://cgpmko4d01n84" path="res://trees/ui-theme/theme.tres" id="2_dmt6l"]
 [ext_resource type="Material" uid="uid://doy4hl7gf6umw" path="res://material/light_green.tres" id="3_8fsaj"]
 [ext_resource type="Script" uid="uid://cln8b13m7t7di" path="res://map/FakeButton.gd" id="3_i3m3m"]
 [ext_resource type="Material" uid="uid://qaim6gqhxig0" path="res://material/light_off.tres" id="3_pb7hh"]

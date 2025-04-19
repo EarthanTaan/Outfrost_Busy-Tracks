@@ -30,7 +30,7 @@ var end_signal_always_clear: bool = false
 var occupied: bool = false
 var followers: int = 0
 
-func find_dest(side: Side) -> Segment:
+func find_dest(side: Segment.Side) -> Segment:
 	var last_node
 	if side == Segment.Side.Begin:
 		last_node = begin_node
@@ -52,7 +52,7 @@ func find_dest(side: Side) -> Segment:
 			break
 	return dest_segment
 
-func find_route_dest(side: Side, route_segments: Array[Segment], route_nodes: Array) -> Segment:
+func find_route_dest(side: Segment.Side, route_segments: Array[Segment], route_nodes: Array) -> Segment:
 	var last_node
 	if side == Segment.Side.Begin:
 		last_node = begin_node

@@ -1,6 +1,6 @@
 extends Node3D
 
-@export_node_path(MeshInstance3D) var mesh_instance_path: NodePath
+@export_node_path("MeshInstance3D") var mesh_instance_path: NodePath
 
 @onready var mesh_instance: MeshInstance3D = get_node(mesh_instance_path)
 var train: Train

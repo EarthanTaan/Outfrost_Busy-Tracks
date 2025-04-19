@@ -3,7 +3,7 @@ extends Node3D
 const NIGHT_LIGHT_THRESHOLD_START: float = 0.3
 const NIGHT_LIGHT_THRESHOLD_END: float = 0.65
 
-@export_node_path(MeshInstance3D) var mesh_instance_path: NodePath
+@export_node_path("MeshInstance3D") var mesh_instance_path: NodePath
 
 @onready var mesh_instance: MeshInstance3D = get_node(mesh_instance_path)
 @onready var lighting_threshold: float = randf_range(

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bjbey6bjjepho"]
 
 [ext_resource type="Script" uid="uid://fsphhsjgwcvs" path="res://game/loading/TransitionScreen.gd" id="2"]
-[ext_resource type="Theme" uid="uid://cgpmko4d01n84" path="res://game/ui-theme/theme.tres" id="2_f1wtc"]
+[ext_resource type="Theme" uid="uid://cgpmko4d01n84" path="res://trees/ui-theme/theme.tres" id="2_f1wtc"]
 
 [node name="TransitionScreen" type="Control"]
 layout_mode = 3
